@@ -3,13 +3,6 @@ import logo from "./logo.svg";
 import ThomasErhel from "./pp-thomas.png";
 import AntoineLachaud from "./pp-antoine.jpg";
 import "./App.scss";
-import "@material/react-card/index.scss";
-import Card, {
-  CardPrimaryContent,
-  CardMedia,
-  CardActions,
-  CardActionIcons
-} from "@material/react-card";
 
 const App = () => {
   return (
@@ -19,31 +12,13 @@ const App = () => {
         <h1>
           Nous construisons des applications Web et mobile de haute qualité.
         </h1>
-        <Card>
-          <CardPrimaryContent>
-            <p className="App-card">Thomas Erhel</p>
-            <CardMedia square imageUrl={ThomasErhel} />
-          </CardPrimaryContent>
-
-          <CardActions>
-            <CardActionIcons>
-              <i>Développeur</i>
-            </CardActionIcons>
-          </CardActions>
-        </Card>
+        <img src={ThomasErhel} className="App-thomas" alt="Thomas Erhel" />
         <h2>Nous faisons également du dépannage informatique.</h2>
-        <Card>
-          <CardPrimaryContent>
-            <p className="App-card">Antoine Lachaud</p>
-            <CardMedia square imageUrl={AntoineLachaud} />
-          </CardPrimaryContent>
-
-          <CardActions>
-            <CardActionIcons>
-              <i>Chef de projet</i>
-            </CardActionIcons>
-          </CardActions>
-        </Card>
+        <img
+          src={AntoineLachaud}
+          className="App-antoine"
+          alt="Antoine Lachaud"
+        />
         <h3>Il nous font confiance</h3>
         <a
           className="App-link"
