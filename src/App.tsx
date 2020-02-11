@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import ThomasErhel from "./pp-thomas.png";
 import AntoineLachaud from "./pp-antoine.jpg";
 import "./App.scss";
+import Button from "@material/react-button";
 
 const App = () => {
   return (
@@ -12,6 +13,13 @@ const App = () => {
         <h1>
           Nous construisons des applications Web et mobile de haute qualité.
         </h1>
+        <Button
+          raised
+          className="button-alternate"
+          onClick={() => console.log("clicked!")}
+        >
+          Click Me!
+        </Button>
         <article>
           <p>
             Bonjour je m'appelle Thomas, j'ai 29 ans et je suis passionné depuis
@@ -24,9 +32,9 @@ const App = () => {
             vrai.
           </p>
           <p>
-            O'clock prochainement pour devenir un développeur certifié par
-            l'état. Si jamais ça foire et qu'il y a des bugs je pourrais
-            toujours dire que c'est de la faute de Dario.
+            Prochainement élève chez O'clock pour devenir un développeur
+            certifié par l'état. Si jamais ça foire et qu'il y a des bugs je
+            pourrais toujours dire que c'est de la faute de Dario.
           </p>
           <p>
             Le virtuel est le véritable domaine du hacker. C’est à partir du
