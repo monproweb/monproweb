@@ -7,3 +7,9 @@ test("renders eduque tous chiens loisirs canins link", () => {
   const linkElement = getByText(/Eduque tous chiens loisirs canins/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test("renders github link", () => {
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/Mon GitHub/i);
+  expect(linkElement).toBeInTheDocument();
+});
