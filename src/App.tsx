@@ -55,7 +55,9 @@ const App = () => {
             </TopAppBarSection>
           </TopAppBarRow>
         </TopAppBar>
-        <TopAppBarFixedAdjust>My exciting content!</TopAppBarFixedAdjust>
+        <TopAppBarFixedAdjust>
+          L'équipe va rejoindre une couveuse d'entreprise!
+        </TopAppBarFixedAdjust>
         <img src={logo} className="App-logo" alt="logo" />
         <Headline1>
           Nous construisons des applications Web et mobile de haute qualité.
