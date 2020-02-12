@@ -1,5 +1,13 @@
+@import "@material/react-button/index.scss";
+@import "@material/react-material-icon/index.scss";
+@import "./react-button-overrides";
+@import "@material/react-top-app-bar/index.scss";
+@import "@material/react-material-icon/index.scss";
+
 .App {
   text-align: center;
+  background-color: #292929;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .App-logo {
@@ -14,14 +22,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
