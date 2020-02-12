@@ -1,5 +1,13 @@
 @import "@material/button/mixins";
 
-.button-alternate {
-  @include mdc-button-container-fill-color(rgb(226, 139, 8));
+.boutton-aventurier {
+  @include mdc-button-container-fill-color(rgb(226, 169, 66));
+}
+
+.boutton-directeur {
+  @include mdc-button-container-fill-color(rgb(81, 169, 171));
+}
+
+span {
+  color: black;
 }
