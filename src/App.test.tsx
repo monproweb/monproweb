@@ -10,6 +10,6 @@ test("renders eduque tous chiens loisirs canins link", () => {
 
 test("renders github link", () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/code/i);
+  const linkElement = getByText(/GitHub/i);
   expect(linkElement).toBeInTheDocument();
 });
