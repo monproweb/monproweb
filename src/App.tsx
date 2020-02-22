@@ -2,6 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import ThomasErhel from "./pp-thomas.webp";
 import AntoineLachaud from "./pp-antoine.webp";
+import PracticeMakePerfect from "./practice-make-perfect.webp";
 import "./App.scss";
 
 function App() {
@@ -32,6 +33,11 @@ function App() {
           différence du réel.
         </code>
         <img src={ThomasErhel} className="Thomas" alt="Thomas Erhel" />
+        <img
+          src={PracticeMakePerfect}
+          className="Practice-make-perfect"
+          alt="Rapport Lighthouse"
+        />
         <h2>Nous faisons également du dépannage informatique.</h2>
         <p>
           Fort de son expérience en tant que Technicien support
@@ -41,11 +47,7 @@ function App() {
           l'avancé. Intervention possible sur place en région Parisienne ou à
           Distance.
         </p>
-        <img
-          src={AntoineLachaud}
-          className="App-antoine"
-          alt="Antoine Lachaud"
-        />
+        <img src={AntoineLachaud} className="Antoine" alt="Antoine Lachaud" />
         <h3>Ils nous font confiance</h3>
         <p>
           Parce que c'est important de tenir ces engagements et ces promesses
