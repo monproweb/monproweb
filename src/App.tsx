@@ -66,7 +66,6 @@ function App() {
       <div className="player-wrapper">
         <FacebookPlayer
           url="https://facebook.com/monproweb/videos/2365654277008450/"
-          loop
           playing
           className="react-player"
           width="100%"
