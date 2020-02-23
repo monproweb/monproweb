@@ -4,7 +4,6 @@ import ThomasErhel from "./pp-thomas.webp";
 import AntoineLachaud from "./pp-antoine.webp";
 import PracticeMakePerfect from "./practice-make-perfect.webp";
 import "./App.scss";
-import FacebookPlayer from "react-player/lib/players/Facebook";
 
 function App() {
   return (
@@ -63,16 +62,6 @@ function App() {
           Eduque tous chiens loisirs canins
         </a>
       </header>
-      <div className="player-wrapper">
-        <FacebookPlayer
-          url="https://facebook.com/monproweb/videos/2365654277008450/"
-          playing
-          className="react-player"
-          width="100%"
-          height="100%"
-          // Other ReactPlayer props will work here
-        />
-      </div>
     </div>
   );
 }
