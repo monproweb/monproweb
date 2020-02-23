@@ -1,9 +1,10 @@
 import React from "react";
+import "./App.scss";
 import logo from "./logo.svg";
 import ThomasErhel from "./pp-thomas.webp";
 import AntoineLachaud from "./pp-antoine.webp";
 import PracticeMakePerfect from "./practice-make-perfect.webp";
-import "./App.scss";
+import Tests from "./tests.webp";
 
 function App() {
   return (
@@ -53,6 +54,7 @@ function App() {
           Parce que c'est important de tenir ces engagements et ces promesses
           même si ça prend du temps.
         </p>
+        <img src={Tests} className="Tests" alt="Tests" />
         <a
           className="App-link"
           href="https://eduquetouschiens.com"
