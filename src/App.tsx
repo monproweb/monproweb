@@ -4,6 +4,7 @@ import ThomasErhel from "./pp-thomas.webp";
 import AntoineLachaud from "./pp-antoine.webp";
 import PracticeMakePerfect from "./practice-make-perfect.webp";
 import "./App.scss";
+import FacebookPlayer from "react-player/lib/players/Facebook";
 
 function App() {
   return (
@@ -41,9 +42,9 @@ function App() {
         <h2>Nous faisons également du dépannage informatique.</h2>
         <p>
           Fort de son expérience en tant que Technicien support
-          informatique/Administrateur systèmes et réseaux c'est lui qui est en
-          contact avec vous et vous accompagne tout au long de votre projet. Il
-          rédige le cahier des charges avec vous et vous tiens au courant de
+          informatique/Administrateur systèmes et réseaux, c'est Antoine qui est
+          en contact avec vous et vous accompagne tout au long de votre projet.
+          Il rédige le cahier des charges avec vous et vous tiens au courant de
           l'avancé. Intervention possible sur place en région Parisienne ou à
           Distance.
         </p>
@@ -62,6 +63,17 @@ function App() {
           Eduque tous chiens loisirs canins
         </a>
       </header>
+      <div className="player-wrapper">
+        <FacebookPlayer
+          url="https://facebook.com/monproweb/videos/2365654277008450/"
+          loop
+          playing
+          className="react-player"
+          width="100%"
+          height="100%"
+          // Other ReactPlayer props will work here
+        />
+      </div>
     </div>
   );
 }

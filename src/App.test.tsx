@@ -8,8 +8,14 @@ test("renders eduque tous chiens loisirs canins link", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test("renders github link", () => {
+test("renders thomas developer", () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/GitHub/i);
-  expect(linkElement).toBeInTheDocument();
+  const developerElement = getByText(/Thomas/i);
+  expect(developerElement).toBeInTheDocument();
+});
+
+test("renders antoine admin sys", () => {
+  const { getByText } = render(<App />);
+  const adminsysElement = getByText(/Antoine/i);
+  expect(adminsysElement).toBeInTheDocument();
 });
