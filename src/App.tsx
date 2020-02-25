@@ -113,7 +113,7 @@ function App() {
                         <CardMedia
                           sixteenByNine
                           style={{
-                            backgroundImage: "url(./images/pp-thomas.png)"
+                            backgroundImage: "url(./images/pp-thomas.jpeg)"
                           }}
                         />
                         <div style={{ padding: "0 1rem 1rem 1rem" }}>
@@ -242,7 +242,7 @@ function App() {
                   <CardMedia
                     sixteenByNine
                     style={{
-                      backgroundImage: "url(./images/pp-antoine.png)"
+                      backgroundImage: "url(./images/pp-antoine.jpeg)"
                     }}
                   />
                   <div style={{ padding: "0 1rem 1rem 1rem" }}>
@@ -322,7 +322,7 @@ function App() {
                   <CardMedia
                     sixteenByNine
                     style={{
-                      backgroundImage: "url(./images/tests.png)"
+                      backgroundImage: "url(./images/tests.jpeg)"
                     }}
                   />
                 </CardPrimaryAction>
