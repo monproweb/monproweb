@@ -1,5 +1,6 @@
 {
   "name": "monproweb",
+  "sideEffects": false,
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,16 +8,21 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
     "@testing-library/user-event": "^7.2.1",
+    "@types/enzyme": "^3.10.5",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/jest": "^24.9.1",
     "@types/node": "^12.12.28",
     "@types/react": "^16.9.22",
     "@types/react-dom": "^16.9.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "material-components-web": "^5.0.0",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-player": "^1.15.2",
     "react-scripts": "3.4.0",
+    "rmwc": "^5.7.2",
     "typescript": "^3.7.5"
   },
   "scripts": {
