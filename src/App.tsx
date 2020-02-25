@@ -113,7 +113,7 @@ function App() {
                         <CardMedia
                           sixteenByNine
                           style={{
-                            backgroundImage: "url(./images/pp-thomas.webp)"
+                            backgroundImage: "url(./images/pp-thomas.png)"
                           }}
                         />
                         <div style={{ padding: "0 1rem 1rem 1rem" }}>
@@ -242,7 +242,7 @@ function App() {
                   <CardMedia
                     sixteenByNine
                     style={{
-                      backgroundImage: "url(./images/pp-antoine.webp)"
+                      backgroundImage: "url(./images/pp-antoine.png)"
                     }}
                   />
                   <div style={{ padding: "0 1rem 1rem 1rem" }}>
@@ -310,7 +310,7 @@ function App() {
                     sixteenByNine
                     style={{
                       backgroundImage:
-                        "url(./images/practice-make-perfect.webp)"
+                        "url(https://scontent.fcdg2-1.fna.fbcdn.net/v/t1.0-9/12308306_494863444029015_6504351862740158663_n.png?_nc_cat=104&_nc_ohc=NgQ1B6mhMtsAX_0kHUD&_nc_ht=scontent.fcdg2-1.fna&oh=68b2f593b741bb2e5f25570a18970fcd&oe=5EFB01B6)"
                     }}
                   />
                 </CardPrimaryAction>
@@ -322,7 +322,7 @@ function App() {
                   <CardMedia
                     sixteenByNine
                     style={{
-                      backgroundImage: "url(./images/tests.webp)"
+                      backgroundImage: "url(./images/tests.png)"
                     }}
                   />
                 </CardPrimaryAction>
