@@ -40,8 +40,10 @@ function App() {
   return (
     <div className="Monproweb">
       <Drawer
+        className="Monproweb-drawer"
         style={{
-          background: "#212121"
+          background: "#212121",
+          color: "rgba(255, 255, 255, 1)"
         }}
         modal
         open={open}
@@ -51,7 +53,12 @@ function App() {
           <DrawerTitle>Monproweb</DrawerTitle>
           <DrawerSubtitle>Work In Progress..</DrawerSubtitle>
         </DrawerHeader>
-        <DrawerContent>
+        <DrawerContent
+          style={{
+            background: "#212121",
+            color: "rgba(255, 255, 255, 1)"
+          }}
+        >
           <List>
             <ListItem>Accueil</ListItem>
             <ListItem>Services</ListItem>
@@ -287,7 +294,7 @@ function App() {
           <Grid>
             <GridCell span={6}>
               <Typography use="body1">
-                Parce que c'est important de tenir ces engagements et ces
+                Parce que c'est important de tenir ses engagements et ses
                 promesses même si ça prend du temps.
               </Typography>
             </GridCell>
