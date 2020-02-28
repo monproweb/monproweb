@@ -46,7 +46,6 @@ class App extends Component {
             onComplete={this.handleComplete.bind(this)}
             clearOnComplete={true}
             conversationModeOn={false}
-            voiceEnabled={true}
           />
           <h2>TODO</h2>
           <ul>
