@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "monproweb",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcognito33a9be4b",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

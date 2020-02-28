@@ -1,0 +1,27 @@
+{
+    "resourceName": "lexf61056d0",
+    "botName": "BenderTordeurRodriguez",
+    "intents": [
+        {
+            "slots": [
+                {
+                    "name": "Projet",
+                    "type": "AMAZON.Corporation",
+                    "prompt": "Quel est le nom de votre projet ?",
+                    "required": true,
+                    "customType": false
+                }
+            ],
+            "utterances": [
+                "Réserver un dev",
+                "Réserver un développeur",
+                "Réserver un developer"
+            ],
+            "intentName": "Dev",
+            "newSlotTypes": []
+        }
+    ],
+    "outputVoice": "Matthew",
+    "sessionTimeout": 5,
+    "coppa": false
+}
