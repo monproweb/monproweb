@@ -50,6 +50,12 @@ class App extends Component {
           <h2>TODO</h2>
           <ul>
             <li>[X] Api, Auth, Interactions, Analytics </li>
+            <li>
+              [/!\] Valuable Inventory: No content
+              <span role="img" aria-label="Homme haussant les épaules">
+                🤷‍♂️
+              </span>
+            </li>
             <li>[] Customiser Bender</li>
             <li>[] Ecrire des tests</li>
             <li>[] Modèle Projets</li>
