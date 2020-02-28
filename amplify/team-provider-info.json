@@ -10,6 +10,13 @@
             "StackName": "amplify-monproweb-prod-80107",
             "StackId": "arn:aws:cloudformation:eu-west-1:338912828004:stack/amplify-monproweb-prod-80107/c8beeee0-4a40-11ea-9099-02aed67d8a72",
             "AmplifyAppId": "d33vuj9ksu1aeb"
+        },
+        "categories": {
+            "auth": {
+                "cognito33a9be4b": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"955058761337320\",\"client_secret\":\"af707cc8f49a514b0692a79d0c96ac1b\"},{\"ProviderName\":\"Google\",\"client_id\":\"464135034738-77kc4o34n8lsh5sntmldki8cfehkdkl4.apps.googleusercontent.com\",\"client_secret\":\"uEksSBHcvSDXejSCg8EsSsCz\"},{\"ProviderName\":\"LoginWithAmazon\",\"client_id\":\"amzn1.application-oa2-client.7999a17bf74b43b7b0160c1afb234f6f\",\"client_secret\":\"26ac63621b651fc1ca9515ddbbe4d3dbe7399749d7b80424dc95af7af9614191\"}]"
+                }
+            }
         }
     }
 }

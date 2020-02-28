@@ -1,1 +1,40 @@
-{}
+{
+	"api": {
+		"monproweb": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authcognito33a9be4b"
+						}
+					}
+				}
+			}
+		}
+	},
+	"auth": {
+		"cognito33a9be4b": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"interactions": {
+		"lexf61056d0": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	},
+	"analytics": {
+		"monproweb": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"predictions": {}
+}

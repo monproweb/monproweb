@@ -1,0 +1,20 @@
+{
+    "appName": "monproweb",
+    "roleName": "pinpointLambdaRolede934ccd",
+    "cloudWatchPolicyName": "cloudWatchPolicyde934ccd",
+    "pinpointPolicyName": "pinpointPolicyde934ccd",
+    "authPolicyName": "pinpoint_amplify_de934ccd",
+    "unauthPolicyName": "pinpoint_amplify_de934ccd",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
