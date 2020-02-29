@@ -2,15 +2,15 @@
 
 const awsmobile = {
     "aws_project_region": "eu-west-1",
-    "aws_appsync_graphqlEndpoint": "https://34uopl3cnzfbvdjxxyi53wu63m.appsync-api.eu-west-1.amazonaws.com/graphql",
+    "aws_appsync_graphqlEndpoint": "https://26gxxnquwbehhlfpvs6faw2h4m.appsync-api.eu-west-1.amazonaws.com/graphql",
     "aws_appsync_region": "eu-west-1",
     "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
-    "aws_cognito_identity_pool_id": "eu-west-1:479b2bcb-b066-4e1b-8b0b-d073e0149fa4",
+    "aws_cognito_identity_pool_id": "eu-west-1:915fe0fd-55f9-4b80-9bad-49a3115da0dd",
     "aws_cognito_region": "eu-west-1",
-    "aws_user_pools_id": "eu-west-1_N8kFNPjZj",
-    "aws_user_pools_web_client_id": "27hvhju9fk2lsfebpsqh2mon2n",
+    "aws_user_pools_id": "eu-west-1_NnIva7Sue",
+    "aws_user_pools_web_client_id": "5u1r4equ0vpc6f0ic4l9q83mbp",
     "oauth": {
-        "domain": "monproweb24c7ff83-24c7ff83-prod.auth.eu-west-1.amazoncognito.com",
+        "domain": "monproweb-prod.auth.eu-west-1.amazoncognito.com",
         "scope": [
             "phone",
             "email",
@@ -18,8 +18,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "http://localhost:3000/,https://monproweb.com/",
-        "redirectSignOut": "http://localhost:3000/,https://monproweb.com/",
+        "redirectSignIn": "http://localhost:3000/",
+        "redirectSignOut": "http://localhost:3000/",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",

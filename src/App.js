@@ -1,14 +1,26 @@
 import React, { Component } from "react";
+import {
+  ChatBot,
+  AmplifyTheme,
+  S3Album,
+  withAuthenticator,
+  Connect
+} from "aws-amplify-react";
 import Amplify, {
   Interactions,
   Analytics,
-  AWSKinesisProvider
+  AWSKinesisProvider,
+  Storage,
+  API,
+  graphqlOperation
 } from "aws-amplify";
-import { ChatBot, AmplifyTheme } from "aws-amplify-react";
 import awsconfig from "./aws-exports";
-
+import * as queries from "./graphql/queries";
+import * as subscriptions from "./graphql/subscriptions";
+import * as mutations from "./graphql/mutations";
 Amplify.configure(awsconfig);
 Analytics.addPluggable(new AWSKinesisProvider());
+Storage.configure({ level: "private" });
 
 // Imported default theme can be customized by overloading attributes
 const myTheme = {
@@ -18,6 +30,58 @@ const myTheme = {
     backgroundColor: "#ff6600"
   }
 };
+
+class AddTodo extends Component {
+  constructor(props) {
+    super(props);
+    this.submit = this.submit.bind(this);
+    this.state = {
+      name: "",
+      description: ""
+    };
+  }
+
+  handleChange(name, event) {
+    this.setState({ [name]: event.target.value });
+  }
+
+  async submit() {
+    const { onCreate } = this.props;
+    const input = {
+      name: this.state.name,
+      description: this.state.description
+    };
+    console.log(input);
+
+    try {
+      await onCreate({ input });
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <input
+          name="name"
+          placeholder="name"
+          onChange={event => {
+            this.handleChange("name", event);
+          }}
+        />
+        <input
+          name="description"
+          placeholder="description"
+          onChange={event => {
+            this.handleChange("description", event);
+          }}
+        />
+        <button onClick={this.submit}>Add</button>
+      </div>
+    );
+  }
+}
 
 class App extends Component {
   handleComplete(err, confirmation) {
@@ -31,6 +95,17 @@ class App extends Component {
   }
 
   render() {
+    const ListView = ({ todos }) => (
+      <div>
+        <h3>All Todos</h3>
+        <ul>
+          {todos.map(todo => (
+            <li key={todo.id}>{todo.name}</li>
+          ))}
+        </ul>
+      </div>
+    );
+
     return (
       <div className="App">
         <header className="App-header">
@@ -48,20 +123,38 @@ class App extends Component {
             conversationModeOn={false}
           />
           <h2>TODO</h2>
-          <ul>
-            <li>[X] Api, Auth, Interactions, Analytics </li>
-            <li>
-              [/!\] Valuable Inventory: No content
-              <span role="img" aria-label="Homme haussant les épaules">
-                🤷‍♂️
-              </span>
-            </li>
-            <li>[] Customiser Bender</li>
-            <li>[] Ecrire des tests</li>
-            <li>[] Modèle Projets</li>
-            <li>[] Modèle Tickets</li>
-            <li>[] Mocking tests API</li>
-          </ul>
+          <Connect
+            query={graphqlOperation(queries.listTodos)}
+            subscription={graphqlOperation(subscriptions.onCreateTodo)}
+            onSubscriptionMsg={(prev, { onCreateTodo }) => {
+              console.log(onCreateTodo);
+              return prev;
+            }}
+          >
+            {({ data: { listTodos }, loading, error }) => {
+              if (error) return <h3>Error</h3>;
+              if (loading || !listTodos) return <h3>Loading...</h3>;
+              return <ListView todos={listTodos ? listTodos.items : []} />;
+            }}
+          </Connect>
+          <Connect mutation={graphqlOperation(mutations.createTodo)}>
+            {({ mutation }) => <AddTodo onCreate={mutation} />}
+          </Connect>
+
+          <Connect
+            query={graphqlOperation(queries.listTodos)}
+            subscription={graphqlOperation(subscriptions.onCreateTodo)}
+            onSubscriptionMsg={(prev, { onCreateTodo }) => {
+              console.log("Subscription data:", onCreateTodo);
+              return prev;
+            }}
+          >
+            {({ data: { listTodos }, loading, error }) => {
+              if (error) return <h3>Error</h3>;
+              if (loading || !listTodos) return <h3>Loading...</h3>;
+              return <ListView todos={listTodos.items} />;
+            }}
+          </Connect>
           <h3>Ils nous font confiance</h3>
           <p>
             Un grand merci à eux
@@ -93,4 +186,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withAuthenticator(App, false);

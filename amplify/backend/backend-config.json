@@ -9,7 +9,7 @@
 					"defaultAuthentication": {
 						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
 						"userPoolConfig": {
-							"userPoolId": "authcognito33a9be4b"
+							"userPoolId": "authmonproweb3678c7ee"
 						}
 					}
 				}
@@ -17,10 +17,11 @@
 		}
 	},
 	"auth": {
-		"cognito33a9be4b": {
+		"monproweb3678c7ee": {
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"dependsOn": []
+			"dependsOn": [],
+			"customAuth": false
 		}
 	},
 	"interactions": {
@@ -36,5 +37,7 @@
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"predictions": {}
+	"predictions": {},
+	"storage": {},
+	"function": {}
 }

@@ -7,6 +7,7 @@ export const getTodo = /* GraphQL */ `
       id
       name
       description
+      priority
     }
   }
 `;
@@ -21,6 +22,7 @@ export const listTodos = /* GraphQL */ `
         id
         name
         description
+        priority
       }
       nextToken
     }
