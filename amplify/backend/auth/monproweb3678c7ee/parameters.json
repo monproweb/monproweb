@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "monproweb_identitypool_04b71821",
-    "allowUnauthenticatedIdentities": true,
-    "resourceNameTruncated": "cognit24c7ff83",
-    "userPoolName": "cognito33a9be4b_userpool_24c7ff83",
+    "identityPoolName": "monproweb3678c7ee_identitypool_3678c7ee",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "monpro3678c7ee",
+    "userPoolName": "monproweb3678c7ee_userpool_3678c7ee",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "cognit24c7ff83_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "monpro3678c7ee_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
+    "resourceName": "monproweb3678c7ee",
     "authSelections": "identityPoolAndUserPool",
-    "resourceName": "cognito33a9be4b",
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -44,16 +44,19 @@
             "Arn"
         ]
     },
-    "hostedUI": true,
     "useDefault": "defaultSocial",
-    "hostedUIDomainName": "monproweb24c7ff83-24c7ff83",
+    "hostedUI": true,
+    "usernameAttributes": [
+        "email"
+    ],
+    "hostedUIDomainName": "monproweb",
     "authProvidersUserPool": [
         "Facebook",
         "Google",
         "LoginWithAmazon"
     ],
     "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}},{\"ProviderName\":\"LoginWithAmazon\",\"authorize_scopes\":\"profile profile:user_id\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"user_id\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"https://monproweb.com/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://monproweb.com/\"]}",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
     "userPoolGroupList": [],
     "dependsOn": []
 }
