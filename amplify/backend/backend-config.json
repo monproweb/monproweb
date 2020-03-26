@@ -1,43 +1,44 @@
 {
-    "api": {
-        "monproweb": {
-            "service": "AppSync",
-            "providerPlugin": "awscloudformation",
-            "output": {
-                "authConfig": {
-                    "additionalAuthenticationProviders": [],
-                    "defaultAuthentication": {
-                        "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-                        "userPoolConfig": {
-                            "userPoolId": "authmonproweb3678c7ee"
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "auth": {
-        "monproweb3678c7ee": {
-            "service": "Cognito",
-            "providerPlugin": "awscloudformation",
-            "dependsOn": [],
-            "customAuth": false
-        }
-    },
-    "interactions": {
-        "lexf61056d0": {
-            "service": "Lex",
-            "providerPlugin": "awscloudformation",
-            "build": true
-        }
-    },
-    "analytics": {
-        "monproweb": {
-            "service": "Pinpoint",
-            "providerPlugin": "awscloudformation"
-        }
-    },
-    "predictions": {},
-    "storage": {},
-    "function": {}
+	"api": {
+		"monproweb": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "",
+							"apiKeyExpirationDays": 7
+						}
+					}
+				}
+			}
+		}
+	},
+	"auth": {
+		"monproweb3678c7ee": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	},
+	"interactions": {
+		"lexf61056d0": {
+			"service": "Lex",
+			"providerPlugin": "awscloudformation",
+			"build": true
+		}
+	},
+	"analytics": {
+		"monproweb": {
+			"service": "Pinpoint",
+			"providerPlugin": "awscloudformation"
+		}
+	},
+	"predictions": {},
+	"storage": {},
+	"function": {}
 }

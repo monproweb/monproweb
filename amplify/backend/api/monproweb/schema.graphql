@@ -2,5 +2,16 @@ type Todo @model {
   id: ID!
   name: String!
   description: String
-  priority: String
+}
+
+enum PostStatus {
+  ACTIVE
+  INACTIVE
+}
+
+type Post @model {
+  id: ID!
+  title: String!
+  rating: Int!
+  status: PostStatus!
 }
