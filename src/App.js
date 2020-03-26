@@ -10,9 +10,14 @@ import {
 import logo from './logo.svg';
 import './App.scss';
 import Emoji from 'a11y-react-emoji'
-import Octicon, { Rocket, MarkGithub, FileBinary } from '@primer/octicons-react'
-import { BaseStyles, Box, Heading, ButtonPrimary, Button, ButtonOutline, Text, ProgressBar } from '@primer/components'
+import Octicon, { Rocket, MarkGithub } from '@primer/octicons-react'
+import { BaseStyles, Box, Heading, Button, Text, ProgressBar } from '@primer/components'
 import { Helmet } from "react-helmet";
+import Amplify, { Analytics } from 'aws-amplify';
+import awsconfig from './aws-exports';
+
+Amplify.configure(awsconfig);
+Analytics.enable();
 
 export default function App() {
     return (
@@ -58,14 +63,14 @@ function Home() {
                         <Octicon icon={Rocket} />
                         {' '}
                     </p>
-                    <ButtonPrimary
+                    <Button
                         as='a'
                         className="App-link"
                         href="https://facebook.com/monproweb/"
                         target="_blank"
                         rel="noopener noreferrer">
                         Notre page Facebook
-                    </ButtonPrimary>
+                    </Button>
                     <p>
                         Réalisé avec
                         {' '}
