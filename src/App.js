@@ -28,9 +28,6 @@ export default function App() {
                     <Route path="/about">
                         <About />
                     </Route>
-                    <Route path="/admin">
-                        <Admin />
-                    </Route>
                     <Route path="/topics">
                         <Topics />
                     </Route>
@@ -159,36 +156,4 @@ function Topics() {
 function Topic() {
     let { topicId } = useParams();
     return <h3>ID de sujet demandé: {topicId}</h3>;
-}
-
-function Admin() {
-    return (
-        <div className="App-admin">
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>MPW | Admin | Rick Rolled</title>
-                <link rel="canonical" href="https://monproweb.com/admin" />
-            </Helmet>
-            <BaseStyles>
-                <Box m={4}>
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <Heading mb={2}>Admin</Heading>
-                    <p>Rick Rolled !!
-                    {' '}
-                        <Emoji symbol="🐦" label="Twitter" />
-                        <Octicon icon={FileBinary} />
-                        {' '}</p>
-                    <iframe title="Rick Astley - Never Gonna Give You Up (Video)" width="300" height="150" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                    <div><ButtonOutline
-                        as='a'
-                        className="App-link"
-                        href="https://twitter.com/ThomasErhel/"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        Follow me sur twitter je follow back
-                    </ButtonOutline></div>
-                </Box>
-            </BaseStyles>
-        </div >
-    );
 }
