@@ -10,7 +10,6 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
-      priority
     }
   }
 `;
@@ -23,7 +22,6 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
-      priority
     }
   }
 `;
@@ -36,7 +34,6 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
-      priority
     }
   }
 `;

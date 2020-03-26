@@ -1,5 +1,8 @@
+@import "@primer/css/index.scss";
+
+
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
@@ -16,8 +19,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-ul {
-  color: red;
 }
