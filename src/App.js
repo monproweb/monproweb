@@ -91,8 +91,8 @@ function About() {
         <div className="App-a-propos">
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>MPW | À propos</title>
-                <link rel="canonical" href="https://monproweb.com/about" />
+                <title>MPW | À-propos</title>
+                <link rel="canonical" href="https://monproweb.com/a-propos" />
             </Helmet>
             <BaseStyles>
                 <Box m={4}>
@@ -129,7 +129,7 @@ function Topics() {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>MPW | Les sujets</title>
-                <link rel="canonical" href="https://monproweb.com/topics" />
+                <link rel="canonical" href="https://monproweb.com/sujets" />
             </Helmet>
             <h2>Les sujets</h2>
 
