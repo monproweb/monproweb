@@ -10,7 +10,7 @@ import {
 import logo from './logo.svg';
 import './App.scss';
 import Emoji from 'a11y-react-emoji'
-import Octicon, { Rocket, MarkGithub } from '@primer/octicons-react'
+import Octicon, { Terminal, MarkGithub } from '@primer/octicons-react'
 import { BaseStyles, Box, Heading, Button, Text, ProgressBar } from '@primer/components'
 import { Helmet } from "react-helmet";
 import Amplify, { Analytics } from 'aws-amplify';
@@ -26,14 +26,14 @@ export default function App() {
                 <div className="Header">
                     <div className="Header-item"><Link className="Header-link" to="/">Mon Pro Web</Link>
                     </div>
-                    <div className="Header-item"><Link className="Header-link" to="/about">À propos</Link></div>
-                    <div className="Header-item"><Link className="Header-link" to="/topics">Les sujets</Link></div>
+                    <div className="Header-item"><Link className="Header-link" to="/a-propos">À-propos</Link></div>
+                    <div className="Header-item"><Link className="Header-link" to="/sujets">Les sujets</Link></div>
                 </div>
                 <Switch>
-                    <Route path="/about">
+                    <Route path="/a-propos">
                         <About />
                     </Route>
-                    <Route path="/topics">
+                    <Route path="/sujets">
                         <Topics />
                     </Route>
                     <Route path="/">
@@ -56,11 +56,13 @@ function Home() {
             <BaseStyles>
                 <Box m={4}>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <Heading mb={2}>Nous construisons des applications Web et mobile.</Heading>
+                    <Heading mb={2}>Nous construisons des applications Web et mobiles.</Heading>
                     <p>Bienvenue sur Mon Pro Web, nous vous aidons à développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques en matière d'accessibilité.
                         {' '}
                         <Emoji symbol="🚀" label="fusée" />
-                        <Octicon icon={Rocket} />
+                        <button>
+                            <Octicon icon={Terminal} ariaLabel="Terminal" />
+                        </button>
                         {' '}
                     </p>
                     <Button
@@ -86,7 +88,7 @@ function Home() {
 
 function About() {
     return (
-        <div className="App-about">
+        <div className="App-a-propos">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>MPW | À propos</title>
@@ -95,8 +97,8 @@ function About() {
             <BaseStyles>
                 <Box m={4}>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <Heading mb={2}>À propos</Heading>
-                    <p>Lorem Ipsum
+                    <Heading mb={2}>À-propos</Heading>
+                    <p>Nous faisons également du dépannage Informatique.
                     {' '}
                         <Emoji symbol="🌍" label="Globe montrant l'Europe-Afrique" />
                         <Octicon icon={MarkGithub} />
@@ -123,7 +125,7 @@ function Topics() {
     let match = useRouteMatch();
 
     return (
-        <div className="App-topics">
+        <div className="App-sujets">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>MPW | Les sujets</title>
