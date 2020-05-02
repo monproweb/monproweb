@@ -46,8 +46,16 @@ export default function App() {
               Les sujets
             </Link>
           </div>
+          <div className="Header-item">
+            <Link className="Header-link" to="/equipe">
+              L'équipe
+            </Link>
+          </div>
         </div>
         <Switch>
+          <Route path="/equipe">
+            <Team />
+          </Route>
           <Route path="/a-propos">
             <About />
           </Route>
@@ -186,4 +194,23 @@ function Topics() {
 function Topic() {
   let { topicId } = useParams();
   return <h3>ID de sujet demandé: {topicId}</h3>;
+}
+
+function Team() {
+  return (
+    <div className="App-equipe">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>MPW | L'équipe</title>
+        <link rel="canonical" href="https://monproweb.com/equipe" />
+      </Helmet>
+      <BaseStyles>
+        <Box m={4}>
+          <img src={logo} className="App-logo" alt="logo" />
+          <Heading mb={2}>L'équipe</Heading>
+          <p>Qui sommes nous ?</p>
+        </Box>
+      </BaseStyles>
+    </div>
+  );
 }
