@@ -89,9 +89,11 @@ function Home() {
             Nous construisons des applications Web et mobiles.
           </Heading>
           <p>
-            Bienvenue sur Mon Pro Web, nous vous aidons à développer votre
-            visibilité en ligne à l'aide d'applications performantes qui suivent
-            les bonnes pratiques en matière d'accessibilité.
+            <Text mr={3}>
+              Bienvenue sur Mon Pro Web, nous vous aidons à développer votre
+              visibilité en ligne à l'aide d'applications performantes qui
+              suivent les bonnes pratiques en matière d'accessibilité.
+            </Text>
           </p>
           <IconContext.Provider
             value={{
@@ -115,7 +117,9 @@ function Home() {
             Notre page Facebook
           </Button>
           <p>
-            Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
+            <Text mr={3}>
+              Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
+            </Text>
           </p>
         </Box>
       </BaseStyles>
@@ -135,7 +139,11 @@ function About() {
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
           <Heading mb={2}>À-propos</Heading>
-          <p>Nous faisons également du dépannage Informatique.</p>
+          <p>
+            <Text mr={3}>
+              Nous faisons également du dépannage Informatique.
+            </Text>
+          </p>
           <IconContext.Provider
             value={{
               color: "dark",
@@ -148,6 +156,26 @@ function About() {
               <GiAutoRepair />
             </div>
           </IconContext.Provider>
+        </Box>
+        <Box m={4}>
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/monproweb/"
+            data-tabs="timeline"
+            data-width="500"
+            data-height=""
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/monproweb/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/monproweb/">Mon Pro Web</a>
+            </blockquote>
+          </div>
         </Box>
       </BaseStyles>
     </div>
