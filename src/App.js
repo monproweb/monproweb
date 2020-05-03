@@ -157,26 +157,6 @@ function About() {
             </div>
           </IconContext.Provider>
         </Box>
-        <Box m={4}>
-          <div
-            class="fb-page"
-            data-href="https://www.facebook.com/monproweb/"
-            data-tabs="timeline"
-            data-width="500"
-            data-height=""
-            data-small-header="false"
-            data-adapt-container-width="true"
-            data-hide-cover="false"
-            data-show-facepile="true"
-          >
-            <blockquote
-              cite="https://www.facebook.com/monproweb/"
-              class="fb-xfbml-parse-ignore"
-            >
-              <a href="https://www.facebook.com/monproweb/">Mon Pro Web</a>
-            </blockquote>
-          </div>
-        </Box>
       </BaseStyles>
     </div>
   );
