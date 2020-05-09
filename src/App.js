@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.scss";
 import Emoji from "a11y-react-emoji";
@@ -45,11 +38,6 @@ export default function App() {
             </Link>
           </div>
           <div className="Header-item">
-            <Link className="Header-link" to="/sujets">
-              Les sujets
-            </Link>
-          </div>
-          <div className="Header-item">
             <Link className="Header-link" to="/equipe">
               L'équipe
             </Link>
@@ -61,9 +49,6 @@ export default function App() {
           </Route>
           <Route path="/a-propos">
             <About />
-          </Route>
-          <Route path="/sujets">
-            <Topics />
           </Route>
           <Route path="/">
             <Home />
@@ -116,11 +101,11 @@ function Home() {
           >
             Notre page Facebook
           </Button>
-          <p>
+          <div className="App-footer">
             <Text mr={3}>
               Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
             </Text>
-          </p>
+          </div>
         </Box>
       </BaseStyles>
     </div>
@@ -156,56 +141,15 @@ function About() {
               <GiAutoRepair />
             </div>
           </IconContext.Provider>
+          <div className="App-footer">
+            <Text mr={3}>
+              Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
+            </Text>
+          </div>
         </Box>
       </BaseStyles>
     </div>
   );
-}
-
-function Topics() {
-  let match = useRouteMatch();
-
-  return (
-    <div className="App-sujets">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>MPW | Les sujets</title>
-        <link rel="canonical" href="https://monproweb.com/sujets" />
-      </Helmet>
-      <h2>Les sujets</h2>
-
-      <ul>
-        <li>
-          <Link className="App-link" to={`${match.url}/components`}>
-            Components
-          </Link>
-        </li>
-        <li>
-          <Link className="App-link" to={`${match.url}/props-v-state`}>
-            Props v. State
-          </Link>
-        </li>
-      </ul>
-
-      {/* The Topics page has its own <Switch> with more routes
-          that build on the /topics URL path. You can think of the
-          2nd <Route> here as an "index" page for all topics, or
-          the page that is shown when no topic is selected */}
-      <Switch>
-        <Route path={`${match.path}/:topicId`}>
-          <Topic />
-        </Route>
-        <Route path={match.path}>
-          <h3>Veuillez sélectionner un sujet.</h3>
-        </Route>
-      </Switch>
-    </div>
-  );
-}
-
-function Topic() {
-  let { topicId } = useParams();
-  return <h3>ID de sujet demandé: {topicId}</h3>;
 }
 
 function Team() {
@@ -265,6 +209,11 @@ function Team() {
             </Text>
           </p>
         </Box>
+        <div className="App-footer">
+          <Text mr={3}>
+            Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
+          </Text>
+        </div>
       </BaseStyles>
     </div>
   );
