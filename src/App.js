@@ -101,12 +101,14 @@ function Home() {
           >
             Notre page Facebook
           </Button>
-          <div className="App-footer">
+        </Box>
+        <div className="App-footer">
+          <Box m={4}>
             <Text mr={3}>
               Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
             </Text>
-          </div>
-        </Box>
+          </Box>
+        </div>
       </BaseStyles>
     </div>
   );
@@ -146,12 +148,14 @@ function About() {
           <Button as="a" href="mailto:contact@monproweb.com">
             Contactez-nous
           </Button>
-          <div className="App-footer">
+        </Box>
+        <div className="App-footer">
+          <Box m={4}>
             <Text mr={3}>
               Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
             </Text>
-          </div>
-        </Box>
+          </Box>
+        </div>
       </BaseStyles>
     </div>
   );
@@ -219,9 +223,11 @@ function Team() {
           </p>
         </Box>
         <div className="App-footer">
-          <Text mr={3}>
-            Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
-          </Text>
+          <Box m={4}>
+            <Text mr={3}>
+              Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
+            </Text>
+          </Box>
         </div>
       </BaseStyles>
     </div>
