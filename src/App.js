@@ -143,6 +143,9 @@ function About() {
               <GiAutoRepair />
             </div>
           </IconContext.Provider>
+          <Button as="a" href="mailto:contact@monproweb.com">
+            Contactez-nous
+          </Button>
           <div className="App-footer">
             <Text mr={3}>
               Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
