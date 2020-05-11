@@ -70,11 +70,11 @@ function Home() {
       <BaseStyles>
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
-          <Heading mb={2}>
+          <Heading className="anim-fade-up" mb={2}>
             Nous construisons des applications Web et mobiles.
           </Heading>
           <p>
-            <Text mr={3}>
+            <Text className="anim-fade-in" mr={3}>
               Bienvenue sur Mon Pro Web, nous vous aidons à développer votre
               visibilité en ligne à l'aide d'applications performantes qui
               suivent les bonnes pratiques en matière d'accessibilité.
@@ -88,7 +88,7 @@ function Home() {
               title: "Accessibility",
             }}
           >
-            <div>
+            <div className="anim-pulse">
               <MdAccessibility />
             </div>
           </IconContext.Provider>
@@ -123,9 +123,11 @@ function About() {
       <BaseStyles>
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
-          <Heading mb={2}>À-propos</Heading>
+          <Heading className="anim-fade-up" mb={2}>
+            À-propos
+          </Heading>
           <p>
-            <Text mr={3}>
+            <Text className="anim-fade-in" mr={3}>
               Nous faisons également du dépannage Informatique.
             </Text>
           </p>
@@ -137,7 +139,7 @@ function About() {
               title: "Réparation",
             }}
           >
-            <div>
+            <div className="anim-pulse">
               <GiAutoRepair />
             </div>
           </IconContext.Provider>
@@ -163,17 +165,19 @@ function Team() {
       <BaseStyles>
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
-          <Heading mb={2}>
+          <Heading className="anim-fade-up" mb={2}>
             <Text mr={3}>Un développeur : Thomas Erhel</Text>
           </Heading>
           <p>
-            <Text mr={3}>
+            <Text className="anim-fade-in" mr={3}>
               Passioné depuis toujours par le Web, je suis autodidacte.
             </Text>
           </p>
           <p>
-            <Text mr={3}>Certification Blueprint 0 sur 8</Text>
-            <ProgressBar progress={0} inline width="100px" />
+            <Text className="anim-pulse" mr={3}>
+              Certification Blueprint 0 sur 8
+            </Text>
+            <ProgressBar progress={5} inline width="100px" />
           </p>
           <Button
             as="a"
@@ -186,9 +190,11 @@ function Team() {
           </Button>
         </Box>
         <Box m={4}>
-          <Heading mb={2}>Un chef de projets : Antoine Lachaud</Heading>
+          <Heading className="anim-fade-up" mb={2}>
+            Un chef de projets : Antoine Lachaud
+          </Heading>
           <p>
-            <Text mr={3}>
+            <Text className="anim-fade-in" mr={3}>
               L'option informatique et réseaux est tournée vers les réseaux et
               leur sécurité, les systèmes embarqués, le cloud computing et la
               programmation des systèmes. Elle ne s'applique pas à
