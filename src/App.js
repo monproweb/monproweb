@@ -15,6 +15,7 @@ import {
 import { MdAccessibility } from "react-icons/md";
 import { IconContext } from "react-icons";
 import { GiAutoRepair } from "react-icons/gi";
+import { FaReact } from "react-icons/fa";
 import { Helmet } from "react-helmet";
 import Amplify, { Analytics } from "aws-amplify";
 import awsconfig from "./aws-exports";
@@ -143,6 +144,18 @@ function About() {
           >
             <div className="anim-pulse">
               <GiAutoRepair />
+            </div>
+          </IconContext.Provider>
+          <IconContext.Provider
+            value={{
+              color: "dark",
+              className: "global-class-name",
+              size: "6em",
+              title: "React",
+            }}
+          >
+            <div className="anim-pulse">
+              <FaReact />
             </div>
           </IconContext.Provider>
           <Button as="a" href="mailto:contact@monproweb.com">
