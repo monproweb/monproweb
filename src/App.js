@@ -193,6 +193,15 @@ function Team() {
               Passioné depuis toujours par le Web, je suis autodidacte.
             </Text>
           </p>
+          <Button
+            as="a"
+            className="App-link"
+            href="https://blog.monproweb.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Blog
+          </Button>
           <p>
             <Text className="anim-pulse" mr={3}>
               Certification Blueprint 0 sur 8
