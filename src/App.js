@@ -246,7 +246,8 @@ function Team() {
           <Heading className="anim-fade-up" mb={2}>
             Un chef de projets :
             <Box m={4}>
-              <VerifiedIcon size={24} /> Antoine Lachaud
+              <VerifiedIcon size={24} arial-label="Icone vérifié" /> Antoine
+              Lachaud
             </Box>
           </Heading>
           <Box m={4}>
