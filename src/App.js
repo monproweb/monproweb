@@ -3,7 +3,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.scss";
 import Emoji from "a11y-react-emoji";
-import Octicon, { MarkGithub } from "@primer/octicons-react";
+import {
+  LogoGithubIcon,
+  ZapIcon,
+  BookIcon,
+  VerifiedIcon,
+} from "@primer/octicons-react";
 import {
   BaseStyles,
   Box,
@@ -186,63 +191,88 @@ function Team() {
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
           <Heading className="anim-fade-up" mb={2}>
-            <Text mr={3}>Un développeur : Thomas Erhel</Text>
+            <Text mr={3}>
+              Un développeur :
+              <Box m={4}>
+                <VerifiedIcon size={24} arial-label="Icone vérifié" /> Thomas
+                Erhel
+              </Box>
+            </Text>
           </Heading>
-          <p>
-            <Text className="anim-fade-in" mr={3}>
-              Passioné depuis toujours par le Web, je suis autodidacte.
-            </Text>
-          </p>
-          <Button
-            as="a"
-            className="App-link"
-            href="https://blog.monproweb.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Blog
-          </Button>
-          <p>
-            <Text className="anim-pulse" mr={3}>
-              Certification Blueprint 0 sur 8
-            </Text>
-            <ProgressBar progress={5} inline width="100px" />
-          </p>
-          <Button
-            as="a"
-            className="App-link"
-            href="https://github.com/ThomasErhel/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Octicon icon={MarkGithub} ariaLabel="Github" />
-          </Button>
+          <Box m={4}>
+            <h1>
+              <a href="https://github.com/ThomasErhel/">
+                <LogoGithubIcon size="large" aria-label="GitHub" />
+              </a>
+            </h1>
+            <p>
+              <Text className="anim-fade-in" mr={3}>
+                Passioné depuis toujours par le Web, je suis autodidacte.
+              </Text>
+            </p>
+          </Box>
+          <Box m={4}>
+            <Button
+              as="a"
+              className="App-link"
+              href="https://blog.monproweb.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ZapIcon aria-label="Blog" /> Blog
+            </Button>
+          </Box>
+          <Box m={4}>
+            <Button
+              as="a"
+              className="App-link"
+              href="https://docs.monproweb.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BookIcon aria-label="Documentations" /> Docs
+            </Button>
+          </Box>
+          <Box m={4}>
+            <p>
+              <Text className="anim-pulse" mr={3}>
+                Certification Blueprint 0 sur 8
+              </Text>
+              <ProgressBar progress={5} inline width="100px" />
+            </p>
+          </Box>
         </Box>
         <Box m={4}>
           <Heading className="anim-fade-up" mb={2}>
-            Un chef de projets : Antoine Lachaud
+            Un chef de projets :
+            <Box m={4}>
+              <VerifiedIcon size={24} /> Antoine Lachaud
+            </Box>
           </Heading>
-          <p>
-            <Text className="anim-fade-in" mr={3}>
-              L'option informatique et réseaux est tournée vers les réseaux et
-              leur sécurité, les systèmes embarqués, le cloud computing et la
-              programmation des systèmes. Elle ne s'applique pas à
-              l'informatique de gestion et de service à l'usager. L'objectif de
-              ce BTS est de former l'élève au maintien en état de fonctionnement
-              des réseaux, à la sécurisation ainsi qu'au bon fonctionnement de
-              la programmation (client/serveur, cloud computing). À partir d'un
-              cahier des charges et de contraintes de production, le technicien
-              supérieur définit des spécifications techniques. Il peut installer
-              un système d'exploitation, une bibliothèque logicielle, un
-              dispositif de correction ou de mise à jour de logiciel. Il rédige
-              un cahier de recette permettant de recenser les points à tester en
-              fonction des demandes identifiées dans le cahier des charges. Il
-              exerce son activité chez les prestataires informatiques : service
-              interne d'une entreprise, SSII… Avec de l'expérience, le diplômé
-              peut se voir confier la responsabilité de projets ou des fonctions
-              de management d'équipe.
-            </Text>
-          </p>
+          <Box m={4}>
+            <p>
+              <Text className="anim-fade-in" mr={3}>
+                L'option informatique et réseaux est tournée vers les réseaux et
+                leur sécurité, les systèmes embarqués, le cloud computing et la
+                programmation des systèmes. Elle ne s'applique pas à
+                l'informatique de gestion et de service à l'usager. L'objectif
+                de ce BTS est de former l'élève au maintien en état de
+                fonctionnement des réseaux, à la sécurisation ainsi qu'au bon
+                fonctionnement de la programmation (client/serveur, cloud
+                computing). À partir d'un cahier des charges et de contraintes
+                de production, le technicien supérieur définit des
+                spécifications techniques. Il peut installer un système
+                d'exploitation, une bibliothèque logicielle, un dispositif de
+                correction ou de mise à jour de logiciel. Il rédige un cahier de
+                recette permettant de recenser les points à tester en fonction
+                des demandes identifiées dans le cahier des charges. Il exerce
+                son activité chez les prestataires informatiques : service
+                interne d'une entreprise, SSII… Avec de l'expérience, le diplômé
+                peut se voir confier la responsabilité de projets ou des
+                fonctions de management d'équipe.
+              </Text>
+            </p>
+          </Box>
         </Box>
         <div className="App-footer">
           <Box m={4}>
