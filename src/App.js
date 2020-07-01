@@ -194,8 +194,8 @@ function Team() {
             <Text mr={3}>
               Un développeur :
               <Box m={4}>
-                <VerifiedIcon size={24} arial-label="Icone vérifié" /> Thomas
-                Erhel
+                Thomas Erhel{" "}
+                <VerifiedIcon size={24} arial-label="Icone vérifié" />
               </Box>
             </Text>
           </Heading>
@@ -246,8 +246,8 @@ function Team() {
           <Heading className="anim-fade-up" mb={2}>
             Un chef de projets :
             <Box m={4}>
-              <VerifiedIcon size={24} arial-label="Icone vérifié" /> Antoine
-              Lachaud
+              Antoine Lachaud{" "}
+              <VerifiedIcon size={24} arial-label="Icone vérifié" />
             </Box>
           </Heading>
           <Box m={4}>
