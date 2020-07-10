@@ -191,13 +191,11 @@ function Team() {
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
           <Heading className="anim-fade-up" mb={2}>
-            <Text mr={3}>
-              Un développeur :
-              <Box m={4}>
-                Thomas Erhel{" "}
-                <VerifiedIcon size={24} arial-label="Icone vérifié" />
-              </Box>
-            </Text>
+            Un développeur :
+            <Box m={4}>
+              <VerifiedIcon size={24} arial-label="Icone vérifié" /> Thomas
+              Erhel{" "}
+            </Box>
           </Heading>
           <Box m={4}>
             <h1>
@@ -246,8 +244,8 @@ function Team() {
           <Heading className="anim-fade-up" mb={2}>
             Un chef de projets :
             <Box m={4}>
-              Antoine Lachaud{" "}
-              <VerifiedIcon size={24} arial-label="Icone vérifié" />
+              <VerifiedIcon size={24} arial-label="Icone vérifié" /> Antoine
+              Lachaud{" "}
             </Box>
           </Heading>
           <Box m={4}>
