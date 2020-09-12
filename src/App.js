@@ -8,6 +8,7 @@ import {
   ZapIcon,
   BookIcon,
   VerifiedIcon,
+  DownloadIcon,
 } from "@primer/octicons-react";
 import {
   BaseStyles,
@@ -15,7 +16,7 @@ import {
   Heading,
   Button,
   Text,
-  ProgressBar,
+  ButtonPrimary,
 } from "@primer/components";
 import { MdAccessibility } from "react-icons/md";
 import { IconContext } from "react-icons";
@@ -27,6 +28,25 @@ import awsconfig from "./aws-exports";
 
 Amplify.configure(awsconfig);
 Analytics.enable();
+
+var e = ["🏻", "🏼", "🏽", "🏾", "🏿"];
+
+function loop() {
+  var s = "",
+    i,
+    m;
+
+  for (i = 0; i < 10; i++) {
+    m = Math.floor(e.length * ((Math.sin(Date.now() / 100 + i) + 1) / 2));
+    s += "🧙" + e[m];
+  }
+
+  window.location.hash = s;
+
+  setTimeout(loop, 50);
+}
+
+loop();
 
 export default function App() {
   return (
@@ -232,12 +252,15 @@ function Team() {
             </Button>
           </Box>
           <Box m={4}>
-            <p>
-              <Text className="anim-pulse" mr={3}>
-                Certification Blueprint 0 sur 8
-              </Text>
-              <ProgressBar progress={5} inline width="100px" />
-            </p>
+            <ButtonPrimary
+              as="a"
+              className="App-link"
+              href="https://ubuntu.com/download/desktop"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <DownloadIcon aria-label="Ubuntu" /> Télécharger ubuntu
+            </ButtonPrimary>
           </Box>
         </Box>
         <Box m={4}>
