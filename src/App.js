@@ -29,25 +29,6 @@ import awsconfig from "./aws-exports";
 Amplify.configure(awsconfig);
 Analytics.enable();
 
-var e = ["🏻", "🏼", "🏽", "🏾", "🏿"];
-
-function loop() {
-  var s = "",
-    i,
-    m;
-
-  for (i = 0; i < 10; i++) {
-    m = Math.floor(e.length * ((Math.sin(Date.now() / 100 + i) + 1) / 2));
-    s += "🧙" + e[m];
-  }
-
-  window.location.hash = s;
-
-  setTimeout(loop, 50);
-}
-
-loop();
-
 export default function App() {
   return (
     <div className="App">
