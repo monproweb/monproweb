@@ -207,6 +207,7 @@ function Team() {
             <p>
               <Text className="anim-fade-in" mr={3}>
                 Passioné depuis toujours par le Web, je suis autodidacte.
+                #zeroknowledge
               </Text>
             </p>
           </Box>
