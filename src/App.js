@@ -78,7 +78,7 @@ function Home() {
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
           <Heading className="anim-fade-up" mb={2}>
-            Nous construisons des applications Web et mobiles.
+            Nous construisons des applications Web et mobile.
           </Heading>
           <p>
             <Text className="anim-fade-in" mr={3}>
@@ -206,8 +206,7 @@ function Team() {
             </h1>
             <p>
               <Text className="anim-fade-in" mr={3}>
-                Passioné depuis toujours par le Web, je suis autodidacte.
-                #zeroknowledge
+                Passioné par le Web. #zeroknowledge
               </Text>
             </p>
           </Box>
