@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@aws-amplify/analytics": "^3.3.4",
-    "@aws-amplify/api": "^3.2.4",
+    "@aws-amplify/api": "^3.2.5",
     "@aws-amplify/core": "^3.5.4",
     "@aws-amplify/datastore": "^2.5.1",
     "@aws-amplify/interactions": "^3.3.4",
