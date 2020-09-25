@@ -11,7 +11,7 @@
     "@aws-amplify/pubsub": "^3.2.2",
     "@aws-amplify/storage": "^3.3.4",
     "@aws-amplify/ui": "^2.0.2",
-    "@aws-amplify/xr": "^2.2.4",
+    "@aws-amplify/xr": "^2.2.5",
     "@loadable/component": "^5.13.2",
     "@primer/components": "20.0.0",
     "@primer/css": "^15.1.0",
