@@ -96,7 +96,7 @@ function Home() {
             </Text>
           </p>
           <Box m={4}>
-            <MarkGithubIcon aria-label="GitHub" size={100} />
+            <MarkGithubIcon aria-label="Icône github" size={100} />
           </Box>
           <Box m={4}>
             <Button
@@ -136,12 +136,12 @@ function About() {
         </Box>
         <Box m={4}>
           <div className="anim-pulse">
-            <TerminalIcon size={100} />
+            <TerminalIcon aria-label="Icône terminal" size={100} />
           </div>
         </Box>
         <Box m={4}>
           <div className="anim-pulse">
-            <CodeIcon size={100} />
+            <CodeIcon aria-label="Icône code" size={100} />
           </div>
         </Box>
         <Box m={4}>
@@ -176,7 +176,7 @@ function Team() {
         </Box>
         <Box m={4}>
           <a href="https://github.com/ThomasErhel/">
-            <LogoGithubIcon size="large" aria-label="GitHub" />
+            <LogoGithubIcon size="large" aria-label="Icône logo github" />
           </a>
         </Box>
         <Box m={4}>
@@ -187,7 +187,7 @@ function Team() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <ZapIcon aria-label="Blog" /> Blog
+            <ZapIcon aria-label="Icône éclair" /> Blog
           </Button>
         </Box>
         <Box m={4}>
@@ -198,7 +198,7 @@ function Team() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BookIcon aria-label="Documentation" /> Docs
+            <BookIcon aria-label="Icône livre" /> Docs
           </Button>
         </Box>
         <Box m={4}>
@@ -209,7 +209,7 @@ function Team() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <DownloadIcon aria-label="Ubuntu" /> Télécharger ubuntu
+            <DownloadIcon aria-label="Icône télécharger" /> Télécharger ubuntu
           </ButtonPrimary>
         </Box>
       </BaseStyles>
