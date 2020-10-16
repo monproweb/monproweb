@@ -21,7 +21,7 @@
     "@testing-library/user-event": "^12.1.6",
     "a11y-react-emoji": "^1.1.2",
     "aws-amplify": "^3.3.2",
-    "aws-amplify-react": "^4.2.6",
+    "aws-amplify-react": "^4.2.8",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "node-sass": "^4.14.1",
