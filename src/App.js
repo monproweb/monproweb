@@ -1,19 +1,29 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.scss";
-import Emoji from "a11y-react-emoji";
 import {
   LogoGithubIcon,
   ZapIcon,
   BookIcon,
-  VerifiedIcon,
+  CheckIcon,
   DownloadIcon,
   TerminalIcon,
   CodeIcon,
   MarkGithubIcon,
 } from "@primer/octicons-react";
 import {
+  Header,
+  StyledOcticon,
+  Avatar,
+  CircleOcticon,
+  ProgressBar,
+  StateLabel,
   BaseStyles,
   Box,
   Heading,
@@ -32,23 +42,32 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-        <div className="Header">
-          <div className="Header-item">
-            <Link className="Header-link" to="/">
-              Mon Pro Web
-            </Link>
-          </div>
-          <div className="Header-item">
-            <Link className="Header-link" to="/a-propos">
+        <Header>
+          <Header.Item>
+            <Header.Link as={NavLink} to="/" fontSize={2}>
+              <StyledOcticon icon={MarkGithubIcon} size={32} mr={2} />
+              <span>Mon Pro Web</span>
+            </Header.Link>
+          </Header.Item>
+          <Header.Item>
+            <Header.Link as={NavLink} to="/a-propos">
               À-propos
-            </Link>
-          </div>
-          <div className="Header-item">
-            <Link className="Header-link" to="/equipe">
+            </Header.Link>
+          </Header.Item>
+          <Header.Item>
+            <Header.Link as={NavLink} to="/equipe">
               L'équipe
-            </Link>
-          </div>
-        </div>
+            </Header.Link>
+          </Header.Item>
+          <Header.Item mr={0}>
+            <Avatar
+              src="https://github.com/octocat.png"
+              size={20}
+              square
+              alt="@octocat"
+            />
+          </Header.Item>
+        </Header>
         <Box m={4}>
           <img src={logo} className="App-logo" alt="logo" />
         </Box>
@@ -64,13 +83,6 @@ export default function App() {
           </Route>
         </Switch>
       </Router>
-      <div className="App-footer">
-        <Box m={4}>
-          <Text mr={3}>
-            Réalisé avec <Emoji symbol="💕" label="amour" /> par Mon Pro Web
-          </Text>
-        </Box>
-      </div>
     </div>
   );
 }
@@ -81,23 +93,18 @@ function Home() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>MPW | Mon Pro Web</title>
-        <link rel="canonical" href="https://monproweb.com/a-propos" />
+        <link rel="canonical" href="https://monproweb.io/a-propos" />
       </Helmet>
       <BaseStyles>
         <Box m={4}>
-          <Heading className="anim-fade-up" mb={2}>
+          <Heading as="h1" mb={2}>
             Je construis des applications Web et mobile.
           </Heading>
-          <p>
-            <Text className="anim-fade-in" mr={3}>
-              Bienvenue sur Mon Pro Web, je vous aide à développer votre
-              visibilité en ligne à l'aide d'applications performantes qui
-              suivent les bonnes pratiques.
-            </Text>
-          </p>
-          <Box m={4}>
-            <MarkGithubIcon aria-label="Icône github" size={100} />
-          </Box>
+          <Text as="p" mr={3}>
+            Bienvenue sur Mon Pro Web, je vous aide à développer votre
+            visibilité en ligne à l'aide d'applications performantes qui suivent
+            les bonnes pratiques.
+          </Text>
           <Box m={4}>
             <Button
               as="a"
@@ -121,31 +128,34 @@ function About() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>MPW | À-propos</title>
-        <link rel="canonical" href="https://monproweb.com/a-propos" />
+        <link rel="canonical" href="https://monproweb.io/a-propos" />
       </Helmet>
       <BaseStyles>
         <Box m={4}>
-          <Heading className="anim-fade-up" mb={2}>
+          <Heading as="h1" mb={2}>
             À-propos
           </Heading>
         </Box>
         <Box m={4}>
-          <Text className="anim-fade-in" mr={3}>
+          <Text as="p" mr={3}>
             Je suis actuellement en train d'apprendre Python.
           </Text>
         </Box>
         <Box m={4}>
-          <div className="anim-pulse">
-            <TerminalIcon aria-label="Icône terminal" size={100} />
-          </div>
+          <StateLabel status="issueOpened">Open</StateLabel>
         </Box>
         <Box m={4}>
-          <div className="anim-pulse">
-            <CodeIcon aria-label="Icône code" size={100} />
-          </div>
+          <Text mr={3}>3 sur 6</Text>
+          <ProgressBar progress={50} inline width="100px" />
         </Box>
         <Box m={4}>
-          <Button as="a" href="mailto:contact@monproweb.com">
+          <TerminalIcon aria-label="Icône terminal" size={100} />
+        </Box>
+        <Box m={4}>
+          <CodeIcon aria-label="Icône code" size={100} />
+        </Box>
+        <Box m={4}>
+          <Button as="a" href="mailto:thomas.erhel@gmail.com">
             Contactez-moi
           </Button>
         </Box>
@@ -160,30 +170,35 @@ function Team() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>MPW | L'équipe</title>
-        <link rel="canonical" href="https://monproweb.com/equipe" />
+        <link rel="canonical" href="https://monproweb.io/equipe" />
       </Helmet>
       <BaseStyles>
         <Box m={4}>
-          <Heading className="anim-fade-up" mb={2}>
-            Un développeur : Thomas Erhel{" "}
-            <VerifiedIcon size={24} arial-label="Icone vérifié" />
+          <Heading as="h1" mb={2}>
+            Un développeur : Thomas Erhel
+            <CircleOcticon
+              icon={CheckIcon}
+              size={32}
+              bg="green.5"
+              color="white"
+            />
           </Heading>
         </Box>
         <Box m={4}>
-          <Text className="anim-fade-in" mr={3}>
+          <Text as="p" mr={3}>
             Passioné par le Web. #zeroknowledge
           </Text>
         </Box>
         <Box m={4}>
           <a href="https://github.com/ThomasErhel/">
-            <LogoGithubIcon size="large" aria-label="Icône logo github" />
+            <LogoGithubIcon size="large" aria-label="Icône logo GitHub" />
           </a>
         </Box>
         <Box m={4}>
           <Button
             as="a"
             className="App-link"
-            href="https://blog.monproweb.com"
+            href="https://blog.monproweb.io"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -194,7 +209,7 @@ function Team() {
           <Button
             as="a"
             className="App-link"
-            href="https://docs.monproweb.com"
+            href="https://docs.monproweb.io"
             target="_blank"
             rel="noopener noreferrer"
           >
