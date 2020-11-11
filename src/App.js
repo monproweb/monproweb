@@ -15,7 +15,7 @@ import {
   DownloadIcon,
   TerminalIcon,
   CodeIcon,
-  MarkGithubIcon,
+  RocketIcon,
 } from "@primer/octicons-react";
 import {
   Header,
@@ -45,7 +45,7 @@ export default function App() {
         <Header>
           <Header.Item>
             <Header.Link as={NavLink} to="/" fontSize={2}>
-              <StyledOcticon icon={MarkGithubIcon} size={32} mr={2} />
+              <StyledOcticon icon={RocketIcon} size={32} mr={2} />
               <span>Mon Pro Web</span>
             </Header.Link>
           </Header.Item>
@@ -61,10 +61,10 @@ export default function App() {
           </Header.Item>
           <Header.Item mr={0}>
             <Avatar
-              src="https://github.com/octocat.png"
+              src="https://avatars3.githubusercontent.com/u/16942870?s=460&u=7fd22d4450ad09c4a062c06d91f05247eeed00f9&v=4"
               size={20}
               square
-              alt="@octocat"
+              alt="@ThomasErhel"
             />
           </Header.Item>
         </Header>
@@ -186,7 +186,7 @@ function Team() {
         </Box>
         <Box m={4}>
           <Text as="p" mr={3}>
-            Passioné par le Web. #zeroknowledge
+            #zeroknowledge
           </Text>
         </Box>
         <Box m={4}>
