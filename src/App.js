@@ -145,8 +145,8 @@ function About() {
           <StateLabel status="issueOpened">Open</StateLabel>
         </Box>
         <Box m={4}>
-          <Text mr={3}>3 sur 6</Text>
-          <ProgressBar progress={50} inline width="100px" />
+          <Text mr={3}>1 sur 6</Text>
+          <ProgressBar progress={16} inline width="100px" />
         </Box>
         <Box m={4}>
           <TerminalIcon aria-label="Icône terminal" size={100} />
