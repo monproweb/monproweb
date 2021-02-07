@@ -17,6 +17,8 @@ import {
   CodeIcon,
   RocketIcon,
 } from "@primer/octicons-react";
+import { FcGoogle } from "react-icons/fc";
+import { FaUbuntu } from "react-icons/fa";
 import {
   Header,
   StyledOcticon,
@@ -30,6 +32,7 @@ import {
   Button,
   Text,
   ButtonPrimary,
+  Link,
 } from "@primer/components";
 import { Helmet } from "react-helmet";
 import Amplify, { Analytics } from "aws-amplify";
@@ -142,11 +145,16 @@ function About() {
           </Text>
         </Box>
         <Box m={4}>
-          <StateLabel status="issueOpened">Open</StateLabel>
+          <StateLabel status="issueClosed">Close</StateLabel>
         </Box>
         <Box m={4}>
-          <Text mr={3}>1 sur 6</Text>
-          <ProgressBar progress={16} inline width="100px" />
+          <FcGoogle size={42} />
+          <Link
+            mb={1}
+            href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
+          >
+            Google IT Automation with Python
+          </Link>
         </Box>
         <Box m={4}>
           <TerminalIcon aria-label="Icône terminal" size={100} />
@@ -224,7 +232,7 @@ function Team() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <DownloadIcon aria-label="Icône télécharger" /> Télécharger ubuntu
+            <FaUbuntu aria-label="Icône Ubuntu" /> Télécharger ubuntu
           </ButtonPrimary>
         </Box>
       </BaseStyles>
