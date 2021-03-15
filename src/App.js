@@ -138,7 +138,7 @@ function About() {
           </Text>
         </Box>
         <Box m={4}>
-          <StateLabel status="issueOpen">Open</StateLabel>
+          <StateLabel status="issueOpened">Open</StateLabel>
         </Box>
         <Box m={4}>
           <FcGoogle size={42} />
