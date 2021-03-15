@@ -1,30 +1,28 @@
-import React from "react";
+import React from 'react';
+import logo from './logo.svg';
+import './App.scss';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   NavLink,
-} from "react-router-dom";
-import logo from "./logo.svg";
-import "./App.scss";
+} from 'react-router-dom';
 import {
   LogoGithubIcon,
   ZapIcon,
   BookIcon,
   CheckIcon,
-  DownloadIcon,
   TerminalIcon,
   CodeIcon,
   RocketIcon,
-} from "@primer/octicons-react";
-import { FcGoogle } from "react-icons/fc";
-import { FaUbuntu } from "react-icons/fa";
+} from '@primer/octicons-react';
+import { FcGoogle } from 'react-icons/fc';
+import { FaUbuntu } from 'react-icons/fa';
 import {
   Header,
   StyledOcticon,
   Avatar,
   CircleOcticon,
-  ProgressBar,
   StateLabel,
   BaseStyles,
   Box,
@@ -33,13 +31,8 @@ import {
   Text,
   ButtonPrimary,
   Link,
-} from "@primer/components";
-import { Helmet } from "react-helmet";
-import Amplify, { Analytics } from "aws-amplify";
-import awsconfig from "./aws-exports";
-
-Amplify.configure(awsconfig);
-Analytics.enable();
+} from '@primer/components';
+import { Helmet } from 'react-helmet';
 
 export default function App() {
   return (
@@ -141,11 +134,11 @@ function About() {
         </Box>
         <Box m={4}>
           <Text as="p" mr={3}>
-            Je suis actuellement en train d'apprendre Python.
+            Je suis actuellement en train d'apprendre React.
           </Text>
         </Box>
         <Box m={4}>
-          <StateLabel status="issueClosed">Close</StateLabel>
+          <StateLabel status="issueOpen">Open</StateLabel>
         </Box>
         <Box m={4}>
           <FcGoogle size={42} />
@@ -194,7 +187,7 @@ function Team() {
         </Box>
         <Box m={4}>
           <Text as="p" mr={3}>
-            #zeroknowledge
+            #zeroknowledge #practicemakesperfect #blacklivesmatter
           </Text>
         </Box>
         <Box m={4}>
