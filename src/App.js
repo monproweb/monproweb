@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import logo from './logo.svg';
 import './App.scss';
-import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   RocketIcon,
 } from '@primer/octicons-react';
@@ -21,16 +21,16 @@ const App = () => (
       <Suspense fallback={<div>🐧 Chargement...</div>}>
         <Header>
           <Header.Item>
-            <Header.Link as={NavLink} to="/" fontSize={2}>
+            <Header.Link href="/" fontSize={2}>
               <StyledOcticon icon={RocketIcon} size={32} mr={2} />
               <span>Mon Pro Web</span>
             </Header.Link>
           </Header.Item>
           <Header.Item>
-            <Header.Link as={NavLink} to="/a-propos">À-propos</Header.Link>
+            <Header.Link href="/a-propos">À-propos</Header.Link>
           </Header.Item>
           <Header.Item>
-            <Header.Link as={NavLink} to="/equipe">L'équipe</Header.Link>
+            <Header.Link href="/equipe">L'équipe</Header.Link>
           </Header.Item>
         </Header>
         <Box m={4}>
