@@ -2,8 +2,6 @@ import React from 'react';
 import '../scss/Team.scss';
 import {
     LogoGithubIcon,
-    ZapIcon,
-    BookIcon,
     CheckIcon,
 } from '@primer/octicons-react';
 import { FaUbuntu } from 'react-icons/fa';
@@ -12,7 +10,6 @@ import {
     BaseStyles,
     Box,
     Heading,
-    Button,
     Text,
     ButtonPrimary,
 } from '@primer/components';
