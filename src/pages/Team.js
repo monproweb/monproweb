@@ -50,28 +50,6 @@ function Team() {
                         </a>
                     </Box>
                     <Box m={4}>
-                        <Button
-                            as="a"
-                            className="App-link"
-                            href="https://blog.monproweb.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <ZapIcon aria-label="Icône éclair" /> Blog
-            </Button>
-                    </Box>
-                    <Box m={4}>
-                        <Button
-                            as="a"
-                            className="App-link"
-                            href="https://docs.monproweb.io"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <BookIcon aria-label="Icône livre" /> Docs
-            </Button>
-                    </Box>
-                    <Box m={4}>
                         <ButtonPrimary
                             as="a"
                             className="App-link"
