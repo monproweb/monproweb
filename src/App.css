@@ -21,13 +21,6 @@
   }
 }
 
-.App-footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
 .Mpw-orange {
   color: #ec6f18;
 }
@@ -70,4 +63,8 @@
 
 .Mpw-yellow-text {
   color: #f49636;
+}
+
+.Mpw-chargement {
+  text-align: center;
 }
