@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import '../css/About.css';
 import {
@@ -15,8 +17,40 @@ import {
     Link,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import fetchGraphQL from '../fetchGraphQL';
+
+const { useState, useEffect } = React;
 
 function About() {
+    // We'll load the name of a repository, initially setting it to null
+    const [name, setName] = useState(null);
+
+    // When the component mounts we'll fetch a repository name
+    useEffect(() => {
+        let isMounted = true;
+        fetchGraphQL(`
+      query RepositoryNameQuery {
+        # feel free to change owner/name here
+        repository(owner: "monproweb" name: "monproweb") {
+          name
+        }
+      }
+    `).then(response => {
+            // Avoid updating state if the component unmounted before the fetch completes
+            if (!isMounted) {
+                return;
+            }
+            const data = response.data;
+            setName(data.repository.name);
+        }).catch(error => {
+            console.error(error);
+        });
+
+        return () => {
+            isMounted = false;
+        };
+    }, [fetchGraphQL]);
+
     return (
         <HelmetProvider>
             <div className="App-a-propos">
@@ -32,6 +66,9 @@ function About() {
                         </Box>
                         <Box m={4}>
                             <Text as="p" mr={3}>Je suis actuellement en train d'apprendre React.</Text>
+                        </Box>
+                        <Box m={4}>
+                            {name != null ? `Repository: ${name}` : "⚛️ Chargement..."}
                         </Box>
                         <Box m={4}>
                             <StateLabel status="issueOpened">Open</StateLabel>
