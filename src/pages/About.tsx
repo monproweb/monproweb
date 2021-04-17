@@ -1,12 +1,15 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import '../css/About.css';
+import '../styles/About.css';
+import developer_activity from "../images/developer_activity.svg";
+import contact_us from "../images/contact_us.svg";
+import relaunch_day from "../images/relaunch_day.svg";
 import {
-    TerminalIcon,
     CodeIcon,
 } from '@primer/octicons-react';
 import { FcGoogle } from 'react-icons/fc';
+import { FaFreeCodeCamp } from 'react-icons/fa';
 import {
     ThemeProvider,
     StateLabel,
@@ -15,6 +18,7 @@ import {
     Heading,
     Text,
     Link,
+    Grid,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import fetchGraphQL from '../fetchGraphQL';
@@ -59,39 +63,57 @@ function About() {
                     <title>MPW | À-propos</title>
                     <link rel="canonical" href="https://monproweb.io/a-propos" />
                 </Helmet>
+
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
-                            <Heading as="h1" mb={2}>À-propos</Heading>
-                        </Box>
-                        <Box m={4}>
-                            <Text as="p" mr={3}>Je suis actuellement en train d'apprendre React.</Text>
-                        </Box>
-                        <Box m={4}>
-                            {name != null ? `Repository: ${name}` : "⚛️ Chargement..."}
-                        </Box>
-                        <Box m={4}>
-                            <StateLabel status="issueOpened">Open</StateLabel>
-                        </Box>
-                        <Box m={4}>
-                            <FcGoogle size={42} />
-                            <Link
-                                mb={1}
-                                href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
-                            >
-                                Google IT Automation with Python
-            </Link>
-                        </Box>
-                        <Box m={4}>
-                            <TerminalIcon aria-label="Icône terminal" size={100} />
-                        </Box>
-                        <Box m={4}>
-                            <CodeIcon aria-label="Icône code" size={100} />
-                        </Box>
-                        <Box m={4}>
-                            <Link mb={1} href="mailto:thomas.erhel@gmail.com">
-                                Contactez-moi
-</Link>
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                                <Box p={3}>
+                                    <Heading as="h1" mb={2}>À-propos</Heading>
+                                    <Text as="p" mr={3}>Je suis actuellement en train d'apprendre React.</Text>
+                                    <Box p={3}>
+                                        <StateLabel status="issueOpened">Open</StateLabel>
+                                    </Box>
+                                </Box>
+                                <Box p={3}>
+                                    <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw" />
+                                </Box>
+                            </Grid>
+
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                                <Box p={3}>
+                                    <img src={relaunch_day} alt="Relaunch Day" className="Mpw-undraw-relaunch-day" />
+                                </Box>
+                                <Box p={3}>
+                                    <CodeIcon aria-label="Icône code" size={42} /> {name != null ? `Repository: ${name}` : "⚛️ Chargement..."}
+                                </Box>
+                            </Grid>
+
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                                <Box p={3}>
+                                    <Box p={3}>
+                                        <FcGoogle size={42} />
+                                        <Link
+                                            mb={1}
+                                            href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
+                                        >Google IT Automation with Python</Link>
+                                    </Box>
+                                </Box>
+                                <Box p={3}>
+                                    <FaFreeCodeCamp size={42} />
+                                    <Link
+                                        mb={1}
+                                        href="https://www.freecodecamp.org/certification/thomaserhel/javascript-algorithms-and-data-structures"
+                                    >JavaScript Algorithms and Data Structures</Link>
+                                </Box>
+                            </Grid>
+
+                            <Box p={3}>
+                                <img src={contact_us} alt="Contact Us" className="Mpw-undraw" />
+                            </Box>
+                            <Box p={3}>
+                                <Link mb={1} href="mailto:thomas.erhel@gmail.com">Contactez-moi</Link>
+                            </Box>
                         </Box>
                     </BaseStyles>
                 </ThemeProvider>

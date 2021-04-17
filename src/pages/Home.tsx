@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/Home.css';
+import '../styles/Home.css';
+import react from '../images/react.svg'
 import {
     ThemeProvider,
     BaseStyles,
@@ -7,6 +8,7 @@ import {
     Heading,
     Text,
     Link,
+    Grid,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -22,24 +24,23 @@ function Home() {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
-                            <Heading as="h1" mb={2}>
-                                Je construis des applications Web et mobile.
-            </Heading>
-                            <Text as="p" mr={3}>
-                                Bienvenue sur Mon Pro Web, je vous aide à développer votre
-                                visibilité en ligne à l'aide d'applications performantes qui suivent
-                                les bonnes pratiques.
-            </Text>
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                                <Box p={3}>
+                                    <Heading as="h1" mb={2}>Je construis des applications Web et mobile.</Heading>
+                                    <Text as="p" mr={3}>Bienvenue sur Mon Pro Web, je vous aide à développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
+                                </Box>
+                                <Box p={3}>
+                                    <img src={react} alt="React" className="Mpw-undraw" />
+                                </Box>
+                            </Grid>
                             <Box m={4}>
-                                <Link mb={1} href="https://facebook.com/monproweb/">
-                                    Page Facebook
-</Link>
+                                <Link mb={1} href="https://facebook.com/monproweb/">Page Facebook</Link>
                             </Box>
                         </Box>
                     </BaseStyles>
                 </ThemeProvider>
             </div>
-        </HelmetProvider>
+        </HelmetProvider >
     );
 }
 
