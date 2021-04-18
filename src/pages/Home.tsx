@@ -24,9 +24,9 @@ function Home() {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
+                            <Heading as="h1" mb={2}>Je construis des applications Web et mobile.</Heading>
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <Heading as="h1" mb={2}>Je construis des applications Web et mobile.</Heading>
                                     <Text as="p" mr={3}>Bienvenue sur Mon Pro Web, je vous aide à développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
                                 </Box>
                                 <Box p={3}>

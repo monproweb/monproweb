@@ -19,6 +19,7 @@ import {
     Text,
     Link,
     Grid,
+    Avatar,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import fetchGraphQL from '../fetchGraphQL';
@@ -67,9 +68,9 @@ function About() {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
+                            <Heading as="h1" mb={2}>À-propos</Heading>
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <Heading as="h1" mb={2}>À-propos</Heading>
                                     <Text as="p" mr={3}>Je suis actuellement en train d'apprendre React.</Text>
                                     <Box p={3}>
                                         <StateLabel status="issueOpened">Open</StateLabel>
@@ -85,14 +86,14 @@ function About() {
                                     <img src={relaunch_day} alt="Relaunch Day" className="Mpw-undraw-relaunch-day" />
                                 </Box>
                                 <Box p={3}>
-                                    <CodeIcon aria-label="Icône code" size={42} /> {name != null ? `Repository: ${name}` : "⚛️ Chargement..."}
+                                    <Text as="p" mr={3}>{name != null ? `Repository: ${name}` : "⚛️ Chargement..."}</Text>
                                 </Box>
                             </Grid>
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
                                     <Box p={3}>
-                                        <FcGoogle size={42} />
+                                        <FcGoogle />
                                         <Link
                                             mb={1}
                                             href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
@@ -100,7 +101,7 @@ function About() {
                                     </Box>
                                 </Box>
                                 <Box p={3}>
-                                    <FaFreeCodeCamp size={42} />
+                                    <FaFreeCodeCamp />
                                     <Link
                                         mb={1}
                                         href="https://www.freecodecamp.org/certification/thomaserhel/javascript-algorithms-and-data-structures"
