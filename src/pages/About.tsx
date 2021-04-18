@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import '../styles/About.scss';
 import developer_activity from "../images/developer_activity.svg";
@@ -51,7 +49,7 @@ function About() {
         return () => {
             isMounted = false;
         };
-    }, [fetchGraphQL]);
+    }, []);
 
     return (
         <HelmetProvider>
