@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import {
   RocketIcon,
@@ -22,7 +22,7 @@ const App = () => (
     <ThemeProvider>
       <BaseStyles>
         <Router>
-          <Suspense fallback={<div className="Mpw-chargement">⚛️ Chargement...</div>}>
+          <Suspense fallback={<div className="Mpw-chargement AnimatedEllipsis">⚛️ Chargement</div>}>
             <Header>
               <Header.Item>
                 <Header.Link href="/" fontSize={2}>

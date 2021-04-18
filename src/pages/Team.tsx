@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Team.css';
+import '../styles/Team.scss';
 import programming from '../images/programming.svg';
 import {
     CheckIcon,
@@ -38,7 +38,7 @@ function Team() {
                                     </Box>
                                 </Box>
                                 <Box p={3}>
-                                    <img src={programming} alt="Programming" className="Mpw-undraw" />
+                                    <img src={programming} alt="Programming" className="Mpw-undraw Box hover-grow m-3 p-4" />
                                 </Box>
                             </Grid>
 
@@ -55,11 +55,11 @@ function Team() {
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box m={4}>
-                                    <Avatar square src="https://avatars.githubusercontent.com/ubuntu" />
+                                    <Avatar square src="https://avatars.githubusercontent.com/ubuntu" className="anim-rotate" />
                                     <Link mb={1} href="https://ubuntu.com/download/desktop">Desktop</Link>
                                 </Box>
                                 <Box m={4}>
-                                    <Avatar square src="https://avatars.githubusercontent.com/ubuntu" />
+                                    <Avatar square src="https://avatars.githubusercontent.com/ubuntu" className="anim-rotate" />
                                     <Link mb={1} href="https://ubuntu.com/download/server">Server</Link>
                                 </Box>
                             </Grid>

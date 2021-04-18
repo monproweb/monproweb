@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import '../styles/About.css';
+import '../styles/About.scss';
 import developer_activity from "../images/developer_activity.svg";
 import contact_us from "../images/contact_us.svg";
 import relaunch_day from "../images/relaunch_day.svg";
@@ -66,32 +66,32 @@ function About() {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
-                            <Heading as="h1" mb={2}>À-propos</Heading>
+                            <Heading as="h1" mb={2} className="anim-fade-in">À-propos</Heading>
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <Text as="p" mr={3}>Je suis actuellement en train d'apprendre React.</Text>
+                                    <Text as="p" mr={3} className="anim-fade-up">Je suis actuellement en train d'apprendre React.</Text>
                                     <Box p={3}>
                                         <StateLabel status="pullOpened">Open</StateLabel>
                                     </Box>
                                 </Box>
                                 <Box p={3}>
-                                    <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw" />
+                                    <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw Box hover-grow m-3 p-4" />
                                 </Box>
                             </Grid>
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <img src={relaunch_day} alt="Relaunch Day" className="Mpw-undraw-relaunch-day" />
+                                    <img src={relaunch_day} alt="Relaunch Day" className="Mpw-undraw-relaunch-day Box hover-grow m-3 p-4" />
                                 </Box>
                                 <Box p={3}>
-                                    <Text as="p" mr={3}>{name != null ? `Repository: ${name}` : "⚛️ Chargement..."}</Text>
+                                    <Text as="p" mr={3} className="AnimatedEllipsis">{name != null ? `Repository: ${name}` : "⚛️ Chargement"}</Text>
                                 </Box>
                             </Grid>
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
                                     <Box p={3}>
-                                        <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-undraw" />
+                                        <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-undraw Box hover-grow m-3 p-4" />
                                         <FcGoogle />
                                         <Link
                                             mb={1}
@@ -100,7 +100,7 @@ function About() {
                                     </Box>
                                 </Box>
                                 <Box p={3}>
-                                    <img src={certificat_freecodecamp_javascript} alt="JavaScript Algorithms and Data Structures" className="Mpw-undraw" />
+                                    <img src={certificat_freecodecamp_javascript} alt="JavaScript Algorithms and Data Structures" className="Mpw-undraw Box hover-grow m-3 p-4" />
                                     <FaFreeCodeCamp />
                                     <Link
                                         mb={1}

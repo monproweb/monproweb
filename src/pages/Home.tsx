@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Home.css';
+import '../styles/Home.scss';
 import react from '../images/react.svg'
 import {
     ThemeProvider,
@@ -24,13 +24,13 @@ function Home() {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
-                            <Heading as="h1" mb={2}>Je construis des applications Web et mobile.</Heading>
+                            <Heading as="h1" mb={2} className="anim-fade-in">Je construis des applications Web et mobile.</Heading>
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <Text as="p" mr={3}>Bienvenue sur Mon Pro Web, je vous aide à développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
+                                    <Text as="p" mr={3} className="anim-fade-up">Bienvenue sur Mon Pro Web, je vous aide à développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
                                 </Box>
                                 <Box p={3}>
-                                    <img src={react} alt="React" className="Mpw-undraw" />
+                                    <img src={react} alt="React" className="Mpw-undraw Box hover-grow m-3 p-4" />
                                 </Box>
                             </Grid>
                             <Box m={4}>
