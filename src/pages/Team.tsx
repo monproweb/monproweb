@@ -42,7 +42,7 @@ function Team() {
                                 </Box>
                             </Grid>
 
-                            <Grid gridTemplateColumns="repeat(4, auto)" gridGap={3}>
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box m={4}>
                                     <Avatar src="https://avatars.githubusercontent.com/ThomasErhel" />
                                     <Link mb={1} href="https://github.com/ThomasErhel/">Thomas Erhel</Link>
@@ -51,6 +51,9 @@ function Team() {
                                     <Avatar square src="https://avatars.githubusercontent.com/monproweb" />
                                     <Link mb={1} href="https://github.com/monproweb/">Mon Pro Web</Link>
                                 </Box>
+                            </Grid>
+
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box m={4}>
                                     <Avatar square src="https://avatars.githubusercontent.com/ubuntu" />
                                     <Link mb={1} href="https://ubuntu.com/download/desktop">Desktop</Link>
