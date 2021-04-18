@@ -4,7 +4,6 @@ import React from 'react';
 import '../styles/About.scss';
 import developer_activity from "../images/developer_activity.svg";
 import contact_us from "../images/contact_us.svg";
-import relaunch_day from "../images/relaunch_day.svg";
 import certificat_google from "../images/certificat_google.webp";
 import certificat_freecodecamp_javascript from "../images/certificat_freecodecamp_javascript.webp";
 import { FcGoogle } from 'react-icons/fc';
@@ -71,20 +70,11 @@ function About() {
                                 <Box p={3}>
                                     <Text as="p" mr={3} className="anim-fade-up">Je suis actuellement en train d'apprendre React.</Text>
                                     <Box p={3}>
-                                        <StateLabel status="pullOpened">Open</StateLabel>
+                                        <StateLabel status="pullOpened"><Text as="p" mr={3} className="AnimatedEllipsis">{name != null ? `${name}` : "⚛️ Chargement"}</Text></StateLabel>
                                     </Box>
                                 </Box>
                                 <Box p={3}>
                                     <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                </Box>
-                            </Grid>
-
-                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                                <Box p={3}>
-                                    <img src={relaunch_day} alt="Relaunch Day" className="Mpw-undraw-relaunch-day Box hover-grow m-3 p-4" />
-                                </Box>
-                                <Box p={3}>
-                                    <Text as="p" mr={3} className="AnimatedEllipsis">{name != null ? `Repository: ${name}` : "⚛️ Chargement"}</Text>
                                 </Box>
                             </Grid>
 
