@@ -5,9 +5,8 @@ import '../styles/About.css';
 import developer_activity from "../images/developer_activity.svg";
 import contact_us from "../images/contact_us.svg";
 import relaunch_day from "../images/relaunch_day.svg";
-import {
-    CodeIcon,
-} from '@primer/octicons-react';
+import certificat_google from "../images/certificat_google.webp";
+import certificat_freecodecamp_javascript from "../images/certificat_freecodecamp_javascript.webp";
 import { FcGoogle } from 'react-icons/fc';
 import { FaFreeCodeCamp } from 'react-icons/fa';
 import {
@@ -19,7 +18,6 @@ import {
     Text,
     Link,
     Grid,
-    Avatar,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import fetchGraphQL from '../fetchGraphQL';
@@ -73,7 +71,7 @@ function About() {
                                 <Box p={3}>
                                     <Text as="p" mr={3}>Je suis actuellement en train d'apprendre React.</Text>
                                     <Box p={3}>
-                                        <StateLabel status="issueOpened">Open</StateLabel>
+                                        <StateLabel status="pullOpened">Open</StateLabel>
                                     </Box>
                                 </Box>
                                 <Box p={3}>
@@ -93,6 +91,7 @@ function About() {
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
                                     <Box p={3}>
+                                        <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-undraw" />
                                         <FcGoogle />
                                         <Link
                                             mb={1}
@@ -101,6 +100,7 @@ function About() {
                                     </Box>
                                 </Box>
                                 <Box p={3}>
+                                    <img src={certificat_freecodecamp_javascript} alt="JavaScript Algorithms and Data Structures" className="Mpw-undraw" />
                                     <FaFreeCodeCamp />
                                     <Link
                                         mb={1}
