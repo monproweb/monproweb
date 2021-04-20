@@ -31,9 +31,9 @@ const Team = () => {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
+                            <Heading as="h1" mb={2} className="anim-fade-in prose">Thomas Erhel</Heading>
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <Heading as="h1" mb={2} className="anim-fade-in prose">Thomas Erhel</Heading>
                                     <Text as="p" mr={3} className="anim-fade-up prose">#zeroknowledge #practicemakesperfect #blacklivesmatter</Text>
                                     <Grid gridTemplateColumns="repeat(2, auto)" gridGap={1}>
                                         <Box p={3}>

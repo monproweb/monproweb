@@ -61,17 +61,23 @@ const About = () => {
                 <ThemeProvider>
                     <BaseStyles>
                         <Box m={4}>
+                            <Heading as="h1" mb={2} className="anim-fade-in prose">À-propos</Heading>
+
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
-                                    <Heading as="h1" mb={2} className="anim-fade-in prose">À-propos</Heading>
                                     <Text as="p" mr={3} className="anim-fade-up prose">Je suis actuellement en train d'apprendre React.</Text>
-                                    <StateLabel status="pullOpened"><span className="AnimatedEllipsis">{name != null ? `${name}` : "⚛️ Chargement"}</span></StateLabel>
                                 </Box>
 
                                 <Box p={3}>
                                     <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw Box hover-grow m-3 p-4" />
                                 </Box>
                             </Grid>
+
+
+                            <Box p={3}>
+                                <StateLabel status="pullOpened"><span className="AnimatedEllipsis">{name != null ? `${name}` : "⚛️ Chargement"}</span></StateLabel>
+                            </Box>
+
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                                 <Box p={3}>
@@ -93,12 +99,15 @@ const About = () => {
                                 </Box>
                             </Grid>
 
+
                             <Box p={3}>
                                 <img src={contact_us} alt="Contact Us" className="Mpw-undraw" />
                             </Box>
+
                             <Box p={3}>
                                 <Link mb={1} href="mailto:thomas.erhel@gmail.com" className="prose">Contactez-moi</Link>
                             </Box>
+
                         </Box>
                     </BaseStyles>
                 </ThemeProvider>
