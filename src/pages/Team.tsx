@@ -17,7 +17,7 @@ import {
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
-function Team() {
+const Team = () => {
     return (
         <HelmetProvider>
             <div className="App-equipe">

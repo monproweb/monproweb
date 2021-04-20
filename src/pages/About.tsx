@@ -21,7 +21,7 @@ import fetchGraphQL from '../fetchGraphQL';
 
 const { useState, useEffect } = React;
 
-function About() {
+const About = () => {
     // We'll load the name of a repository, initially setting it to null
     const [name, setName] = useState(null);
 
