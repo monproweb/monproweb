@@ -109,15 +109,11 @@ const About = () => {
                             <Box p={3}>
                                 <Link mb={1} href="mailto:thomas.erhel@gmail.com">Contactez-moi</Link>
                             </Box>
-                        </Box>
-                    </BaseStyles>
-                </ThemeProvider>
-            </div>
-            <div className="footer container-xl width-full p-responsive" role="contentinfo">
-                <div className="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 color-text-secondary border-top color-border-secondary ">
-                    <ul className="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
-                        <li className="mr-3 mr-lg-0">© 2021 Monproweb, Inc.</li>
-                        {/* <li className="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+                            <div className="footer container-xl width-full p-responsive" role="contentinfo">
+                                <div className="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between pt-6 pb-2 mt-6 f6 color-text-secondary border-top color-border-secondary ">
+                                    <ul className="list-style-none d-flex flex-wrap col-12 col-lg-5 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+                                        <li className="mr-3 mr-lg-0">© 2021 Monproweb, Inc.</li>
+                                        {/* <li className="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
                         <li className="mr-3 mr-lg-0"><a href="https://docs.github.com/en/github/site-policy/github-privacy-statement" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
                         <li className="mr-3 mr-lg-0"><a data-ga-click="Footer, go to security, text:security" href="https://github.com/security">Security</a></li>
                         <li className="mr-3 mr-lg-0"><a href="https://www.githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
@@ -135,10 +131,14 @@ const About = () => {
                         <li className="mr-3 mr-lg-0"><a href="https://github.blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
                         <li><a data-ga-click="Footer, go to about, text:about" href="https://monproweb.io/a-propos">About</a></li>
     */}</ul>
-                </div>
-                <div className="d-flex flex-justify-center pb-6">
-                    <span className="f6 color-text-tertiary"></span>
-                </div>
+                                </div>
+                                <div className="d-flex flex-justify-center pb-6">
+                                    <span className="f6 color-text-tertiary"></span>
+                                </div>
+                            </div>
+                        </Box>
+                    </BaseStyles>
+                </ThemeProvider>
             </div>
         </HelmetProvider>
     );
