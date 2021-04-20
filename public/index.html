@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -25,7 +25,7 @@
   <title>MPW | Mon Pro Web</title>
 </head>
 
-<body>
+<body class="dark-mode">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFLZQ7R" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
@@ -83,6 +83,34 @@
     tarteaucitron.user.googletagmanagerId = 'GTM-TFLZQ7R';
     (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
   </script>
+  <script>(function () {
+      var storageKey = 'darkMode'
+      var classNameDark = 'dark-mode'
+      var classNameLight = 'light-mode'
+      function setClassOnDocumentBody(darkMode) {
+        document.body.classList.add(darkMode ? classNameDark : classNameLight)
+        document.body.classList.remove(darkMode ? classNameLight : classNameDark)
+      }
+      var preferDarkQuery = '(prefers-color-scheme: dark)'
+      var mql = window.matchMedia(preferDarkQuery)
+      var supportsColorSchemeQuery = mql.media === preferDarkQuery
+      var localStorageTheme = null
+      try {
+        localStorageTheme = localStorage.getItem(storageKey)
+      } catch (err) { }
+      var localStorageExists = localStorageTheme !== null
+      if (localStorageExists) {
+        localStorageTheme = JSON.parse(localStorageTheme)
+      }
+      if (localStorageExists) {
+        setClassOnDocumentBody(localStorageTheme)
+      } else if (supportsColorSchemeQuery) {
+        localStorage.setItem(storageKey, true)
+      } else {
+        var isDarkMode = document.body.classList.contains(classNameDark)
+        localStorage.setItem(storageKey, JSON.stringify(isDarkMode))
+      }
+    })();</script>
 </body>
 
 </html>
