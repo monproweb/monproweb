@@ -9,7 +9,6 @@ import {
     Heading,
     Text,
     Link,
-    Grid,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -24,18 +23,16 @@ const Home = () => {
                 </Helmet>
                 <ThemeProvider>
                     <BaseStyles>
-                        <Box m={4}>
+                        <Box m={4} className="p-8 sm:mt-0 mt-12 mx-auto prose lg:prose-xl">
+                            <Box p={3}>
+                                <img src={react} alt="React" className="Mpw-undraw Box hover-grow m-3 p-4" />
+                            </Box>
                             <Heading as="h1" mb={2} className="anim-fade-in prose">Je construis des applications Web et mobile.</Heading>
-                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                                <Box p={3}>
-                                    <Text as="p" mr={3} className="anim-fade-up prose">Bienvenue sur Mon Pro Web, je vous aide à développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
-                                </Box>
-                                <Box p={3}>
-                                    <img src={react} alt="React" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                </Box>
-                            </Grid>
+                            <Box p={3}>
+                                <Text as="p" mr={3} className="anim-fade-up prose">Développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
+                            </Box>
                             <Box m={4}>
-                                <Link mb={1} href="https://facebook.com/monproweb/" className="prose">Page Facebook</Link>
+                                <Link mb={1} href="https://facebook.com/monproweb/" className="btn-primary">Page Facebook</Link>
                             </Box>
                         </Box>
                     </BaseStyles>

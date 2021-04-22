@@ -12,7 +12,6 @@ import {
     Heading,
     Text,
     Link,
-    Grid,
 } from '@primer/components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import fetchGraphQL from '../fetchGraphQL';
@@ -60,52 +59,44 @@ const About = () => {
 
                 <ThemeProvider>
                     <BaseStyles>
-                        <Box m={4}>
+                        <Box m={4} className="p-8 sm:mt-0 mt-12 mx-auto prose lg:prose-xl">
+                            <Box p={3}>
+                                <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw Box hover-grow m-3 p-4" />
+                            </Box>
                             <Heading as="h1" mb={2} className="anim-fade-in prose">À-propos</Heading>
 
-                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                                <Box p={3}>
-                                    <Text as="p" mr={3} className="anim-fade-up prose">Je suis actuellement en train d'apprendre React.</Text>
-                                </Box>
-
-                                <Box p={3}>
-                                    <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                </Box>
-                            </Grid>
-
+                            <Box p={3}>
+                                <Text as="p" mr={3} className="anim-fade-up prose">Actuellement en train d'apprendre React.</Text>
+                            </Box>
 
                             <Box p={3}>
                                 <StateLabel status="pullOpened"><span className="AnimatedEllipsis">{name != null ? `${name}` : "⚛️ Chargement"}</span></StateLabel>
                             </Box>
 
+                            <Box p={3}>
+                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-undraw Box hover-grow m-3 p-4" />
+                                <Link
+                                    mb={1}
+                                    href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
+                                    className="btn-secondary"
+                                >Google IT Automation with Python</Link>
+                            </Box>
 
-                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                                <Box p={3}>
-                                    <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                    <Link
-                                        mb={1}
-                                        href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
-                                        className="prose"
-                                    >Google IT Automation with Python</Link>
-                                </Box>
-
-                                <Box p={3}>
-                                    <img src={certificat_freecodecamp_javascript} alt="JavaScript Algorithms and Data Structures" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                    <Link
-                                        mb={1}
-                                        href="https://www.freecodecamp.org/certification/thomaserhel/javascript-algorithms-and-data-structures"
-                                        className="prose"
-                                    >JavaScript Algorithms and Data Structures</Link>
-                                </Box>
-                            </Grid>
-
+                            <Box p={3}>
+                                <img src={certificat_freecodecamp_javascript} alt="JavaScript Algorithms and Data Structures" className="Mpw-undraw Box hover-grow m-3 p-4" />
+                                <Link
+                                    mb={1}
+                                    href="https://www.freecodecamp.org/certification/thomaserhel/javascript-algorithms-and-data-structures"
+                                    className="btn-secondary"
+                                >JavaScript Algorithms and Data Structures</Link>
+                            </Box>
 
                             <Box p={3}>
                                 <img src={contact_us} alt="Contact Us" className="Mpw-undraw" />
                             </Box>
 
                             <Box p={3}>
-                                <Link mb={1} href="mailto:thomas.erhel@gmail.com" className="prose">Contactez-moi</Link>
+                                <Link mb={1} href="mailto:thomas.erhel@gmail.com" className="btn-primary">Contactez-moi</Link>
                             </Box>
 
                         </Box>
