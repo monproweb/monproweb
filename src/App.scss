@@ -1,100 +1,100 @@
 @import "@primer/css/utilities/index.scss";
 
 .App-logo {
-    height: 10vmin;
-    pointer-events: none;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  height: 10vmin;
+  pointer-events: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .Mpw-orange {
-    color: #ec6f18;
+  color: #ec6f18;
 }
 
 .Mpw-orange-bis {
-    color: #e34520;
+  color: #e34520;
 }
 
 .Mpw-orange-third {
-    color: #e94e1b;
+  color: #e94e1b;
 }
 
 .Mpw-orange-four {
-    color: #e27746;
+  color: #e27746;
 }
 
 .Mpw-red {
-    color: #d52f26;
+  color: #d52f26;
 }
 
 .Mpw-yellow {
-    color: #f3af1c;
+  color: #f3af1c;
 }
 
 .Mpw-yellow-bis {
-    color: #ffdd0e;
+  color: #ffdd0e;
 }
 
 .Mpw-yellow-third {
-    color: #f2d957;
+  color: #f2d957;
 }
 
 .Mpw-grey {
-    color: #aaa9a9;
+  color: #aaa9a9;
 }
 
 .Mpw-orange-text {
-    color: #eb5d2b;
+  color: #eb5d2b;
 }
 
 .Mpw-yellow-text {
-    color: #f49636;
+  color: #f49636;
 }
 
 .Mpw-chargement {
-    text-align: center;
+  text-align: center;
 }
 
 .Mpw-undraw {
-    width: 40%;
-    height: auto;
+  width: 40%;
+  height: auto;
 }
 
 .Mpw-certificat {
-    width: 50%;
-    height: auto;
+  width: 50%;
+  height: auto;
 }
 
 .Mpw-label {
-    display: inline-block;
-    padding: 0 7px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 18px;
-    border-radius: 2em;
-    background-color: initial !important;
-    border: 1px solid;
-    border-color: #8957e5;
-    text-transform: uppercase !important;
+  display: inline-block;
+  padding: 0 7px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  border-radius: 2em;
+  background-color: initial !important;
+  border: 1px solid;
+  border-color: #8957e5;
+  text-transform: uppercase !important;
 }
 
 .Mpw-star {
-    color: #9eddf8;
+  color: #9eddf8;
 }
