@@ -3,7 +3,7 @@ import '../styles/About.scss';
 import developer_activity from "../images/developer_activity.svg";
 import contact_us from "../images/contact_us.svg";
 import certificat_google from "../images/certificat_google.webp";
-import certificat_freecodecamp_javascript from "../images/certificat_freecodecamp_javascript.webp";
+import certificat_legacy_full_stack from "../images/certificat_legacy_full_stack.webp";
 import {
     ThemeProvider,
     StateLabel,
@@ -59,14 +59,16 @@ const About = () => {
 
                 <ThemeProvider>
                     <BaseStyles>
-                        <Box m={4} className="p-8 sm:mt-0 mt-12 mx-auto prose lg:prose-xl">
-                            <Box p={3}>
-                                <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                            </Box>
-                            <Heading as="h1" mb={2} className="anim-fade-in prose">À-propos</Heading>
+                        <Box m={4} >
 
                             <Box p={3}>
-                                <Text as="p" mr={3} className="anim-fade-up prose">Actuellement en train d'apprendre React.</Text>
+                                <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw" />
+                            </Box>
+
+                            <Heading as="h1" mb={2} className="anim-fade-in">À-propos</Heading>
+
+                            <Box p={3}>
+                                <Text as="p" mr={3} className="anim-fade-up">Actuellement en train d'apprendre React.</Text>
                             </Box>
 
                             <Box p={3}>
@@ -74,21 +76,23 @@ const About = () => {
                             </Box>
 
                             <Box p={3}>
-                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                <Link
-                                    mb={1}
-                                    href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
-                                    className="btn-secondary"
-                                >Google IT Automation with Python</Link>
+                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-certificat" />
+                                <Box p={3}>
+                                    <Link
+                                        mb={1}
+                                        href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
+                                    >Google IT Automation with Python</Link>
+                                </Box>
                             </Box>
 
                             <Box p={3}>
-                                <img src={certificat_freecodecamp_javascript} alt="JavaScript Algorithms and Data Structures" className="Mpw-undraw Box hover-grow m-3 p-4" />
-                                <Link
-                                    mb={1}
-                                    href="https://www.freecodecamp.org/certification/thomaserhel/javascript-algorithms-and-data-structures"
-                                    className="btn-secondary"
-                                >JavaScript Algorithms and Data Structures</Link>
+                                <img src={certificat_legacy_full_stack} alt="Legacy Full Stack" className="Mpw-certificat" />
+                                <Box p={3}>
+                                    <Link
+                                        mb={1}
+                                        href="https://www.freecodecamp.org/certification/thomaserhel/full-stack"
+                                    >Legacy Full Stack</Link>
+                                </Box>
                             </Box>
 
                             <Box p={3}>
@@ -96,7 +100,7 @@ const About = () => {
                             </Box>
 
                             <Box p={3}>
-                                <Link mb={1} href="mailto:thomas.erhel@gmail.com" className="btn-primary">Contactez-moi</Link>
+                                <Link mb={1} href="mailto:thomas.erhel@gmail.com" >Contactez-moi</Link>
                             </Box>
 
                         </Box>

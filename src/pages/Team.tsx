@@ -30,20 +30,26 @@ const Team = () => {
                 </Helmet>
                 <ThemeProvider>
                     <BaseStyles>
-                        <Box m={4} className="p-8 sm:mt-0 mt-12 mx-auto prose lg:prose-xl">
+                        <Box m={4} >
+
                             <Box p={3}>
-                                <img src={programming} alt="Programming" className="Mpw-undraw Box hover-grow m-3 p-4" />
+                                <img src={programming} alt="Programming" className="Mpw-undraw" />
                             </Box>
+
                             <Heading as="h1" mb={2} className="anim-fade-in prose">Thomas Erhel</Heading>
+
                             <Box p={3}>
                                 <Text as="p" mr={3} className="anim-fade-up prose">#zeroknowledge #practicemakesperfect #blacklivesmatter</Text>
+
                                 <Box p={3}>
                                     <CircleOcticon icon={CheckIcon} size={32} bg="icon.success" color="text.inverse" />
                                 </Box>
+
                                 <Box p={3}>
                                     <Tooltip aria-label="Mon Pro Web"><StarIcon className="Mpw-star" size={16} /><span>  </span><Label color="#a371f7" className="Mpw-label">mpw</Label></Tooltip>
                                 </Box>
-                                <figure className="prose">
+
+                                <figure >
                                     <blockquote cite="https://youtu.be/Ek4V62VJU7c">
                                         <p>Je pense que tout est possible à qui rêve, ose, travaille et n'abandonne jamais.</p>
                                     </blockquote>
@@ -55,20 +61,12 @@ const Team = () => {
                                 <Avatar src="https://avatars.githubusercontent.com/ThomasErhel" /><span>  </span>
                                 <Link mb={1} className="prose" href="https://github.com/ThomasErhel/">Thomas Erhel</Link>
                             </Box>
+
                             <Box m={4}>
                                 <Avatar square src="https://avatars.githubusercontent.com/monproweb" /><span>  </span>
                                 <Link mb={1} href="https://github.com/monproweb/">Mon Pro Web</Link>
-
                             </Box>
 
-                            <Box m={4}>
-                                <Avatar square src="https://avatars.githubusercontent.com/ubuntu" className="anim-rotate" /><span>  </span>
-                                <Link mb={1} href="https://ubuntu.com/download/desktop">Desktop</Link>
-                            </Box>
-                            <Box m={4}>
-                                <Avatar square src="https://avatars.githubusercontent.com/ubuntu" className="anim-rotate" /><span>  </span>
-                                <Link mb={1} href="https://ubuntu.com/download/server">Server</Link>
-                            </Box>
                         </Box>
                     </BaseStyles>
                 </ThemeProvider>

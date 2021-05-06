@@ -1,4 +1,3 @@
-/* eslint-disable react/style-prop-object */
 import React from 'react';
 import '../styles/Home.scss';
 import react from '../images/react.svg'
@@ -23,9 +22,9 @@ const Home = () => {
                 </Helmet>
                 <ThemeProvider>
                     <BaseStyles>
-                        <Box m={4} className="p-8 sm:mt-0 mt-12 mx-auto prose lg:prose-xl">
+                        <Box m={4} >
                             <Box p={3}>
-                                <img src={react} alt="React" className="Mpw-undraw Box hover-grow m-3 p-4" />
+                                <img src={react} alt="React" className="Mpw-undraw" />
                             </Box>
                             <Heading as="h1" mb={2} className="anim-fade-in prose">Je construis des applications Web et mobile.</Heading>
                             <Box p={3}>
