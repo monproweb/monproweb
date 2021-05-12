@@ -39,7 +39,7 @@ const Team = () => {
                             <Heading as="h1" mb={2} className="anim-fade-in">Thomas Erhel</Heading>
 
                             <Box p={3}>
-                                <Text as="p" mr={3} className="anim-fade-up">#ZeroKnowledge #PracticeMakesPerfect #BlackLivesMatter</Text>
+                                <Text as="p" mr={3} className="anim-fade-up">#ZeroKnowledge #PracticeMakesPerfect #NeverGiveUp #BlackLivesMatter</Text>
 
                                 <Box p={3}>
                                     <CircleOcticon icon={CheckIcon} size={32} bg="icon.success" color="text.inverse" />
