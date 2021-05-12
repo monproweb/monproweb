@@ -62,7 +62,7 @@ const About = () => {
                         <Box m={4} >
 
                             <Box p={3}>
-                                <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw" />
+                                <img src={developer_activity} alt="Developer Activity" className="Mpw-undraw hover-grow" />
                             </Box>
 
                             <Heading as="h1" mb={2} className="anim-fade-in">À-propos</Heading>
@@ -76,7 +76,7 @@ const About = () => {
                             </Box>
 
                             <Box p={3}>
-                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-certificat" />
+                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-certificat hover-grow" />
                                 <Box p={3}>
                                     <Link
                                         mb={1}
@@ -86,7 +86,7 @@ const About = () => {
                             </Box>
 
                             <Box p={3}>
-                                <img src={certificat_legacy_full_stack} alt="Legacy Full Stack" className="Mpw-certificat" />
+                                <img src={certificat_legacy_full_stack} alt="Legacy Full Stack" className="Mpw-certificat hover-grow" />
                                 <Box p={3}>
                                     <Link
                                         mb={1}

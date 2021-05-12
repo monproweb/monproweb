@@ -33,13 +33,13 @@ const Team = () => {
                         <Box m={4} >
 
                             <Box p={3}>
-                                <img src={programming} alt="Programming" className="Mpw-undraw" />
+                                <img src={programming} alt="Programming" className="Mpw-undraw hover-grow" />
                             </Box>
 
-                            <Heading as="h1" mb={2} className="anim-fade-in prose">Thomas Erhel</Heading>
+                            <Heading as="h1" mb={2} className="anim-fade-in">Thomas Erhel</Heading>
 
                             <Box p={3}>
-                                <Text as="p" mr={3} className="anim-fade-up prose">#ZeroKnowledge #PracticeMakesPerfect #BlackLivesMatter</Text>
+                                <Text as="p" mr={3} className="anim-fade-up">#ZeroKnowledge #PracticeMakesPerfect #BlackLivesMatter</Text>
 
                                 <Box p={3}>
                                     <CircleOcticon icon={CheckIcon} size={32} bg="icon.success" color="text.inverse" />
@@ -59,7 +59,7 @@ const Team = () => {
 
                             <Box m={4}>
                                 <Avatar src="https://avatars.githubusercontent.com/ThomasErhel" /><span>  </span>
-                                <Link mb={1} className="prose" href="https://github.com/ThomasErhel/">Thomas Erhel</Link>
+                                <Link mb={1} href="https://github.com/ThomasErhel/">Thomas Erhel</Link>
                             </Box>
 
                             <Box m={4}>
