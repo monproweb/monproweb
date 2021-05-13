@@ -2,6 +2,16 @@
 <html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark_dimmed">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TFLZQ7R');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,75 +52,18 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.8.5/tarteaucitron.min.js"
-    integrity="sha512-7GdR3E/iZ4VcsUrt0Qe9ok/zsKe63IwTHUHjWPuS6gNCZPy3DwhA2zxmTrgu5+6feQze3AwoyghuwaDjOu+ylA=="
-    crossorigin="anonymous"></script>
   <script>
-    tarteaucitron.init({
-      "privacyUrl": "", /* Privacy policy url */
+    window.axeptioSettings = {
+      clientId: "609d5368e34b5e7472dbdd3e",
+      cookiesVersion: "mon pro web-base",
+    };
 
-      "hashtag": "#monproweb", /* Open the panel with this hashtag */
-      "cookieName": "monproweb", /* Cookie name */
-
-      "orientation": "middle", /* Banner position (top - bottom) */
-
-      "showAlertSmall": false, /* Show the small banner on bottom right */
-      "cookieslist": false, /* Show the cookie list */
-
-      "showIcon": true, /* Show cookie icon to manage cookies */
-      "iconPosition": "BottomRight", /* Position of the icon between BottomRight, BottomLeft, TopRight and TopLeft */
-
-      "adblocker": false, /* Show a Warning if an adblocker is detected */
-
-      "DenyAllCta": true, /* Show the deny all button */
-      "AcceptAllCta": true, /* Show the accept all button when highPrivacy on */
-      "highPrivacy": true, /* HIGHLY RECOMMANDED Disable auto consent */
-
-      "handleBrowserDNTRequest": false, /* If Do Not Track == 1, disallow all */
-
-      "removeCredit": false, /* Remove credit link */
-      "moreInfoLink": true, /* Show more info link */
-      "useExternalCss": false, /* If false, the tarteaucitron.css file will be loaded */
-
-      //"cookieDomain": ".my-multisite-domaine.fr", /* Shared cookie for subdomain website */
-
-      "readmoreLink": "", /* Change the default readmore link pointing to tarteaucitron.io */
-
-      "mandatory": true /* Show a message about mandatory cookies */
-    });
+    (function (d, s) {
+      var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+      e.async = true; e.src = "//static.axept.io/sdk.js";
+      t.parentNode.insertBefore(e, t);
+    })(document, "script");
   </script>
-  <script type="text/javascript">
-    tarteaucitron.user.googletagmanagerId = 'GTM-TFLZQ7R';
-    (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
-  </script>
-  <script>(function () {
-      var storageKey = 'darkMode'
-      var classNameDark = 'dark-mode'
-      var classNameLight = 'light-mode'
-      function setClassOnDocumentBody(darkMode) {
-        document.body.classList.add(darkMode ? classNameDark : classNameLight)
-        document.body.classList.remove(darkMode ? classNameLight : classNameDark)
-      }
-      var preferDarkQuery = '(prefers-color-scheme: dark)'
-      var mql = window.matchMedia(preferDarkQuery)
-      var supportsColorSchemeQuery = mql.media === preferDarkQuery
-      var localStorageTheme = null
-      try {
-        localStorageTheme = localStorage.getItem(storageKey)
-      } catch (err) { }
-      var localStorageExists = localStorageTheme !== null
-      if (localStorageExists) {
-        localStorageTheme = JSON.parse(localStorageTheme)
-      }
-      if (localStorageExists) {
-        setClassOnDocumentBody(localStorageTheme)
-      } else if (supportsColorSchemeQuery) {
-        localStorage.setItem(storageKey, true)
-      } else {
-        var isDarkMode = document.body.classList.contains(classNameDark)
-        localStorage.setItem(storageKey, JSON.stringify(isDarkMode))
-      }
-    })();</script>
 </body>
 
 </html>
