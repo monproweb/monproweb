@@ -4,7 +4,6 @@ const https = require('https');
 const path = require('path');
 const express = require('express');
 const helmet = require("helmet");
-const { getDefaultDirectives } = require('helmet/dist/middlewares/content-security-policy');
 
 const app = express();
 
