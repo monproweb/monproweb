@@ -22,7 +22,7 @@ app.use(helmet());
 
 app.use(
     helmet({
-        contentSecurityPolicy: getDefaultDirectives(),
+        contentSecurityPolicy: false,
     })
 );
 
