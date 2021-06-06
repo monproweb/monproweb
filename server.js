@@ -18,8 +18,6 @@ const credentials = {
     ca: ca
 };
 
-app.use(helmet());
-
 app.use(
     helmet({
         contentSecurityPolicy: false,
