@@ -19,13 +19,12 @@ const credentials = {
 
 app.use(helmet());
 
+app.use(helmet.contentSecurityPolicy.getDefaultDirectives());
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-    res
-        .set("Content-Security-Policy", "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'")
-        .send("<html><head></head><body></body></html>");
 });
 
 const httpServer = http.createServer(app);
