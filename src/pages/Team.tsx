@@ -17,6 +17,7 @@ import {
     Label,
     Tooltip,
 } from '@primer/components';
+import Footer from '../components/Footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Team = () => {
@@ -49,12 +50,16 @@ const Team = () => {
                                     <Tooltip aria-label="Mon Pro Web"><StarIcon className="Mpw-star" size={16} /><span>  </span><Label color="#a371f7" className="Mpw-label">mpw</Label></Tooltip>
                                 </Box>
 
-                                <figure >
-                                    <blockquote cite="https://youtu.be/Ek4V62VJU7c">
-                                        <p>Je pense que tout est possible à qui rêve, ose, travaille et n'abandonne jamais.</p>
-                                    </blockquote>
-                                    <figcaption>—Panayotis Pascot, <cite>Rêver, oser, travailler, ne pas abandonner</cite></figcaption>
-                                </figure>
+                                <Box p={3}>
+                                    <iframe width="auto" height="auto" src="https://www.youtube-nocookie.com/embed/Ek4V62VJU7c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+                                    <figure >
+                                        <blockquote cite="https://youtu.be/Ek4V62VJU7c">
+                                            <p>Je pense que tout est possible à qui rêve, ose, travaille et n'abandonne jamais.</p>
+                                        </blockquote>
+                                        <figcaption>—Panayotis Pascot, <cite>Rêver, oser, travailler, ne pas abandonner</cite></figcaption>
+                                    </figure>
+                                </Box>
                             </Box>
 
                             <Box m={4}>
@@ -68,6 +73,7 @@ const Team = () => {
                             </Box>
 
                         </Box>
+                        <Footer />
                     </BaseStyles>
                 </ThemeProvider>
             </div>

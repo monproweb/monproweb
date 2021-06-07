@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/About.scss';
 import developer_activity from "../images/developer_activity.svg";
-import contact_us from "../images/contact_us.svg";
 import certificat_google from "../images/certificat_google.webp";
 import certificat_legacy_full_stack from "../images/certificat_legacy_full_stack.webp";
 import {
@@ -12,7 +11,11 @@ import {
     Heading,
     Text,
     Link,
+    Grid,
 } from '@primer/components';
+import Footer from '../components/Footer';
+import { FaHtml5, FaCss3, FaSass, FaReact, FaNodeJs, FaUbuntu, FaAws, FaApple, FaAndroid, FaStackOverflow, FaGithub, FaGoogle, FaWikipediaW, FaAppStore, FaGooglePlay, FaCcStripe, FaCcPaypal } from 'react-icons/fa';
+import { SiJavascript, SiTypescript, SiGraphql, SiMdnwebdocs, SiJest, SiVisualstudiocode, SiGooglemybusiness, SiExpo, SiTed, SiW3C, SiLighthouse } from 'react-icons/si';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import fetchGraphQL from '../fetchGraphQL';
 
@@ -69,14 +72,35 @@ const About = () => {
 
                             <Box p={3}>
                                 <Text as="p" mr={3} className="anim-fade-up">Actuellement en train d'apprendre React.</Text>
-                            </Box>
-
-                            <Box p={3}>
                                 <StateLabel status="pullOpened"><span className="AnimatedEllipsis">{name != null ? `${name}` : "⚛️ Chargement"}</span></StateLabel>
                             </Box>
 
-                            <Box p={3}>
-                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-certificat hover-grow" />
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                                <Box p={3} className="hover-grow anim-fade-up">
+                                    <FaHtml5 size={42} /> <FaCss3 size={42} /> <FaSass size={42} /> <SiJavascript size={42} /> <SiTypescript size={42} /> <SiVisualstudiocode size={42} />
+                                </Box>
+
+                                <Box p={3} className="hover-grow anim-fade-up">
+                                    <FaReact size={42} className="anim-rotate" /> <SiJest size={42} /> <FaNodeJs size={42} /> <SiGraphql size={42} />  <FaUbuntu size={42} /> <FaAws size={42} /> <SiExpo size={42} /> <SiLighthouse size={42} /> <SiGooglemybusiness size={42} />
+                                </Box>
+                            </Grid>
+
+                            <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                                <Box p={3} className="hover-grow anim-fade-up">
+                                    <FaGithub size={42} /> <FaStackOverflow size={42} /> <SiMdnwebdocs size={42} /> <SiW3C size={42} /> <FaGoogle size={42} /> <FaWikipediaW size={42} /> <SiTed size={42} />
+                                </Box>
+
+                                <Box p={3} className="hover-grow anim-fade-up">
+                                    <FaApple size={42} /> <FaAndroid size={42} /> <FaAppStore size={42} /> <FaGooglePlay size={42} />
+                                </Box>
+                            </Grid>
+
+                            <Box p={3} className="hover-grow anim-fade-up">
+                                <FaCcStripe size={42} /> <FaCcPaypal size={42} />
+                            </Box>
+
+                            <Box p={3} className="hover-grow">
+                                <img src={certificat_google} alt="Google IT Automation with Python" className="Mpw-certificat" />
                                 <Box p={3}>
                                     <Link
                                         mb={1}
@@ -85,8 +109,8 @@ const About = () => {
                                 </Box>
                             </Box>
 
-                            <Box p={3}>
-                                <img src={certificat_legacy_full_stack} alt="Legacy Full Stack" className="Mpw-certificat hover-grow" />
+                            <Box p={3} className="hover-grow">
+                                <img src={certificat_legacy_full_stack} alt="Legacy Full Stack" className="Mpw-certificat" />
                                 <Box p={3}>
                                     <Link
                                         mb={1}
@@ -95,15 +119,8 @@ const About = () => {
                                 </Box>
                             </Box>
 
-                            <Box p={3}>
-                                <img src={contact_us} alt="Contact Us" className="Mpw-undraw" />
-                            </Box>
-
-                            <Box p={3}>
-                                <Link mb={1} href="mailto:thomas.erhel@gmail.com" >Contactez-moi</Link>
-                            </Box>
-
                         </Box>
+                        <Footer />
                     </BaseStyles>
                 </ThemeProvider>
             </div>
