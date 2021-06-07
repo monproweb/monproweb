@@ -76,26 +76,26 @@ const About = () => {
                             </Box>
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                                <Box p={3} className="hover-grow anim-fade-up">
+                                <Box p={3} className="hover-grow">
                                     <FaHtml5 size={42} /> <FaCss3 size={42} /> <FaSass size={42} /> <SiJavascript size={42} /> <SiTypescript size={42} /> <SiVisualstudiocode size={42} />
                                 </Box>
 
-                                <Box p={3} className="hover-grow anim-fade-up">
+                                <Box p={3} className="hover-grow">
                                     <FaReact size={42} className="anim-rotate" /> <SiJest size={42} /> <FaNodeJs size={42} /> <SiGraphql size={42} />  <FaUbuntu size={42} /> <FaAws size={42} /> <SiExpo size={42} /> <SiLighthouse size={42} /> <SiGooglemybusiness size={42} />
                                 </Box>
                             </Grid>
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                                <Box p={3} className="hover-grow anim-fade-up">
+                                <Box p={3} className="hover-grow">
                                     <FaGithub size={42} /> <FaStackOverflow size={42} /> <SiMdnwebdocs size={42} /> <SiW3C size={42} /> <FaGoogle size={42} /> <FaWikipediaW size={42} /> <SiTed size={42} />
                                 </Box>
 
-                                <Box p={3} className="hover-grow anim-fade-up">
+                                <Box p={3} className="hover-grow">
                                     <FaApple size={42} /> <FaAndroid size={42} /> <FaAppStore size={42} /> <FaGooglePlay size={42} />
                                 </Box>
                             </Grid>
 
-                            <Box p={3} className="hover-grow anim-fade-up">
+                            <Box p={3} className="hover-grow">
                                 <FaCcStripe size={42} /> <FaCcPaypal size={42} />
                             </Box>
 
