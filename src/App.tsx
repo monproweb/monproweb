@@ -25,6 +25,12 @@ const App = () => (
         <Router>
           <Suspense fallback={<div className="Mpw-chargement"><Spinner /></div>}>
             <Header>
+              <Header.Item>Black Lives Matter.</Header.Item>
+              <Header.Item>
+                <Header.Link mb={1} href="https://support.eji.org/give/153413/#!/donation/checkout">Soutenez la Equal Justice Initiative.</Header.Link>
+              </Header.Item>
+            </Header>
+            <Header>
               <Header.Item>
                 <Header.Link href="/" fontSize={2}>
                   <StyledOcticon icon={RocketIcon} size={32} mr={2} />
@@ -51,7 +57,7 @@ const App = () => (
         </Router>
       </BaseStyles>
     </ThemeProvider>
-  </div>
+  </div >
 );
 
 <Home />
