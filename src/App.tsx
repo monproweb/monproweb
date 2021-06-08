@@ -11,6 +11,7 @@ import {
   Header,
   StyledOcticon,
   Box,
+  Spinner,
 } from '@primer/components';
 
 const Home = lazy(() => import('./pages/Home'));
@@ -22,7 +23,7 @@ const App = () => (
     <ThemeProvider>
       <BaseStyles>
         <Router>
-          <Suspense fallback={<div className="Mpw-chargement AnimatedEllipsis">⚛️ Chargement</div>}>
+          <Suspense fallback={<div className="Mpw-chargement"><Spinner /></div>}>
             <Header>
               <Header.Item>
                 <Header.Link href="/" fontSize={2}>

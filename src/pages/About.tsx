@@ -12,6 +12,7 @@ import {
     Text,
     Link,
     Grid,
+    Spinner,
 } from '@primer/components';
 import Footer from '../components/Footer';
 import { FaHtml5, FaCss3, FaSass, FaReact, FaNodeJs, FaUbuntu, FaAws, FaApple, FaAndroid, FaStackOverflow, FaGithub, FaGoogle, FaWikipediaW, FaAppStore, FaGooglePlay, FaCcStripe, FaCcPaypal } from 'react-icons/fa';
@@ -72,7 +73,7 @@ const About = () => {
 
                             <Box p={3}>
                                 <Text as="p" mr={3} className="anim-fade-up">Actuellement en train d'apprendre React.</Text>
-                                <StateLabel status="pullOpened"><span className="AnimatedEllipsis">{name != null ? `${name}` : "⚛️ Chargement"}</span></StateLabel>
+                                <StateLabel status="pullOpened">{name != null ? `${name}` : <Spinner size="small" />}</StateLabel>
                             </Box>
 
                             <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
