@@ -7,7 +7,9 @@ import {
     Header,
     Spinner,
     Avatar,
+    Tooltip,
 } from '@primer/components';
+import { HomeIcon, InfoIcon, PeopleIcon } from '@primer/octicons-react'
 
 const Home = lazy(() => import('../pages/Home'));
 const About = lazy(() => import('../pages/About'));
@@ -19,12 +21,14 @@ const NavBar = () => (
             <BaseStyles>
                 <Router>
                     <Suspense fallback={<div className="Mpw-chargement"><Spinner /></div>}>
+
                         <Header>
                             <Header.Item>Black Lives Matter.</Header.Item>
                             <Header.Item>
                                 <Header.Link mb={1} href="https://support.eji.org/give/153413/#!/donation/checkout">Soutenez la Equal Justice Initiative.</Header.Link>
                             </Header.Item>
                         </Header>
+
                         <Header>
                             <Header.Item>
                                 <Header.Link href="/" fontSize={2}>
@@ -32,11 +36,23 @@ const NavBar = () => (
                                     <span>Mon Pro Web</span>
                                 </Header.Link>
                             </Header.Item>
+
                             <Header.Item>
-                                <Header.Link href="/à-propos">À-propos</Header.Link>
+                                <Header.Link href="/" fontSize={2}>
+                                    <Tooltip aria-label="Accueil" direction="s"><HomeIcon size={24} /></Tooltip>
+                                </Header.Link>
                             </Header.Item>
+
                             <Header.Item>
-                                <Header.Link href="/equipe">L'équipe</Header.Link>
+                                <Header.Link href="/à-propos">
+                                    <Tooltip aria-label="À-propos" direction="s"><InfoIcon size={24} /></Tooltip>
+                                </Header.Link>
+                            </Header.Item>
+
+                            <Header.Item>
+                                <Header.Link href="/equipe">
+                                    <Tooltip aria-label="Équipe" direction="s"><PeopleIcon size={24} /></Tooltip>
+                                </Header.Link>
                             </Header.Item>
                         </Header>
 
