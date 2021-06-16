@@ -17,6 +17,7 @@ import {
     Label,
     Tooltip,
 } from '@primer/components';
+import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -31,6 +32,8 @@ const Team = () => {
                 </Helmet>
                 <ThemeProvider>
                     <BaseStyles>
+                        <NavBar />
+
                         <Box m={4} >
 
                             <Box p={3}>
@@ -73,6 +76,7 @@ const Team = () => {
                             </Box>
 
                         </Box>
+
                         <Footer />
                     </BaseStyles>
                 </ThemeProvider>

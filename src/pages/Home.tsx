@@ -8,6 +8,7 @@ import {
     Heading,
     Text,
 } from '@primer/components';
+import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -22,6 +23,8 @@ const Home = () => {
                 </Helmet>
                 <ThemeProvider>
                     <BaseStyles>
+                        <NavBar />
+
                         <Box m={4} >
                             <Box p={3}>
                                 <img src={react} alt="React" className="Mpw-undraw hover-grow" />
@@ -31,6 +34,7 @@ const Home = () => {
                                 <Text as="p" mr={3} className="anim-fade-up">Développer votre visibilité en ligne à l'aide d'applications performantes qui suivent les bonnes pratiques.</Text>
                             </Box>
                         </Box>
+
                         <Footer />
                     </BaseStyles>
                 </ThemeProvider>

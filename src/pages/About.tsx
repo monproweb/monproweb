@@ -14,6 +14,7 @@ import {
     Grid,
     Spinner,
 } from '@primer/components';
+import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { FaHtml5, FaCss3, FaSass, FaReact, FaNodeJs, FaUbuntu, FaAws, FaApple, FaAndroid, FaStackOverflow, FaGithub, FaGoogle, FaWikipediaW, FaAppStore, FaGooglePlay, FaCcStripe, FaCcPaypal } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiGraphql, SiMdnwebdocs, SiJest, SiVisualstudiocode, SiGooglemybusiness, SiExpo, SiTed, SiW3C, SiLighthouse } from 'react-icons/si';
@@ -63,6 +64,8 @@ const About = () => {
 
                 <ThemeProvider>
                     <BaseStyles>
+                        <NavBar />
+
                         <Box m={4} >
 
                             <Box p={3}>
@@ -121,6 +124,7 @@ const About = () => {
                             </Box>
 
                         </Box>
+
                         <Footer />
                     </BaseStyles>
                 </ThemeProvider>
