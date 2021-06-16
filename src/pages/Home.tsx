@@ -14,7 +14,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 const Home = () => {
     return (
         <HelmetProvider>
-            <div className="App-home">
+            <div className="Mpw-home">
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>MPW | Mon Pro Web</title>

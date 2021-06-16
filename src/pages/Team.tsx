@@ -23,7 +23,7 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 const Team = () => {
     return (
         <HelmetProvider>
-            <div className="App-team">
+            <div className="Mpw-team">
                 <Helmet>
                     <meta charSet="utf-8" />
                     <title>MPW | L'équipe</title>
@@ -51,13 +51,13 @@ const Team = () => {
                                 </Box>
 
                                 <Box p={3}>
-                                    <iframe width="auto" height="auto" src="https://www.youtube-nocookie.com/embed/Ek4V62VJU7c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                                    <iframe width="auto" height="auto" src="https://www.youtube-nocookie.com/embed/EAmmUIEsN9A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
                                     <figure >
-                                        <blockquote cite="https://youtu.be/Ek4V62VJU7c">
-                                            <p>Je pense que tout est possible à qui rêve, ose, travaille et n'abandonne jamais.</p>
+                                        <blockquote cite="https://youtu.be/EAmmUIEsN9A">
+                                            <p>Once we start to act, hope is everywhere.</p>
                                         </blockquote>
-                                        <figcaption>—Panayotis Pascot, <cite>Rêver, oser, travailler, ne pas abandonner</cite></figcaption>
+                                        <figcaption>—Greta Thunberg, <cite>School strike for climate - save the world by changing the rules</cite></figcaption>
                                     </figure>
                                 </Box>
                             </Box>
