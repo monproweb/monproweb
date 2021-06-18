@@ -52,14 +52,7 @@ const Team = () => {
                                 </Box>
 
                                 <Box p={3}>
-                                    <iframe width="auto" height="auto" src="https://www.youtube-nocookie.com/embed/EAmmUIEsN9A" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-
-                                    <figure >
-                                        <blockquote cite="https://youtu.be/EAmmUIEsN9A">
-                                            <p>Once we start to act, hope is everywhere.</p>
-                                        </blockquote>
-                                        <figcaption>—Greta Thunberg, <cite>School strike for climate - save the world by changing the rules</cite></figcaption>
-                                    </figure>
+                                    <iframe src="https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc" title="Informatique Durable" height="102px" width="400px" frameBorder="0" scrolling="no"></iframe>
                                 </Box>
 
                             </Box>
