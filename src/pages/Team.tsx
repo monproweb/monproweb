@@ -52,7 +52,7 @@ const Team = () => {
                                 </Box>
 
                                 <Box p={3}>
-                                    <iframe src="https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc" title="Informatique Durable" height="102px" width="400px" frameBorder="0" scrolling="no"></iframe>
+                                    <iframe src="https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc" title="Informatique Durable" height="102px" width="260px" frameBorder="0" scrolling="no"></iframe>
                                 </Box>
 
                             </Box>
@@ -64,7 +64,7 @@ const Team = () => {
 
                             <Box m={4}>
                                 <Avatar square src="https://avatars.githubusercontent.com/monproweb" /><span>  </span>
-                                <Link mb={1} href="https://github.com/monproweb/">Mon Pro Web</Link>
+                                <Link mb={1} href="https://github.com/monproweb/">Monproweb</Link>
                             </Box>
 
                         </Box>

@@ -33,7 +33,7 @@ const NavBar = () => (
                             <Header.Item>
                                 <Header.Link href="/" fontSize={2}>
                                     <Avatar square src={logo} size={32} mr={2} />
-                                    <span>Mon Pro Web</span>
+                                    <span>Monproweb</span>
                                 </Header.Link>
                             </Header.Item>
 
