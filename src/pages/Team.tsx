@@ -1,6 +1,8 @@
 import React from 'react';
 import '../styles/Team.scss';
 import programming from '../images/programming.svg';
+import avatarthomaserhel from '../images/avatar-thomaserhel.svg';
+import avatarmonproweb from '../images/avatar-monproweb.svg';
 import {
     CheckIcon,
     StarIcon,
@@ -22,14 +24,16 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Team = () => {
     return (
-        <HelmetProvider>
-            <div className="Mpw-team">
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>MPW | L'équipe</title>
-                    <link rel="canonical" href="https://monproweb.io/equipe" />
-                </Helmet>
-                <ThemeProvider>
+        <ThemeProvider>
+            <HelmetProvider>
+                <div className="Mpw-team">
+
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>MPW | L'équipe</title>
+                        <link rel="canonical" href="https://monproweb.io/equipe" />
+                    </Helmet>
+
                     <BaseStyles>
 
                         <Box m={4} >
@@ -58,12 +62,12 @@ const Team = () => {
                             </Box>
 
                             <Box m={4}>
-                                <Avatar src="https://avatars.githubusercontent.com/ThomasErhel" /><span>  </span>
+                                <Avatar src={avatarthomaserhel} /><span>  </span>
                                 <Link mb={1} href="https://github.com/ThomasErhel/">Thomas Erhel</Link>
                             </Box>
 
                             <Box m={4}>
-                                <Avatar square src="https://avatars.githubusercontent.com/monproweb" /><span>  </span>
+                                <Avatar square src={avatarmonproweb} /><span>  </span>
                                 <Link mb={1} href="https://github.com/monproweb/">Monproweb</Link>
                             </Box>
 
@@ -72,9 +76,9 @@ const Team = () => {
                         <Footer />
 
                     </BaseStyles>
-                </ThemeProvider>
-            </div>
-        </HelmetProvider >
+                </div>
+            </HelmetProvider >
+        </ThemeProvider>
     );
 }
 

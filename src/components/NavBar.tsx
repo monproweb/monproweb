@@ -16,8 +16,8 @@ const About = lazy(() => import('../pages/About'));
 const Team = lazy(() => import('../pages/Team'));
 
 const NavBar = () => (
-    <div className="Mpw-navbar">
-        <ThemeProvider>
+    <ThemeProvider>
+        <div className="Mpw-navbar">
             <BaseStyles>
                 <Router>
                     <Suspense fallback={<div className="Mpw-chargement"><Spinner /></div>}>
@@ -64,8 +64,8 @@ const NavBar = () => (
                     </Suspense>
                 </Router>
             </BaseStyles>
-        </ThemeProvider>
-    </div >
+        </div >
+    </ThemeProvider>
 );
 
 export default NavBar;

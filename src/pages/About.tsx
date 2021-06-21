@@ -53,15 +53,16 @@ const About = () => {
     }, []);
 
     return (
-        <HelmetProvider>
-            <div className="Mpw-about">
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>MPW | À-propos</title>
-                    <link rel="canonical" href="https://monproweb.io/a-propos" />
-                </Helmet>
+        <ThemeProvider>
+            <HelmetProvider>
+                <div className="Mpw-about">
 
-                <ThemeProvider>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>MPW | À-propos</title>
+                        <link rel="canonical" href="https://monproweb.io/a-propos" />
+                    </Helmet>
+
                     <BaseStyles>
 
                         <Box m={4} >
@@ -126,9 +127,9 @@ const About = () => {
                         <Footer />
 
                     </BaseStyles>
-                </ThemeProvider>
-            </div>
-        </HelmetProvider>
+                </div>
+            </HelmetProvider>
+        </ThemeProvider>
     );
 }
 

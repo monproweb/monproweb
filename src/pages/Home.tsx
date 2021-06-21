@@ -13,14 +13,17 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Home = () => {
     return (
-        <HelmetProvider>
-            <div className="Mpw-home">
-                <Helmet>
-                    <meta charSet="utf-8" />
-                    <title>MPW | Mon Pro Web</title>
-                    <link rel="canonical" href="https://monproweb.io/a-propos" />
-                </Helmet>
-                <ThemeProvider>
+        <ThemeProvider>
+            <HelmetProvider>
+
+                <div className="Mpw-home">
+
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>MPW | Mon Pro Web</title>
+                        <link rel="canonical" href="https://monproweb.io/a-propos" />
+                    </Helmet>
+
                     <BaseStyles>
 
                         <Box m={4} >
@@ -40,9 +43,10 @@ const Home = () => {
                         <Footer />
 
                     </BaseStyles>
-                </ThemeProvider>
-            </div>
-        </HelmetProvider >
+
+                </div>
+            </HelmetProvider >
+        </ThemeProvider>
     );
 }
 
