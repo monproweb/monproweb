@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/About.scss';
 import developer_activity from "../images/developer_activity.svg";
 import certificat_google from "../images/certificat_google.svg";
 import certificat_legacy_full_stack from "../images/certificat_legacy_full_stack.svg";

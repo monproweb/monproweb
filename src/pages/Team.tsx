@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Team.scss';
 import programming from '../images/programming.svg';
 import avatarthomaserhel from '../images/avatar-thomaserhel.svg';
 import avatarmonproweb from '../images/avatar-monproweb.svg';

@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/Home.scss';
 import react from '../images/react.svg';
 import nature from '../images/nature.svg'
 import {
