@@ -13,6 +13,8 @@ import {
     Link,
     Grid,
     Spinner,
+    CounterLabel,
+    ProgressBar,
 } from '@primer/components';
 import Footer from '../components/Footer';
 import { FaHtml5, FaCss3, FaSass, FaReact, FaNodeJs, FaUbuntu, FaAws, FaApple, FaAndroid, FaStackOverflow, FaGithub, FaGoogle, FaWikipediaW, FaAppStore, FaGooglePlay, FaCcStripe, FaCcPaypal } from 'react-icons/fa';
@@ -120,6 +122,11 @@ const About = () => {
                                         href="https://www.freecodecamp.org/certification/thomaserhel/full-stack"
                                     >Legacy Full Stack</Link>
                                 </Box>
+                            </Box>
+
+                            <Box p={3}>
+                                <Text mr={3}>EcoIndex <CounterLabel>B</CounterLabel></Text>
+                                <ProgressBar progress={75} inline width="100px" />
                             </Box>
 
                         </Box>

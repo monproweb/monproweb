@@ -4,12 +4,10 @@ import programming from '../images/programming.svg';
 import avatarthomaserhel from '../images/avatar-thomaserhel.svg';
 import avatarmonproweb from '../images/avatar-monproweb.svg';
 import {
-    CheckIcon,
     StarIcon,
 } from '@primer/octicons-react';
 import {
     ThemeProvider,
-    CircleOcticon,
     BaseStyles,
     Box,
     Heading,
@@ -18,6 +16,8 @@ import {
     Avatar,
     Label,
     Tooltip,
+    CounterLabel,
+    ProgressBar,
 } from '@primer/components';
 import Footer from '../components/Footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
@@ -48,10 +48,6 @@ const Team = () => {
                                 <Text as="p" mr={3} className="anim-fade-up">#ZeroKnowledge #PracticeMakesPerfect #NeverGiveUp</Text>
 
                                 <Box p={3}>
-                                    <CircleOcticon icon={CheckIcon} size={32} bg="icon.success" color="text.inverse" />
-                                </Box>
-
-                                <Box p={3}>
                                     <Tooltip aria-label="Mon Pro Web"><StarIcon className="Mpw-star" size={16} /><span>  </span><Label color="#a371f7" className="Mpw-label">mpw</Label></Tooltip>
                                 </Box>
 
@@ -69,6 +65,11 @@ const Team = () => {
                             <Box m={4}>
                                 <Avatar square src={avatarmonproweb} /><span>  </span>
                                 <Link mb={1} href="https://github.com/monproweb/">Monproweb</Link>
+                            </Box>
+
+                            <Box p={3}>
+                                <Text mr={3}>EcoIndex <CounterLabel>C</CounterLabel></Text>
+                                <ProgressBar progress={65} inline width="100px" />
                             </Box>
 
                         </Box>
