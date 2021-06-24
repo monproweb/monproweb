@@ -30,7 +30,14 @@ app.use(limiter)
 // see https://expressjs.com/en/guide/behind-proxies.html
 // app.set('trust proxy', 1);
 
-app.use(helmet())
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      'script-src': ["'self'", 'monproweb.com', 'monproweb.io', 'googletagmanager.com', 'axept.io']
+    }
+  })
+)
 
 app.use(express.static(path.join(__dirname, 'build')))
 
