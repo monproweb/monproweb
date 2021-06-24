@@ -34,7 +34,7 @@ app.use(
   helmet.contentSecurityPolicy({
     useDefaults: true,
     directives: {
-      'script-src': ["'self'", "'unsafe-inline'", 'googletagmanager.com', 'axept.io', 'anchor.com']
+      'script-src': ["'self'", "'unsafe-inline'", 'https://www.googletagmanager.com/gtm.js?GTM-TFLZQ7R', 'https://static.axept.io/sdk.js', 'anchor.com']
     }
   })
 )
