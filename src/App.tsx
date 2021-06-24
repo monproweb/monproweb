@@ -1,10 +1,10 @@
-import './App.scss';
-import NavBar from './components/NavBar';
+import './App.scss'
+import NavBar from './components/NavBar'
 
 const App = () => (
-  <div className="Mpw-app">
+  <div className='Mpw-app'>
     <NavBar />
-  </div >
-);
+  </div>
+)
 
-export default App;
+export default App
