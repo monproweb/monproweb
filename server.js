@@ -13,14 +13,14 @@ const certificate = fs.readFileSync('/etc/letsencrypt/live/monproweb.com/cert.pe
 const ca = fs.readFileSync('/etc/letsencrypt/live/monproweb.com/chain.pem', 'utf8');
 
 const credentials = {
-    key: privateKey,
-    cert: certificate,
-    ca: ca
+  key: privateKey,
+  cert: certificate,
+  ca: ca
 };
 
 const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100 // limit each IP to 100 requests per windowMs
 });
 
 //  apply to all requests
@@ -30,19 +30,21 @@ app.use(limiter);
 // see https://expressjs.com/en/guide/behind-proxies.html
 // app.set('trust proxy', 1);
 
+app.use(helmet());
+
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(80, () => {
-    console.log('HTTP Server running on port 80');
+  console.log('HTTP Server running on port 80');
 });
 
 httpsServer.listen(443, () => {
-    console.log('HTTPS Server running on port 443');
+  console.log('HTTPS Server running on port 443');
 });
