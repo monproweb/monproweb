@@ -51,7 +51,7 @@ const Team = () => {
                 </Box>
 
                 <Box p={3}>
-                  <iframe src='https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc' title='Informatique Durable' height='102px' width='260px' frameBorder='0' scrolling='no' />
+                  <iframe src='https://open.spotify.com/embed/episode/4fbNoZ3VgIMXL2mrem4mTL?theme=0' title='Informatique Durable' height='152' width='100%' frameBorder='0' allow='encrypted-media' />
                 </Box>
 
               </Box>
