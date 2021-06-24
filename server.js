@@ -30,12 +30,6 @@ app.use(limiter);
 // see https://expressjs.com/en/guide/behind-proxies.html
 // app.set('trust proxy', 1);
 
-app.use(
-    helmet({
-        contentSecurityPolicy: false,
-    })
-);
-
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
