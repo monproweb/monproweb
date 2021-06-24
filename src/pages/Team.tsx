@@ -67,8 +67,8 @@ const Team = () => {
                             </Box>
 
                             <Box p={3}>
-                                <Text mr={3}>EcoIndex <CounterLabel>C</CounterLabel></Text>
-                                <ProgressBar progress={65} inline width="100px" />
+                                <Text mr={3}>EcoIndex <CounterLabel>B</CounterLabel></Text>
+                                <ProgressBar progress={68} inline width="100px" />
                             </Box>
 
                         </Box>
