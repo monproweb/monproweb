@@ -3,7 +3,8 @@ import programming from '../images/programming.svg'
 import avatarthomaserhel from '../images/avatar-thomaserhel.svg'
 import avatarmonproweb from '../images/avatar-monproweb.svg'
 import {
-  StarIcon
+  StarIcon,
+  PlayIcon
 } from '@primer/octicons-react'
 import {
   ThemeProvider,
@@ -16,7 +17,8 @@ import {
   Label,
   Tooltip,
   CounterLabel,
-  ProgressBar
+  ProgressBar,
+  ButtonPrimary
 } from '@primer/components'
 import Footer from '../components/Footer'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
@@ -51,7 +53,7 @@ const Team = () => {
                 </Box>
 
                 <Box p={3}>
-                  <iframe src='https://open.spotify.com/embed/episode/4fbNoZ3VgIMXL2mrem4mTL?theme=0' title='Informatique Durable' height='152' width='100%' frameBorder='0' allow='encrypted-media' />
+                  <ButtonPrimary as='a' variant='large' href='https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc'><PlayIcon size={16} /> Informatique Durable</ButtonPrimary>
                 </Box>
 
               </Box>
