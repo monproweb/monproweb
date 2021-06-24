@@ -53,7 +53,7 @@ const Team = () => {
                 </Box>
 
                 <Box p={3}>
-                  <ButtonPrimary as='a' variant='large' href='https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc'><PlayIcon size={16} /> Informatique Durable</ButtonPrimary>
+                  <ButtonPrimary as='a' variant='large' href='https://anchor.fm/monproweb/embed/episodes/Informatique-Durable-e12v4uc'><PlayIcon size={20} /> Informatique Durable</ButtonPrimary>
                 </Box>
 
               </Box>
