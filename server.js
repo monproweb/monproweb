@@ -30,12 +30,10 @@ app.use(limiter)
 // see https://expressjs.com/en/guide/behind-proxies.html
 // app.set('trust proxy', 1);
 
+// This disables the `contentSecurityPolicy` middleware but keeps the rest.
 app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      'script-src': ["'self'", "'unsafe-inline'", 'https://www.googletagmanager.com/gtm.js?GTM-TFLZQ7R', 'https://static.axept.io/sdk.js', 'anchor.com']
-    }
+  helmet({
+    contentSecurityPolicy: false
   })
 )
 
