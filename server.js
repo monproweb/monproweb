@@ -34,7 +34,7 @@ app.use(
   helmet.contentSecurityPolicy({
     useDefaults: true,
     directives: {
-      'script-src': ["'self'", 'monproweb.com', 'monproweb.io', 'googletagmanager.com', 'axept.io', 'anchor.com']
+      'script-src': ["'self'", "'unsafe-inline'"]
     }
   })
 )
