@@ -17,7 +17,7 @@ import {
 } from '@primer/components'
 import Footer from '../components/Footer'
 import { FaHtml5, FaCss3, FaSass, FaReact, FaNodeJs, FaUbuntu, FaAws, FaApple, FaAndroid, FaStackOverflow, FaGithub, FaGoogle, FaWikipediaW, FaAppStore, FaGooglePlay, FaCcStripe, FaCcPaypal } from 'react-icons/fa'
-import { SiJavascript, SiTypescript, SiGraphql, SiMdnwebdocs, SiJest, SiVisualstudiocode, SiGooglemybusiness, SiExpo, SiTed, SiW3C, SiLighthouse } from 'react-icons/si'
+import { SiJavascript, SiTypescript, SiGraphql, SiMdnwebdocs, SiJest, SiVisualstudiocode, SiGooglemybusiness, SiExpo, SiTed, SiW3C, SiLighthouse, SiFlutter } from 'react-icons/si'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
 import fetchGraphQL from '../fetchGraphQL'
 
@@ -85,7 +85,7 @@ const About = () => {
                 </Box>
 
                 <Box p={3} className='hover-grow'>
-                  <FaReact size={42} className='anim-rotate' /> <SiJest size={42} /> <FaNodeJs size={42} /> <SiGraphql size={42} />  <FaUbuntu size={42} /> <FaAws size={42} /> <SiExpo size={42} /> <SiLighthouse size={42} /> <SiGooglemybusiness size={42} />
+                  <FaReact size={42} className='anim-rotate' /> <SiFlutter size={42} /> <SiJest size={42} /> <FaNodeJs size={42} /> <SiGraphql size={42} /> <FaUbuntu size={42} /> <FaAws size={42} /> <SiExpo size={42} /> <SiLighthouse size={42} /> <SiGooglemybusiness size={42} />
                 </Box>
               </Grid>
 
