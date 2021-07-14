@@ -1,7 +1,7 @@
-import React from 'react'
-import developeractivity from '../images/developer_activity.svg'
-import google from '../images/certificat_google.svg'
-import legacyfullstack from '../images/certificat_legacy_full_stack.svg'
+import React from "react";
+import developeractivity from "../images/developer_activity.svg";
+import google from "../images/certificat_google.svg";
+import legacyfullstack from "../images/certificat_legacy_full_stack.svg";
 import {
   ThemeProvider,
   StateLabel,
@@ -13,23 +13,54 @@ import {
   Grid,
   Spinner,
   CounterLabel,
-  ProgressBar
-} from '@primer/components'
-import Footer from '../components/Footer'
-import { FaHtml5, FaCss3, FaSass, FaReact, FaNodeJs, FaUbuntu, FaAws, FaApple, FaAndroid, FaStackOverflow, FaGithub, FaGoogle, FaWikipediaW, FaAppStore, FaGooglePlay, FaCcStripe, FaCcPaypal } from 'react-icons/fa'
-import { SiJavascript, SiTypescript, SiGraphql, SiMdnwebdocs, SiJest, SiVisualstudiocode, SiGooglemybusiness, SiExpo, SiTed, SiW3C, SiLighthouse, SiFlutter } from 'react-icons/si'
-import { Helmet, HelmetProvider } from 'react-helmet-async'
-import fetchGraphQL from '../fetchGraphQL'
+  ProgressBar,
+} from "@primer/components";
+import Footer from "../components/Footer";
+import {
+  FaHtml5,
+  FaCss3,
+  FaSass,
+  FaReact,
+  FaNodeJs,
+  FaUbuntu,
+  FaAws,
+  FaApple,
+  FaAndroid,
+  FaStackOverflow,
+  FaGithub,
+  FaGoogle,
+  FaWikipediaW,
+  FaAppStore,
+  FaGooglePlay,
+  FaCcStripe,
+  FaCcPaypal,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiGraphql,
+  SiMdnwebdocs,
+  SiJest,
+  SiVisualstudiocode,
+  SiGooglemybusiness,
+  SiExpo,
+  SiTed,
+  SiW3C,
+  SiLighthouse,
+  SiFlutter,
+} from "react-icons/si";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import fetchGraphQL from "../fetchGraphQL";
 
-const { useState, useEffect } = React
+const { useState, useEffect } = React;
 
 const About = () => {
   // We'll load the name of a repository, initially setting it to null
-  const [name, setName] = useState(null)
+  const [name, setName] = useState(null);
 
   // When the component mounts we'll fetch a repository name
   useEffect(() => {
-    let isMounted = true
+    let isMounted = true;
     fetchGraphQL(`
     query RepositoryNameQuery {
       # feel free to change owner/name here
@@ -37,108 +68,138 @@ const About = () => {
         name
         }
       }
-    `).then(response => {
-      // Avoid updating state if the component unmounted before the fetch completes
-      if (!isMounted) {
-        return
-      }
-      const data = response.data
-      setName(data.repository.name)
-    }).catch(error => {
-      console.error(error)
-    })
+    `)
+      .then(response => {
+        // Avoid updating state if the component unmounted before the fetch completes
+        if (!isMounted) {
+          return;
+        }
+        const data = response.data;
+        setName(data.repository.name);
+      })
+      .catch(error => {
+        console.error(error);
+      });
 
     return () => {
-      isMounted = false
-    }
-  }, [])
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <ThemeProvider>
       <HelmetProvider>
-        <div className='Mpw-about'>
-
+        <div className="Mpw-about">
           <Helmet>
-            <meta charSet='utf-8' />
+            <meta charSet="utf-8" />
             <title>MPW | À-propos</title>
-            <link rel='canonical' href='https://monproweb.io/a-propos' />
+            <link rel="canonical" href="https://monproweb.io/a-propos" />
           </Helmet>
 
           <BaseStyles>
-
             <Box m={4}>
-
               <Box p={3}>
-                <img src={developeractivity} alt='Developer Activity' className='Mpw-undraw hover-grow' />
+                <img
+                  src={developeractivity}
+                  alt="Developer Activity"
+                  className="Mpw-undraw hover-grow"
+                />
               </Box>
 
-              <Heading as='h1' mb={2} className='anim-fade-in'>À-propos</Heading>
+              <Heading as="h1" mb={2} className="anim-fade-in">
+                À-propos
+              </Heading>
 
               <Box p={3}>
-                <Text as='p' mr={3} className='anim-fade-up'>Actuellement en train d'apprendre React.</Text>
-                <StateLabel status='pullOpened'>{name != null ? `${name}` : <Spinner size='small' />}</StateLabel>
+                <Text as="p" mr={3} className="anim-fade-up">
+                  Actuellement en train d'apprendre React.
+                </Text>
+                <StateLabel status="pullOpened">
+                  {name != null ? `${name}` : <Spinner size="small" />}
+                </StateLabel>
               </Box>
 
-              <Grid gridTemplateColumns='repeat(2, auto)' gridGap={3}>
-                <Box p={3} className='hover-grow'>
-                  <FaHtml5 size={42} /> <FaCss3 size={42} /> <FaSass size={42} /> <SiJavascript size={42} /> <SiTypescript size={42} /> <SiVisualstudiocode size={42} />
+              <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                <Box p={3} className="hover-grow">
+                  <FaHtml5 size={42} /> <FaCss3 size={42} />{" "}
+                  <FaSass size={42} /> <SiJavascript size={42} />{" "}
+                  <SiTypescript size={42} /> <SiVisualstudiocode size={42} />
                 </Box>
 
-                <Box p={3} className='hover-grow'>
-                  <FaReact size={42} className='anim-rotate' /> <SiFlutter size={42} /> <SiJest size={42} /> <FaNodeJs size={42} /> <SiGraphql size={42} /> <FaUbuntu size={42} /> <FaAws size={42} /> <SiExpo size={42} /> <SiLighthouse size={42} /> <SiGooglemybusiness size={42} />
+                <Box p={3} className="hover-grow">
+                  <FaReact size={42} className="anim-rotate" />{" "}
+                  <SiFlutter size={42} /> <SiJest size={42} />{" "}
+                  <FaNodeJs size={42} /> <SiGraphql size={42} />{" "}
+                  <FaUbuntu size={42} /> <FaAws size={42} />{" "}
+                  <SiExpo size={42} /> <SiLighthouse size={42} />{" "}
+                  <SiGooglemybusiness size={42} />
                 </Box>
               </Grid>
 
-              <Grid gridTemplateColumns='repeat(2, auto)' gridGap={3}>
-                <Box p={3} className='hover-grow'>
-                  <FaGithub size={42} /> <FaStackOverflow size={42} /> <SiMdnwebdocs size={42} /> <SiW3C size={42} /> <FaGoogle size={42} /> <FaWikipediaW size={42} /> <SiTed size={42} />
+              <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                <Box p={3} className="hover-grow">
+                  <FaGithub size={42} /> <FaStackOverflow size={42} />{" "}
+                  <SiMdnwebdocs size={42} /> <SiW3C size={42} />{" "}
+                  <FaGoogle size={42} /> <FaWikipediaW size={42} />{" "}
+                  <SiTed size={42} />
                 </Box>
 
-                <Box p={3} className='hover-grow'>
-                  <FaApple size={42} /> <FaAndroid size={42} /> <FaAppStore size={42} /> <FaGooglePlay size={42} />
+                <Box p={3} className="hover-grow">
+                  <FaApple size={42} /> <FaAndroid size={42} />{" "}
+                  <FaAppStore size={42} /> <FaGooglePlay size={42} />
                 </Box>
               </Grid>
 
-              <Box p={3} className='hover-grow'>
+              <Box p={3} className="hover-grow">
                 <FaCcStripe size={42} /> <FaCcPaypal size={42} />
               </Box>
 
-              <Box p={3} className='hover-grow'>
-                <img src={google} alt='Google IT Automation with Python' className='Mpw-certificat' />
+              <Box p={3} className="hover-grow">
+                <img
+                  src={google}
+                  alt="Google IT Automation with Python"
+                  className="Mpw-certificat"
+                />
                 <Box p={3}>
                   <Link
                     mb={1}
-                    href='https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640'
-                  >Google IT Automation with Python
+                    href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
+                  >
+                    Google IT Automation with Python
                   </Link>
                 </Box>
               </Box>
 
-              <Box p={3} className='hover-grow'>
-                <img src={legacyfullstack} alt='Legacy Full Stack' className='Mpw-certificat' />
+              <Box p={3} className="hover-grow">
+                <img
+                  src={legacyfullstack}
+                  alt="Legacy Full Stack"
+                  className="Mpw-certificat"
+                />
                 <Box p={3}>
                   <Link
                     mb={1}
-                    href='https://www.freecodecamp.org/certification/thomaserhel/full-stack'
-                  >Legacy Full Stack
+                    href="https://www.freecodecamp.org/certification/thomaserhel/full-stack"
+                  >
+                    Legacy Full Stack
                   </Link>
                 </Box>
               </Box>
 
               <Box p={3}>
-                <Text mr={3}>EcoIndex <CounterLabel>A</CounterLabel></Text>
-                <ProgressBar progress={77} inline width='100px' />
+                <Text mr={3}>
+                  EcoIndex <CounterLabel>A</CounterLabel>
+                </Text>
+                <ProgressBar progress={77} inline width="100px" />
               </Box>
-
             </Box>
 
             <Footer />
-
           </BaseStyles>
         </div>
       </HelmetProvider>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default About
+export default About;
