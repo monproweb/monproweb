@@ -44,7 +44,7 @@ const Quotes = () => {
               </Heading>
 
               <Box p={3}>
-                <Get url="http://quotes.stormconsultancy.co.uk/random.json">
+                <Get url="https://quotes.stormconsultancy.co.uk/random.json">
                   {(
                     error: {
                       message:
