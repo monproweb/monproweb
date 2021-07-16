@@ -10,7 +10,6 @@ import {
   Heading,
   Text,
   Link,
-  Grid,
   Spinner,
   CounterLabel,
   ProgressBar,
@@ -18,23 +17,7 @@ import {
 import Footer from "../components/Footer";
 import {
   FaReact,
-  FaUbuntu,
-  FaAws,
-  FaApple,
-  FaAndroid,
-  FaStackOverflow,
-  FaGithub,
-  FaGoogle,
-  FaWikipediaW,
-  FaCcStripe,
-  FaCcPaypal,
 } from "react-icons/fa";
-import {
-  SiGraphql,
-  SiMdnwebdocs,
-  SiTed,
-  SiFlutter,
-} from "react-icons/si";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 // eslint-disable-next-line no-unused-vars
 import fetchGraphQL from '../fetchGraphQL';
@@ -107,29 +90,9 @@ function About(props) {
                 </StateLabel>
               </Box>
 
-              <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                 <Box p={3} className="hover-grow">
-                  <FaReact size={42} className="anim-rotate" color="#61DBFB" />
-                  <SiFlutter size={42} /> <SiGraphql size={42} />
-                  <FaUbuntu size={42} color="#dd4814" /> <FaAws size={42} />
+                  <FaReact size={256} className="anim-rotate" color="#61DBFB" />
                 </Box>
-
-                <Box p={3} className="hover-grow">
-                  <FaGithub size={42} /> <FaStackOverflow size={42} />
-                  <SiMdnwebdocs size={42} /> <FaGoogle size={42} />
-                  <FaWikipediaW size={42} /> <SiTed size={42} />
-                </Box>
-              </Grid>
-
-              <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
-                <Box p={3} className="hover-grow">
-                  <FaApple size={42} /> <FaAndroid size={42} />
-                </Box>
-
-                <Box p={3} className="hover-grow">
-                  <FaCcStripe size={42} /> <FaCcPaypal size={42} />
-                </Box>
-              </Grid>
 
               <Box p={3} className="hover-grow">
                 <img
