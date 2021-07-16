@@ -17,9 +17,6 @@ import {
 } from "@primer/components";
 import Footer from "../components/Footer";
 import {
-  FaHtml5,
-  FaCss3,
-  FaSass,
   FaReact,
   FaNodeJs,
   FaUbuntu,
@@ -30,23 +27,16 @@ import {
   FaGithub,
   FaGoogle,
   FaWikipediaW,
-  FaAppStore,
-  FaGooglePlay,
   FaCcStripe,
   FaCcPaypal,
 } from "react-icons/fa";
 import {
   SiJavascript,
-  SiTypescript,
   SiGraphql,
   SiMdnwebdocs,
   SiJest,
   SiVisualstudiocode,
-  SiGooglemybusiness,
-  SiExpo,
   SiTed,
-  SiW3C,
-  SiLighthouse,
   SiFlutter,
 } from "react-icons/si";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -123,32 +113,26 @@ function About(props) {
 
               <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                 <Box p={3} className="hover-grow">
-                  <FaHtml5 size={42} /> <FaCss3 size={42} />{" "}
-                  <FaSass size={42} /> <SiJavascript size={42} />{" "}
-                  <SiTypescript size={42} /> <SiVisualstudiocode size={42} />
+                  <SiJavascript size={42} /> <SiVisualstudiocode size={42} />
                 </Box>
 
                 <Box p={3} className="hover-grow">
-                  <FaReact size={42} className="anim-rotate" color="#61DBFB" />{" "}
+                  <FaReact size={42} className="anim-rotate" color="#61DBFB" />
                   <SiFlutter size={42} /> <SiJest size={42} />{" "}
                   <FaNodeJs size={42} /> <SiGraphql size={42} />{" "}
-                  <FaUbuntu size={42} color="#dd4814" /> <FaAws size={42} />{" "}
-                  <SiExpo size={42} /> <SiLighthouse size={42} />{" "}
-                  <SiGooglemybusiness size={42} />
+                  <FaUbuntu size={42} color="#dd4814" /> <FaAws size={42} />
                 </Box>
               </Grid>
 
               <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                 <Box p={3} className="hover-grow">
-                  <FaGithub size={42} /> <FaStackOverflow size={42} />{" "}
-                  <SiMdnwebdocs size={42} /> <SiW3C size={42} />{" "}
-                  <FaGoogle size={42} /> <FaWikipediaW size={42} />{" "}
-                  <SiTed size={42} />
+                  <FaGithub size={42} /> <FaStackOverflow size={42} />
+                  <SiMdnwebdocs size={42} /> <FaGoogle size={42} />
+                 <FaWikipediaW size={42} /> <SiTed size={42} />
                 </Box>
 
                 <Box p={3} className="hover-grow">
-                  <FaApple size={42} /> <FaAndroid size={42} />{" "}
-                  <FaAppStore size={42} /> <FaGooglePlay size={42} />
+                  <FaApple size={42} /> <FaAndroid size={42} />
                 </Box>
               </Grid>
 

@@ -44,7 +44,7 @@ const NavBar = () => (
               <Header.Item>
                 <Header.Link href="/" fontSize={2}>
                   <Avatar square src={logo} size={32} mr={2} />
-                  <span>Monproweb</span>
+                  <span>Mon Pro Web</span>
                 </Header.Link>
               </Header.Item>
 
