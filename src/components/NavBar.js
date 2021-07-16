@@ -76,7 +76,7 @@ const NavBar = () => (
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/à-propos" component={About} />
-              <Route path="/equipe" component={Team} />
+              <Route path="/équipe" component={Team} />
               <Route path="/citations" component={Quotes} />
             </Switch>
           </Suspense>

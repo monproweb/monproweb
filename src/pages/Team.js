@@ -28,7 +28,7 @@ function Team() {
           <Helmet>
             <meta charSet="utf-8" />
             <title>MPW | L'équipe</title>
-            <link rel="canonical" href="https://monproweb.io/equipe" />
+            <link rel="canonical" href="https://monproweb.io/équipe" />
           </Helmet>
 
           <BaseStyles>
@@ -83,7 +83,7 @@ function Team() {
                 <Avatar square src={avatarmonproweb} />
                 <span> </span>
                 <Link mb={1} href="https://github.com/monproweb/">
-                  Monproweb
+                  Mon Pro Web
                 </Link>
               </Box>
 

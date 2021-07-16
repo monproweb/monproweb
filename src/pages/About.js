@@ -190,9 +190,9 @@ function About(props) {
 
               <Box p={3}>
                 <Text mr={3}>
-                  EcoIndex <CounterLabel>A</CounterLabel>
+                  EcoIndex <CounterLabel>B</CounterLabel>
                 </Text>
-                <ProgressBar progress={77} inline width="100px" />
+                <ProgressBar progress={72} inline width="100px" />
               </Box>
             </Box>
 
