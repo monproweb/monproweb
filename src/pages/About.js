@@ -1,7 +1,5 @@
 import React from "react";
 import developeractivity from "../images/developer_activity.svg";
-import google from "../images/certificat_google.svg";
-import legacyfullstack from "../images/certificat_legacy_full_stack.svg";
 import {
   ThemeProvider,
   StateLabel,
@@ -94,12 +92,6 @@ function About(props) {
                   <FaReact size={256} className="anim-rotate" color="#61DBFB" />
                 </Box>
 
-              <Box p={3} className="hover-grow">
-                <img
-                  src={google}
-                  alt="Google IT Automation with Python"
-                  className="Mpw-certificat"
-                />
                 <Box p={3}>
                   <Link
                     mb={1}
@@ -108,14 +100,7 @@ function About(props) {
                     Google IT Automation with Python
                   </Link>
                 </Box>
-              </Box>
 
-              <Box p={3} className="hover-grow">
-                <img
-                  src={legacyfullstack}
-                  alt="Legacy Full Stack"
-                  className="Mpw-certificat"
-                />
                 <Box p={3}>
                   <Link
                     mb={1}
@@ -124,13 +109,12 @@ function About(props) {
                     Legacy Full Stack
                   </Link>
                 </Box>
-              </Box>
 
               <Box p={3}>
                 <Text mr={3}>
                   EcoIndex <CounterLabel>B</CounterLabel>
                 </Text>
-                <ProgressBar progress={72} inline width="100px" />
+                <ProgressBar progress={75} inline width="100px" />
               </Box>
             </Box>
 
