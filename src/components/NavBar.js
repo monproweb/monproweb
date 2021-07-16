@@ -65,7 +65,7 @@ const NavBar = () => (
               </Header.Item>
 
               <Header.Item>
-                <Header.Link href="/equipe">
+                <Header.Link href="/équipe">
                   <Tooltip aria-label="Équipe" direction="s">
                     <PeopleIcon size={24} />
                   </Tooltip>
