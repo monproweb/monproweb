@@ -50,41 +50,43 @@ import {
   SiFlutter,
 } from "react-icons/si";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import fetchGraphQL from "../fetchGraphQL";
+// eslint-disable-next-line no-unused-vars
+import fetchGraphQL from '../fetchGraphQL';
+import graphql from 'babel-plugin-relay/macro';
+import {
+  RelayEnvironmentProvider,
+  loadQuery,
+  usePreloadedQuery,
+} from 'react-relay/hooks';
+import RelayEnvironment from '../RelayEnvironment';
 
-const { useState, useEffect } = React;
+const { Suspense } = React;
 
-const About = () => {
-  // We'll load the name of a repository, initially setting it to null
-  const [name, setName] = useState(null);
+// Define a query
+const RepositoryNameQuery = graphql`
+  query AboutRepositoryNameQuery {
+    repository(owner: "monproweb", name: "monproweb") {
+      name
+    }
+  }
+`;
 
-  // When the component mounts we'll fetch a repository name
-  useEffect(() => {
-    let isMounted = true;
-    fetchGraphQL(`
-    query RepositoryNameQuery {
-      # feel free to change owner/name here
-      repository(owner: "monproweb" name: "monproweb") {
-        name
-        }
-      }
-    `)
-      .then(response => {
-        // Avoid updating state if the component unmounted before the fetch completes
-        if (!isMounted) {
-          return;
-        }
-        const data = response.data;
-        setName(data.repository.name);
-      })
-      .catch(error => {
-        console.error(error);
-      });
+// Immediately load the query as our app starts. For a real app, we'd move this
+// into our routing configuration, preloading data as we transition to new routes.
+const preloadedQuery = loadQuery(RelayEnvironment, RepositoryNameQuery, {
+  /* query variables */
+});
 
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+// Inner component that reads the preloaded query results via `usePreloadedQuery()`.
+// This works as follows:
+// - If the query has completed, it returns the results of the query.
+// - If the query is still pending, it "suspends" (indicates to React that the
+//   component isn't ready to render yet). This will show the nearest <Suspense>
+//   fallback.
+// - If the query failed, it throws the failure error. For simplicity we aren't
+//   handling the failure case here.
+function About(props) {
+  const data = usePreloadedQuery(RepositoryNameQuery, props.preloadedQuery);
 
   return (
     <ThemeProvider>
@@ -115,7 +117,7 @@ const About = () => {
                   Actuellement en train d'apprendre React.
                 </Text>
                 <StateLabel status="pullOpened">
-                  {name != null ? `${name}` : <Spinner size="small" />}
+                  {data.repository.name}
                 </StateLabel>
               </Box>
 
@@ -127,10 +129,10 @@ const About = () => {
                 </Box>
 
                 <Box p={3} className="hover-grow">
-                  <FaReact size={42} className="anim-rotate" />{" "}
+                  <FaReact size={42} className="anim-rotate" color="#61DBFB" />{" "}
                   <SiFlutter size={42} /> <SiJest size={42} />{" "}
                   <FaNodeJs size={42} /> <SiGraphql size={42} />{" "}
-                  <FaUbuntu size={42} /> <FaAws size={42} />{" "}
+                  <FaUbuntu size={42} color="#dd4814" /> <FaAws size={42} />{" "}
                   <SiExpo size={42} /> <SiLighthouse size={42} />{" "}
                   <SiGooglemybusiness size={42} />
                 </Box>
@@ -202,4 +204,19 @@ const About = () => {
   );
 };
 
-export default About;
+// The above component needs to know how to access the Relay environment, and we
+// need to specify a fallback in case it suspends:
+// - <RelayEnvironmentProvider> tells child components how to talk to the current
+//   Relay Environment instance
+// - <Suspense> specifies a fallback in case a child suspends.
+function AboutRoot(props) {
+  return (
+    <RelayEnvironmentProvider environment={RelayEnvironment}>
+      <Suspense fallback={<Spinner />}>
+        <About preloadedQuery={preloadedQuery} />
+      </Suspense>
+    </RelayEnvironmentProvider>
+  );
+}
+
+export default AboutRoot;

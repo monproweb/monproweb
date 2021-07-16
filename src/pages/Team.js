@@ -20,7 +20,7 @@ import {
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-const Team = () => {
+function Team() {
   return (
     <ThemeProvider>
       <HelmetProvider>
