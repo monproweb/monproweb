@@ -62,7 +62,7 @@ function About(props) {
           <Helmet>
             <meta charSet="utf-8" />
             <title>MPW | À-propos</title>
-            <link rel="canonical" href="https://monproweb.io/a-propos" />
+            <link rel="canonical" href="https://monproweb.io/à-propos" />
           </Helmet>
 
           <BaseStyles>

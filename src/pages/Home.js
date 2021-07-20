@@ -1,4 +1,4 @@
-import React from "react";
+import { React, lazy } from "react";
 import react from "../images/react.svg";
 import nature from "../images/nature.svg";
 import {
@@ -10,8 +10,9 @@ import {
   ProgressBar,
   CounterLabel,
 } from "@primer/components";
-import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+
+const Footer = lazy(() => import("../components/Footer"));
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
           <Helmet>
             <meta charSet="utf-8" />
             <title>MPW | Mon Pro Web</title>
-            <link rel="canonical" href="https://monproweb.io/a-propos" />
+            <link rel="canonical" href="https://monproweb.io/" />
           </Helmet>
 
           <BaseStyles>
