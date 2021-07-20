@@ -47,7 +47,7 @@ const Home = () => {
                 </Text>
                 <img
                   src={nature}
-                  width="160"
+                  width="90"
                   height="90"
                   alt="React"
                   className="Mpw-undraw hover-grow"

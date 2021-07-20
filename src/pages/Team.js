@@ -18,6 +18,7 @@ import {
   ButtonPrimary,
 } from "@primer/components";
 import Footer from "../components/Footer";
+import "../styles/Team.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Team() {
