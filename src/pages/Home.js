@@ -1,4 +1,4 @@
-import { React, lazy } from "react";
+import React from "react";
 import react from "../images/react.svg";
 import nature from "../images/nature.svg";
 import {
@@ -10,9 +10,8 @@ import {
   ProgressBar,
   CounterLabel,
 } from "@primer/components";
+import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-
-const Footer = lazy(() => import("../components/Footer"));
 
 const Home = () => {
   return (
