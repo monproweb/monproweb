@@ -1,5 +1,5 @@
 import React from "react";
-import nature from "../images/nature.svg";
+import react from "../images/react.svg";
 import {
   ThemeProvider,
   BaseStyles,
@@ -26,8 +26,8 @@ const Home = () => {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-              <img
-                  src={nature}
+                <img
+                  src={react}
                   width="640"
                   height="360"
                   alt="React"
