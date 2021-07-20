@@ -1,5 +1,4 @@
 import React from "react";
-import react from "../images/react.svg";
 import nature from "../images/nature.svg";
 import {
   ThemeProvider,
@@ -27,8 +26,8 @@ const Home = () => {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-                <img
-                  src={react}
+              <img
+                  src={nature}
                   width="640"
                   height="360"
                   alt="React"
@@ -45,13 +44,6 @@ const Home = () => {
                   Développer votre visibilité en ligne à l'aide d'applications
                   performantes qui suivent les bonnes pratiques.
                 </Text>
-                <img
-                  src={nature}
-                  width="640"
-                  height="360"
-                  alt="React"
-                  className="Mpw-undraw hover-grow"
-                />
               </Box>
 
               <Box p={3}>
