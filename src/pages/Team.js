@@ -36,6 +36,8 @@ function Team() {
               <Box p={3}>
                 <img
                   src={programming}
+                  width="640"
+                  height="360"
                   alt="Programming"
                   className="Mpw-undraw hover-grow"
                 />

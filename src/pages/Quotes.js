@@ -28,6 +28,8 @@ function Quotes() {
               <Box p={3}>
                 <img
                   src={theworldismine}
+                  width="640"
+                  height="360"
                   alt="The world is mine"
                   className="Mpw-undraw hover-grow"
                 />

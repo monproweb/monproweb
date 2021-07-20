@@ -30,6 +30,8 @@ const Home = () => {
               <Box p={3}>
                 <img
                   src={react}
+                  width="640"
+                  height="360"
                   alt="React"
                   className="Mpw-undraw hover-grow"
                 />
@@ -46,6 +48,8 @@ const Home = () => {
                 </Text>
                 <img
                   src={nature}
+                  width="640"
+                  height="360"
                   alt="React"
                   className="Mpw-undraw hover-grow"
                 />

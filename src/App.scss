@@ -78,3 +78,7 @@
 .Mpw-app {
   text-align: center;
 }
+
+img {
+  aspect-ratio: attr(width) / attr(height);
+}

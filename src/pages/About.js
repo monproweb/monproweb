@@ -70,6 +70,8 @@ function About(props) {
               <Box p={3}>
                 <img
                   src={developeractivity}
+                  width="640"
+                  height="360"
                   alt="Developer Activity"
                   className="Mpw-undraw hover-grow"
                 />
