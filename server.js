@@ -2,7 +2,6 @@ const fs = require('fs')
 const http = require('http')
 const https = require('https')
 const path = require('path')
-const serveStatic = require('serve-static')
 const express = require('express')
 const compression = require('compression')
 const rateLimit = require('express-rate-limit')
@@ -39,11 +38,6 @@ app.use(
   })
 )
 
-app.use(serveStatic(path.join(__dirname, 'public'), {
-  maxAge: '1d',
-  setHeaders: setCustomCacheControl
-}))
-
 app.use(compression())
 
 app.use(express.static(path.join(__dirname, 'build')))
@@ -62,10 +56,3 @@ httpServer.listen(80, () => {
 httpsServer.listen(443, () => {
   console.log('HTTPS Server running on port 443')
 })
-
-function setCustomCacheControl (res, path) {
-  if (serveStatic.mime.lookup(path) === "text/html") {
-    // Custom Cache-Control for HTML files
-    res.setHeader("Cache-Control", "public, max-age=0");
-  }
-}
