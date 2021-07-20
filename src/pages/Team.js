@@ -91,7 +91,7 @@ function Team() {
                 <Text mr={3}>
                   EcoIndex <CounterLabel>A</CounterLabel>
                 </Text>
-                <ProgressBar progress={76} inline width="100px" />
+                <ProgressBar progress={82} inline width="100px" />
               </Box>
             </Box>
 
