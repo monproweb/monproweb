@@ -3,6 +3,7 @@ const http = require('http')
 const https = require('https')
 const path = require('path')
 const express = require('express')
+const compression = require('compression')
 const rateLimit = require('express-rate-limit')
 const helmet = require('helmet')
 
@@ -36,6 +37,8 @@ app.use(
     contentSecurityPolicy: false
   })
 )
+
+app.use(compression())
 
 app.use(express.static(path.join(__dirname, 'build')))
 
