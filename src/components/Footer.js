@@ -44,7 +44,7 @@ const Footer = () => {
           </Box>
           <Box p={3}>
             <Link mb={1} href="https://github.com/monproweb">
-              <FaGithub size={28} aria-label="GitHub" className="social" />
+              <FaGithub size={26} aria-label="GitHub" className="social" />
             </Link>
           </Box>
         </Grid>
