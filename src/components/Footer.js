@@ -16,18 +16,18 @@ const Footer = () => {
         <Grid gridTemplateColumns="repeat(5, auto)" gridGap={3}>
           <Box p={3}>
             <Link mb={1} href="https://twitter.com/monproweb">
-              <FaTwitter size={28} aria-label="Twitter" className="social" />
+              <FaTwitter size={26} aria-label="Twitter" className="social" />
             </Link>
           </Box>
           <Box p={3}>
             <Link mb={1} href="https://facebook.com/monproweb">
-              <FaFacebook size={28} aria-label="Facebook" className="social" />
+              <FaFacebook size={26} aria-label="Facebook" className="social" />
             </Link>
           </Box>
           <Box p={3}>
             <Link mb={1} href="https://instagram.com/monproweb">
               <FaInstagram
-                size={28}
+                size={26}
                 aria-label="Instagram"
                 className="social"
               />
@@ -36,7 +36,7 @@ const Footer = () => {
           <Box p={3}>
             <Link mb={1} href="https://linkedin.com/company/monproweb">
               <FaLinkedinIn
-                size={28}
+                size={26}
                 aria-label="Linkedin"
                 className="social"
               />
