@@ -50,7 +50,7 @@ const Home = () => {
                 <Text mr={3}>
                   EcoIndex <CounterLabel>A</CounterLabel>
                 </Text>
-                <ProgressBar progress={83} inline width="100px" />
+                <ProgressBar progress={84} inline width="100px" />
               </Box>
             </Box>
 
