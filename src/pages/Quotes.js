@@ -1,5 +1,4 @@
 import React from "react";
-import theworldismine from "../images/the_world_is_mine.svg";
 import {
   ThemeProvider,
   BaseStyles,
@@ -8,7 +7,9 @@ import {
   Text,
   ProgressBar,
   CounterLabel,
+  CircleBadge,
 } from "@primer/components";
+import {ZapIcon} from '@primer/octicons-react'
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -26,13 +27,9 @@ function Quotes() {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-                <img
-                  src={theworldismine}
-                  width="640"
-                  height="360"
-                  alt="The world is mine"
-                  className="Mpw-undraw hover-grow"
-                />
+              <CircleBadge>
+                  <CircleBadge.Icon icon={ZapIcon} />
+                </CircleBadge>
               </Box>
 
               <Heading as="h1" mb={2} className="anim-fade-in">

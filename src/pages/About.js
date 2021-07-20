@@ -1,5 +1,4 @@
 import React from "react";
-import developeractivity from "../images/developer_activity.svg";
 import {
   ThemeProvider,
   StateLabel,
@@ -11,7 +10,9 @@ import {
   Spinner,
   CounterLabel,
   ProgressBar,
+  CircleBadge,
 } from "@primer/components";
+import {MortarBoardIcon} from '@primer/octicons-react'
 import Footer from "../components/Footer";
 import {
   FaReact,
@@ -68,13 +69,9 @@ function About(props) {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-                <img
-                  src={developeractivity}
-                  width="640"
-                  height="360"
-                  alt="Developer Activity"
-                  className="Mpw-undraw hover-grow"
-                />
+              <CircleBadge>
+                  <CircleBadge.Icon icon={MortarBoardIcon} />
+                </CircleBadge>
               </Box>
 
               <Heading as="h1" mb={2} className="anim-fade-in">

@@ -1,6 +1,4 @@
 import React from "react";
-import react from "../images/react.svg";
-import nature from "../images/nature.svg";
 import {
   ThemeProvider,
   BaseStyles,
@@ -9,7 +7,9 @@ import {
   Text,
   ProgressBar,
   CounterLabel,
+  CircleBadge,
 } from "@primer/components";
+import {RocketIcon, GraphIcon} from '@primer/octicons-react'
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -27,13 +27,9 @@ const Home = () => {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-                <img
-                  src={react}
-                  width="160"
-                  height="90"
-                  alt="React"
-                  className="Mpw-undraw hover-grow"
-                />
+                <CircleBadge>
+                  <CircleBadge.Icon icon={RocketIcon} />
+                </CircleBadge>
               </Box>
 
               <Heading as="h1" mb={2} className="anim-fade-in">
@@ -45,13 +41,9 @@ const Home = () => {
                   Développer votre visibilité en ligne à l'aide d'applications
                   performantes qui suivent les bonnes pratiques.
                 </Text>
-                <img
-                  src={nature}
-                  width="90"
-                  height="90"
-                  alt="React"
-                  className="Mpw-undraw hover-grow"
-                />
+                <CircleBadge>
+                  <CircleBadge.Icon icon={GraphIcon} />
+                </CircleBadge>
               </Box>
 
               <Box p={3}>

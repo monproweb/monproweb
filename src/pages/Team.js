@@ -1,5 +1,4 @@
 import React from "react";
-import programming from "../images/programming.svg";
 import avatarthomaserhel from "../images/avatar-thomaserhel.svg";
 import avatarmonproweb from "../images/avatar-monproweb.svg";
 import { StarIcon, PlayIcon } from "@primer/octicons-react";
@@ -16,7 +15,9 @@ import {
   CounterLabel,
   ProgressBar,
   ButtonPrimary,
+  CircleBadge,
 } from "@primer/components";
+import {OrganizationIcon} from '@primer/octicons-react'
 import Footer from "../components/Footer";
 import "../styles/Team.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -35,13 +36,9 @@ function Team() {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-                <img
-                  src={programming}
-                  width="640"
-                  height="360"
-                  alt="Programming"
-                  className="Mpw-undraw hover-grow"
-                />
+              <CircleBadge>
+                  <CircleBadge.Icon icon={OrganizationIcon} />
+                </CircleBadge>
               </Box>
 
               <Heading as="h1" mb={2} className="anim-fade-in">
