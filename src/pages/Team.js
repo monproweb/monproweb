@@ -20,6 +20,7 @@ import {
 import {OrganizationIcon} from '@primer/octicons-react'
 import "../styles/Team.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Footer from "../components/Footer";
 
 function Team() {
   return (
@@ -35,17 +36,17 @@ function Team() {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-              <CircleBadge>
+                <CircleBadge>
                   <CircleBadge.Icon icon={OrganizationIcon} />
                 </CircleBadge>
               </Box>
 
-              <Heading as="h1" mb={2} >
+              <Heading as="h1" mb={2}>
                 Thomas Erhel
               </Heading>
 
               <Box p={3}>
-                <Text as="p" mr={3} >
+                <Text as="p" mr={3}>
                   #ZeroKnowledge #PracticeMakesPerfect #NeverGiveUp
                 </Text>
 
@@ -94,6 +95,7 @@ function Team() {
               </Box>
             </Box>
 
+            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>

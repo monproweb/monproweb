@@ -12,6 +12,7 @@ import {
 } from "@primer/components";
 import {DeviceDesktopIcon, DeviceMobileIcon} from '@primer/octicons-react'
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -26,12 +27,12 @@ const Home = () => {
 
           <BaseStyles>
             <Box m={4}>
-              <Heading as="h1" mb={2} >
+              <Heading as="h1" mb={2}>
                 Je construis des applications Web et mobiles.
               </Heading>
 
               <Box p={3}>
-                <Text as="p" mr={3} >
+                <Text as="p" mr={3}>
                   Développer votre visibilité en ligne à l'aide d'applications
                   performantes qui suivent les bonnes pratiques.
                 </Text>
@@ -58,6 +59,7 @@ const Home = () => {
               </Box>
             </Box>
 
+            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>

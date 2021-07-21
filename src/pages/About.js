@@ -26,6 +26,7 @@ import {
   usePreloadedQuery,
 } from 'react-relay/hooks';
 import RelayEnvironment from '../RelayEnvironment';
+import Footer from "../components/Footer";
 
 const { Suspense } = React;
 
@@ -116,6 +117,7 @@ function About(props) {
               </Box>
             </Box>
 
+            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>

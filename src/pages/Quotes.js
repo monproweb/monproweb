@@ -11,6 +11,7 @@ import {
 } from "@primer/components";
 import {ZapIcon} from '@primer/octicons-react'
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Footer from "../components/Footer";
 
 function Quotes() {
   return (
@@ -47,6 +48,7 @@ function Quotes() {
               </Box>
             </Box>
 
+            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>
