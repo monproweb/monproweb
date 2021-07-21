@@ -8,6 +8,7 @@ import {
   ProgressBar,
   CounterLabel,
   CircleBadge,
+  Grid,
 } from "@primer/components";
 import {RocketIcon, GraphIcon} from '@primer/octicons-react'
 import Footer from "../components/Footer";
@@ -26,12 +27,6 @@ const Home = () => {
 
           <BaseStyles>
             <Box m={4}>
-              <Box p={3}>
-                <CircleBadge>
-                  <CircleBadge.Icon icon={RocketIcon} />
-                </CircleBadge>
-              </Box>
-
               <Heading as="h1" mb={2} className="anim-fade-in">
                 Je construis des applications Web et mobiles.
               </Heading>
@@ -41,10 +36,20 @@ const Home = () => {
                   Développer votre visibilité en ligne à l'aide d'applications
                   performantes qui suivent les bonnes pratiques.
                 </Text>
-                <CircleBadge>
-                  <CircleBadge.Icon icon={GraphIcon} />
-                </CircleBadge>
               </Box>
+
+              <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
+                <Box p={3}>
+                  <CircleBadge>
+                    <CircleBadge.Icon icon={RocketIcon} />
+                  </CircleBadge>
+                </Box>
+                <Box p={3}>
+                  <CircleBadge>
+                    <CircleBadge.Icon icon={GraphIcon} />
+                  </CircleBadge>
+                </Box>
+              </Grid>
 
               <Box p={3}>
                 <Text mr={3}>

@@ -1,5 +1,4 @@
 const fs = require('fs')
-const http = require('http')
 const path = require('path')
 const express = require('express')
 const spdy = require('spdy')
@@ -21,7 +20,7 @@ const credentials = {
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 200 // limit each IP to 200 requests per windowMs
+  max: 100 // limit each IP to 200 requests per windowMs
 })
 
 //  apply to all requests
@@ -46,11 +45,14 @@ app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'))
 })
 
-const httpServer = http.createServer(app)
-
-httpServer.listen(80, () => {
-  console.log('HTTP Server running on port 80')
-})
+spdy.createServer(app).listen(80, error => {
+  if (error) {
+    console.error(error);
+    return process.exit(1);
+  } else {
+    console.log("Listening on port: 80");
+  }
+});
 
 spdy.createServer(credentials, app).listen(443, error => {
   if (error) {
