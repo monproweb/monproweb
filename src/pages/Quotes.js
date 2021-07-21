@@ -10,7 +10,6 @@ import {
   CircleBadge,
 } from "@primer/components";
 import {ZapIcon} from '@primer/octicons-react'
-import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 function Quotes() {
@@ -27,12 +26,12 @@ function Quotes() {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-              <CircleBadge>
+                <CircleBadge>
                   <CircleBadge.Icon icon={ZapIcon} />
                 </CircleBadge>
               </Box>
 
-              <Heading as="h1" mb={2} className="anim-fade-in">
+              <Heading as="h1" mb={2}>
                 Citations
               </Heading>
 
@@ -48,7 +47,6 @@ function Quotes() {
               </Box>
             </Box>
 
-            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>

@@ -15,6 +15,7 @@ const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../pages/About"));
 const Team = lazy(() => import("../pages/Team"));
 const Quotes = lazy(() => import("../pages/Quotes"));
+const Footer = lazy(() => import("../components/Footer"))
 
 const NavBar = () => (
   <ThemeProvider>
@@ -79,6 +80,7 @@ const NavBar = () => (
               <Route path="/équipe" component={Team} />
               <Route path="/citations" component={Quotes} />
             </Switch>
+            <Footer />
           </Suspense>
         </Router>
       </BaseStyles>

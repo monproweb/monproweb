@@ -13,7 +13,6 @@ import {
   CircleBadge,
 } from "@primer/components";
 import {MortarBoardIcon} from '@primer/octicons-react'
-import Footer from "../components/Footer";
 import {
   FaReact,
 } from "react-icons/fa";
@@ -69,12 +68,12 @@ function About(props) {
           <BaseStyles>
             <Box m={4}>
               <Box p={3}>
-              <CircleBadge>
+                <CircleBadge>
                   <CircleBadge.Icon icon={MortarBoardIcon} />
                 </CircleBadge>
               </Box>
 
-              <Heading as="h1" mb={2} className="anim-fade-in">
+              <Heading as="h1" mb={2}>
                 À-propos
               </Heading>
 
@@ -87,27 +86,27 @@ function About(props) {
                 </StateLabel>
               </Box>
 
-                <Box p={3} className="hover-grow">
-                  <FaReact size={256} className="anim-rotate" color="#61DBFB" />
-                </Box>
+              <Box p={3}>
+                <FaReact size={256} color="#61DBFB" />
+              </Box>
 
-                <Box p={3}>
-                  <Link
-                    mb={1}
-                    href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
-                  >
-                    Google IT Automation with Python
-                  </Link>
-                </Box>
+              <Box p={3}>
+                <Link
+                  mb={1}
+                  href="https://coursera.org/share/7e3de15dc9292c8949d518a86bb8c640"
+                >
+                  Google IT Automation with Python
+                </Link>
+              </Box>
 
-                <Box p={3}>
-                  <Link
-                    mb={1}
-                    href="https://www.freecodecamp.org/certification/thomaserhel/full-stack"
-                  >
-                    Legacy Full Stack
-                  </Link>
-                </Box>
+              <Box p={3}>
+                <Link
+                  mb={1}
+                  href="https://www.freecodecamp.org/certification/thomaserhel/full-stack"
+                >
+                  Legacy Full Stack
+                </Link>
+              </Box>
 
               <Box p={3}>
                 <Text mr={3}>
@@ -117,7 +116,6 @@ function About(props) {
               </Box>
             </Box>
 
-            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>

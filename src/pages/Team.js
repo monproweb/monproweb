@@ -18,7 +18,6 @@ import {
   CircleBadge,
 } from "@primer/components";
 import {OrganizationIcon} from '@primer/octicons-react'
-import Footer from "../components/Footer";
 import "../styles/Team.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -41,12 +40,12 @@ function Team() {
                 </CircleBadge>
               </Box>
 
-              <Heading as="h1" mb={2} className="anim-fade-in">
+              <Heading as="h1" mb={2} >
                 Thomas Erhel
               </Heading>
 
               <Box p={3}>
-                <Text as="p" mr={3} className="anim-fade-up">
+                <Text as="p" mr={3} >
                   #ZeroKnowledge #PracticeMakesPerfect #NeverGiveUp
                 </Text>
 
@@ -95,7 +94,6 @@ function Team() {
               </Box>
             </Box>
 
-            <Footer />
           </BaseStyles>
         </div>
       </HelmetProvider>
