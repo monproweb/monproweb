@@ -1,8 +1,8 @@
 const fs = require('fs')
 const http = require('http')
-const https = require('https')
 const path = require('path')
 const express = require('express')
+const spdy = require('spdy')
 const compression = require('compression')
 const rateLimit = require('express-rate-limit')
 const helmet = require('helmet')
@@ -47,12 +47,16 @@ app.get('/*', function (req, res) {
 })
 
 const httpServer = http.createServer(app)
-const httpsServer = https.createServer(credentials, app)
 
 httpServer.listen(80, () => {
   console.log('HTTP Server running on port 80')
 })
 
-httpsServer.listen(443, () => {
-  console.log('HTTPS Server running on port 443')
-})
+spdy.createServer(credentials, app).listen(443, error => {
+  if (error) {
+    console.error(error);
+    return process.exit(1);
+  } else {
+    console.log("Listening on port: 443");
+  }
+});
