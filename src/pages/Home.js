@@ -10,7 +10,7 @@ import {
   CircleBadge,
   Grid,
 } from "@primer/components";
-import {RocketIcon, GraphIcon} from '@primer/octicons-react'
+import {DeviceDesktopIcon, DeviceMobileIcon} from '@primer/octicons-react'
 import Footer from "../components/Footer";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
@@ -40,13 +40,13 @@ const Home = () => {
 
               <Grid gridTemplateColumns="repeat(2, auto)" gridGap={3}>
                 <Box p={3}>
-                  <CircleBadge>
-                    <CircleBadge.Icon icon={RocketIcon} />
+                  <CircleBadge className="anim-hover-grow">
+                    <CircleBadge.Icon icon={DeviceDesktopIcon} />
                   </CircleBadge>
                 </Box>
                 <Box p={3}>
-                  <CircleBadge>
-                    <CircleBadge.Icon icon={GraphIcon} />
+                  <CircleBadge className="anim-hover-grow">
+                    <CircleBadge.Icon icon={DeviceMobileIcon} />
                   </CircleBadge>
                 </Box>
               </Grid>
