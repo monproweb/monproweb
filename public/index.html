@@ -6,7 +6,7 @@
   <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Je construis des applications Web et mobiles." />
-  <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.9.3/css/tarteaucitron.min.css" integrity="sha512-jqx8Dw57c52Pimlx6Bc111fY04WlMproRnFQDgDJwYTxScbEWcLo1rfc5xw9vYyeJ4o8GESYmJkibnkcwwOcHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.9.3/css/tarteaucitron.min.css" integrity="sha512-jqx8Dw57c52Pimlx6Bc111fY04WlMproRnFQDgDJwYTxScbEWcLo1rfc5xw9vYyeJ4o8GESYmJkibnkcwwOcHA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://www.google-analytics.com">
@@ -15,8 +15,8 @@
 </head>
 
 <body>
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.9.3/tarteaucitron.min.js" integrity="sha512-r/kjLI/1jNJCXAUuhhnzD7sFvFX9Vkq3yL2+5Fcs/hQzEzwA2JdiOFLbpQ01m73U4zfG/9lNN/K/MLq5niG8GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script async>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tarteaucitronjs/1.9.3/tarteaucitron.min.js" integrity="sha512-r/kjLI/1jNJCXAUuhhnzD7sFvFX9Vkq3yL2+5Fcs/hQzEzwA2JdiOFLbpQ01m73U4zfG/9lNN/K/MLq5niG8GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
     tarteaucitron.init({
       "privacyUrl": "",
 
@@ -51,7 +51,7 @@
       "mandatory": true
     });
   </script>
-  <script async type="text/javascript">
+  <script type="text/javascript">
     tarteaucitron.user.googletagmanagerId = 'GTM-TFLZQ7R';
     (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
   </script>
