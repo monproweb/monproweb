@@ -54,9 +54,9 @@ httpServer.listen(80, () => {
 
 spdy.createServer(credentials, app).listen(443, error => {
   if (error) {
-    console.error(error);
-    return process.exit(1);
+    console.error(error)
+    return process.exit(1)
   } else {
-    console.log("Listening on port: 443");
+    console.log('Listening on port: 443')
   }
-});
+})

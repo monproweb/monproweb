@@ -1,12 +1,12 @@
-import "./App.scss";
-import NavBar from "./components/NavBar";
+import './App.scss'
+import NavBar from './components/NavBar'
 
-function App() {
+function App () {
   return (
-    <div className="Mpw-app">
+    <div className='Mpw-app'>
       <NavBar />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

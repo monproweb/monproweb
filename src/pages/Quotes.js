@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   ThemeProvider,
   BaseStyles,
@@ -7,21 +7,21 @@ import {
   Text,
   ProgressBar,
   CounterLabel,
-  CircleBadge,
-} from "@primer/components";
-import { ZapIcon } from "@primer/octicons-react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import Footer from "../components/Footer";
+  CircleBadge
+} from '@primer/components'
+import { ZapIcon } from '@primer/octicons-react'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import Footer from '../components/Footer'
 
-function Quotes() {
+function Quotes () {
   return (
     <ThemeProvider>
       <HelmetProvider>
-        <div className="Mpw-quotes">
+        <div className='Mpw-quotes'>
           <Helmet>
-            <meta charSet="utf-8" />
+            <meta charSet='utf-8' />
             <title>MPW | Citations</title>
-            <link rel="canonical" href="https://monproweb.io/citations" />
+            <link rel='canonical' href='https://monproweb.io/citations' />
           </Helmet>
 
           <BaseStyles>
@@ -32,7 +32,7 @@ function Quotes() {
                 </CircleBadge>
               </Box>
 
-              <Heading as="h1" mb={2}>
+              <Heading as='h1' mb={2}>
                 Citations
               </Heading>
 
@@ -44,7 +44,7 @@ function Quotes() {
                 <Text mr={3}>
                   EcoIndex <CounterLabel>A</CounterLabel>
                 </Text>
-                <ProgressBar progress={77} inline width="100px" />
+                <ProgressBar progress={77} inline width='100px' />
               </Box>
             </Box>
 
@@ -53,7 +53,7 @@ function Quotes() {
         </div>
       </HelmetProvider>
     </ThemeProvider>
-  );
+  )
 }
 
-export default Quotes;
+export default Quotes
