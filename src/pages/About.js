@@ -12,20 +12,18 @@ import {
   ProgressBar,
   CircleBadge,
 } from "@primer/components";
-import {MortarBoardIcon} from '@primer/octicons-react'
-import {
-  FaReact,
-} from "react-icons/fa";
+import { MortarBoardIcon } from "@primer/octicons-react";
+import { FaReact } from "react-icons/fa";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 // eslint-disable-next-line no-unused-vars
-import fetchGraphQL from '../fetchGraphQL';
-import graphql from 'babel-plugin-relay/macro';
+import fetchGraphQL from "../fetchGraphQL";
+import graphql from "babel-plugin-relay/macro";
 import {
   RelayEnvironmentProvider,
   loadQuery,
   usePreloadedQuery,
-} from 'react-relay/hooks';
-import RelayEnvironment from '../RelayEnvironment';
+} from "react-relay/hooks";
+import RelayEnvironment from "../RelayEnvironment";
 import Footer from "../components/Footer";
 
 const { Suspense } = React;
@@ -123,7 +121,7 @@ function About(props) {
       </HelmetProvider>
     </ThemeProvider>
   );
-};
+}
 
 // The above component needs to know how to access the Relay environment, and we
 // need to specify a fallback in case it suspends:

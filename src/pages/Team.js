@@ -17,7 +17,7 @@ import {
   ButtonPrimary,
   CircleBadge,
 } from "@primer/components";
-import {OrganizationIcon} from '@primer/octicons-react'
+import { OrganizationIcon } from "@primer/octicons-react";
 import "../styles/Team.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "../components/Footer";
@@ -101,6 +101,6 @@ function Team() {
       </HelmetProvider>
     </ThemeProvider>
   );
-};
+}
 
 export default Team;

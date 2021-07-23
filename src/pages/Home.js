@@ -10,7 +10,7 @@ import {
   CircleBadge,
   Grid,
 } from "@primer/components";
-import {DeviceDesktopIcon, DeviceMobileIcon} from '@primer/octicons-react'
+import { DeviceDesktopIcon, DeviceMobileIcon } from "@primer/octicons-react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "../components/Footer";
 

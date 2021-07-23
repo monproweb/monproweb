@@ -9,7 +9,7 @@ import {
   CounterLabel,
   CircleBadge,
 } from "@primer/components";
-import {ZapIcon} from '@primer/octicons-react'
+import { ZapIcon } from "@primer/octicons-react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Footer from "../components/Footer";
 
@@ -54,6 +54,6 @@ function Quotes() {
       </HelmetProvider>
     </ThemeProvider>
   );
-};
+}
 
 export default Quotes;
