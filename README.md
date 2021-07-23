@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![CodeFactor](https://www.codefactor.io/repository/github/monproweb/monproweb/badge)](https://www.codefactor.io/repository/github/monproweb/monproweb)
 
+[![codecov](https://codecov.io/gh/monproweb/monproweb/branch/main/graph/badge.svg?token=EKNJ667MCN)](https://codecov.io/gh/monproweb/monproweb)
+
 ## Available Scripts
 
 In the project directory, you can run:
