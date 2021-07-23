@@ -7,14 +7,8 @@ test("renders monproweb home link", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test("renders monproweb about link", () => {
+test("renders black lives matter link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/À-propos/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-test("renders monproweb team link", () => {
-  render(<App />);
-  const linkElement = screen.getByText(/L'équipe/i);
+  const linkElement = screen.getByText(/Soutenez la Equal Justice Initiative./i);
   expect(linkElement).toBeInTheDocument();
 });
