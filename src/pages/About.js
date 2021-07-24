@@ -80,7 +80,7 @@ function About(props) {
                 <Text as="p" mr={3}>
                   Actuellement en train d'apprendre React.
                 </Text>
-                <StateLabel status="pullOpened">
+                <StateLabel status="draft">
                   {data.repository.name}
                 </StateLabel>
               </Box>

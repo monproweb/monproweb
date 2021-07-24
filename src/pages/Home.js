@@ -8,7 +8,6 @@ import {
   ProgressBar,
   CounterLabel,
   CircleBadge,
-  Grid
 } from '@primer/components'
 import { DeviceDesktopIcon, DeviceMobileIcon } from '@primer/octicons-react'
 import { Helmet, HelmetProvider } from 'react-helmet-async'
@@ -38,7 +37,6 @@ const Home = () => {
                 </Text>
               </Box>
 
-              <Grid gridTemplateColumns='repeat(2, auto)' gridGap={3}>
                 <Box p={3}>
                   <CircleBadge>
                     <CircleBadge.Icon icon={DeviceDesktopIcon} />
@@ -49,7 +47,6 @@ const Home = () => {
                     <CircleBadge.Icon icon={DeviceMobileIcon} />
                   </CircleBadge>
                 </Box>
-              </Grid>
 
               <Box p={3}>
                 <Text mr={3}>
