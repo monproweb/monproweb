@@ -11,7 +11,8 @@ import type { ConcreteRequest } from 'relay-runtime';
 export type AboutRepositoryNameQueryVariables = {||};
 export type AboutRepositoryNameQueryResponse = {|
   +repository: ?{|
-    +name: string
+    +name: string,
+    +updatedAt: any,
   |}
 |};
 export type AboutRepositoryNameQuery = {|
@@ -25,6 +26,7 @@ export type AboutRepositoryNameQuery = {|
 query AboutRepositoryNameQuery {
   repository(owner: "monproweb", name: "monproweb") {
     name
+    updatedAt
     id
   }
 }
@@ -49,6 +51,13 @@ v1 = {
   "kind": "ScalarField",
   "name": "name",
   "storageKey": null
+},
+v2 = {
+  "alias": null,
+  "args": null,
+  "kind": "ScalarField",
+  "name": "updatedAt",
+  "storageKey": null
 };
 return {
   "fragment": {
@@ -65,7 +74,8 @@ return {
         "name": "repository",
         "plural": false,
         "selections": [
-          (v1/*: any*/)
+          (v1/*: any*/),
+          (v2/*: any*/)
         ],
         "storageKey": "repository(name:\"monproweb\",owner:\"monproweb\")"
       }
@@ -88,6 +98,7 @@ return {
         "plural": false,
         "selections": [
           (v1/*: any*/),
+          (v2/*: any*/),
           {
             "alias": null,
             "args": null,
@@ -101,16 +112,16 @@ return {
     ]
   },
   "params": {
-    "cacheID": "a75bedcc04aa999dd4266596d66a5ad2",
+    "cacheID": "be17ec612ec249d517cec060b7f35834",
     "id": null,
     "metadata": {},
     "name": "AboutRepositoryNameQuery",
     "operationKind": "query",
-    "text": "query AboutRepositoryNameQuery {\n  repository(owner: \"monproweb\", name: \"monproweb\") {\n    name\n    id\n  }\n}\n"
+    "text": "query AboutRepositoryNameQuery {\n  repository(owner: \"monproweb\", name: \"monproweb\") {\n    name\n    updatedAt\n    id\n  }\n}\n"
   }
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '5384f74478775a281996795d33062f7f';
+(node/*: any*/).hash = 'ac744dbbb1317039fa2b544b19e89db6';
 
 module.exports = node;
