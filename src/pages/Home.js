@@ -22,28 +22,6 @@ const Home = () => {
             <meta charSet="utf-8" />
             <title>MPW | Mon Pro Web</title>
             <link rel="canonical" href="https://monproweb.io/" />
-            <meta property="og:url" content="https://monproweb.io" />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content="MPW | Mon Pro Web" />
-            <meta
-              property="og:description"
-              content="Je construis des applications Web et mobiles."
-            />
-            <meta
-              property="og:image"
-              content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Logo_Mon_Pro_Web.png/1077px-Logo_Mon_Pro_Web.png"
-            />
-            <meta property="twitter:card" content="summary" />
-            <meta property="twitter:creator" content="Thomas Erhel" />
-            <meta property="twitter:title" content="MPW | Mon Pro Web" />
-            <meta
-              property="twitter:description"
-              content="Je construis des applications Web et mobiles."
-            />
-            <meta
-              property="twitter:image"
-              content="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Logo_Mon_Pro_Web.png/1077px-Logo_Mon_Pro_Web.png"
-            />
           </Helmet>
 
           <BaseStyles>
