@@ -1565,18 +1565,18 @@
     schema-utils "^2.6.5"
     source-map "^0.7.3"
 
-"@primer/components@^28.2.5":
-  version "28.2.5"
-  resolved "https://registry.yarnpkg.com/@primer/components/-/components-28.2.5.tgz#78d9228e556a735d11fc6d12192042609874cc25"
-  integrity sha512-2X9v21FK4dcRbedllxbNGAZDibwk040mCphEYp8JTaHFbndky7Y0O40FkGMs2f7pmyXxi2FdNFferT+FQza2Ag==
+"@primer/components@^28.3.2":
+  version "28.3.2"
+  resolved "https://registry.yarnpkg.com/@primer/components/-/components-28.3.2.tgz#205f3e90d7bd105b1d7430957fa406934413123d"
+  integrity sha512-mOEH1/k9O8TQ9Wiq4+3sNZwFxHL5fhN45znffy+d01x3zva7/PtMNvQ/5MGSGzf2uF+/NDSC64kZvwUYO00XGQ==
   dependencies:
     "@primer/octicons-react" "^13.0.0"
-    "@primer/primitives" "4.4.0"
+    "@primer/primitives" "4.5.1"
     "@styled-system/css" "5.1.5"
     "@styled-system/props" "5.1.5"
     "@styled-system/theme-get" "5.1.2"
     "@types/history" "4.7.8"
-    "@types/styled-components" "5.1.7"
+    "@types/styled-components" "5.1.11"
     "@types/styled-system" "5.1.11"
     "@types/styled-system__css" "5.0.15"
     "@types/styled-system__theme-get" "5.0.1"
@@ -1585,10 +1585,10 @@
     focus-visible "5.2.0"
     styled-system "5.1.5"
 
-"@primer/css@^17.4.0":
-  version "17.4.0"
-  resolved "https://registry.yarnpkg.com/@primer/css/-/css-17.4.0.tgz#86a390811de7f1ca0f19507b047e822f06eeada6"
-  integrity sha512-Zqb7z7pi+iySb2+RAmw9b/3HeDtNwqmlW4wJWq61VBqlY+xDdyauf5LVlVtXAXTxRsBarLqTpDcz4DyRJfAIMA==
+"@primer/css@^17.5.2":
+  version "17.5.2"
+  resolved "https://registry.yarnpkg.com/@primer/css/-/css-17.5.2.tgz#91b7c9ec55e1a74ad4f085df3b12f6244188cec8"
+  integrity sha512-l7V/Hgqtumh840BZuiMI0tZNLnLOHCztVL1s9z6ORUjm/g3gTtVZGdDRvQ+NGU85WpVAhcQBNgsPHoxLMq/Mbw==
   dependencies:
     "@primer/primitives" "^4.3.5"
 
@@ -1597,17 +1597,12 @@
   resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-13.0.0.tgz#a7f2288fd9cf9cabc1e75553a0dd9f00d74b68c1"
   integrity sha512-j5XppNRCvgaMZLPsVvvmp6GSh7P5pq6PUbsfLNBWi2Kz3KYDeoGDWbPr5MjoxFOGUn6Hjnt6qjHPRxahd11vLQ==
 
-"@primer/octicons-react@^14.2.2":
-  version "14.2.2"
-  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-14.2.2.tgz#f63f4258261f0f3dcbffd156171988749a29ec92"
-  integrity sha512-CB+D1cgWe1na0VPgt/Mg9Hrk6I3lcrJghz1eKQAiv1OPo19gQxR9GQ69ltMQ71HUKfy3af501hX5cxkVNF1kcQ==
+"@primer/octicons-react@^15.0.0":
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-15.0.0.tgz#66b92a2d2e978b139a42a5bedd0d4f67c842c7c6"
+  integrity sha512-R0ETw6OjvoVNCmMW7kDhOwQ0Nj8loi3nNFR6rAFrTkJ8vKzE7uLR7RWR/aMZfJHikrqJRExLjAxAstutmTG+1g==
 
-"@primer/primitives@4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-4.4.0.tgz#6aebda0c187fba42d72c1a655fc29d050c28fdce"
-  integrity sha512-WuWCAanRReK2BlQ8ToBNvnzbPQHmo4Lrs03w8A3L136qomyeZ9bxSa+kkk/B/3oJGUC7zJxAZPMHdx2DIHPgqw==
-
-"@primer/primitives@^4.3.5":
+"@primer/primitives@4.5.1", "@primer/primitives@^4.3.5":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@primer/primitives/-/primitives-4.5.1.tgz#aede2364d7c33de4489ab1e6473925fc86284208"
   integrity sha512-dA5EKORl1fqOa5+cDKYXTPLTNK0BuHS6NPHh1b11H4ngSd6cbuXzzVkUCJ1ooTDR6UbOrpeXMdlUbA9EcwwFVA==
@@ -1654,7 +1649,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@sinonjs/fake-timers@^7.0.4", "@sinonjs/fake-timers@^7.1.0":
+"@sinonjs/fake-timers@^7.0.4", "@sinonjs/fake-timers@^7.1.2":
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/@sinonjs/fake-timers/-/fake-timers-7.1.2.tgz#2524eae70c4910edccf99b2f4e6efc5894aff7b5"
   integrity sha512-iQADsW4LBMISqZ6Ci1dupJL9pprqwcVFTcOsEmQOEhW+KLCVn/Y4Jrvg2k19fIHCp+iFprriYPTdRcQR8NbUPg==
@@ -1927,10 +1922,10 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.0.0"
 
-"@testing-library/user-event@^13.2.0":
-  version "13.2.0"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.2.0.tgz#8d63aaae1f5ec1d683d3afe57acd5f175f819f0f"
-  integrity sha512-wDEuKkkChNfA02Fpd9A39AXmdmxkvRcHyt/cK3WWiPAQTyMhcKFNM51aQgpEDJUcdj7uPsOaDEESoW/L1b2kZA==
+"@testing-library/user-event@^13.2.1":
+  version "13.2.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-13.2.1.tgz#7a71a39e50b4a733afbe2916fa2b99966e941f98"
+  integrity sha512-cczlgVl+krjOb3j1625usarNEibI0IFRJrSWX9UsJ1HKYFgCQv9Nb7QAipUDXl3Xdz8NDTsiS78eAkPSxlzTlw==
   dependencies:
     "@babel/runtime" "^7.12.5"
 
@@ -2131,10 +2126,10 @@
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
 
-"@types/styled-components@5.1.7":
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.7.tgz#3cd10b088c1cb1acde2e4b166b3e8275a3083710"
-  integrity sha512-BJzPhFygYspyefAGFZTZ/8lCEY4Tk+Iqktvnko3xmJf9LrLqs3+grxPeU3O0zLl6yjbYBopD0/VikbHgXDbJtA==
+"@types/styled-components@5.1.11":
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/@types/styled-components/-/styled-components-5.1.11.tgz#a3a1bc0f2cdad7318d8ce219ee507e6b353503b5"
+  integrity sha512-u8g3bSw9KUiZY+S++gh+LlURGraqBe3MC5I5dygrNjGDHWWQfsmZZRTJ9K9oHU2CqWtxChWmJkDI/gp+TZPQMw==
   dependencies:
     "@types/hoist-non-react-statics" "*"
     "@types/react" "*"
@@ -7942,17 +7937,16 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
   integrity sha1-HADHQ7QzzQpOgHWPe2SldEDZ/wA=
 
-lint-staged@^11.1.0:
-  version "11.1.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.1.0.tgz#a21d67ffe4516e907635adeaf6d6450d8cffb4e4"
-  integrity sha512-pzwEf+NKbTauAlk7gPPwTfulRXESEPZCSFXYfg20F220UOObebxu5uL5mkr9csQLNOM2Ydfrt3DJXakzAL7aaQ==
+lint-staged@^11.1.2:
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-11.1.2.tgz#4dd78782ae43ee6ebf2969cad9af67a46b33cd90"
+  integrity sha512-6lYpNoA9wGqkL6Hew/4n1H6lRqF3qCsujVT0Oq5Z4hiSAM7S6NksPJ3gnr7A7R52xCtiZMcEUNNQ6d6X5Bvh9w==
   dependencies:
     chalk "^4.1.1"
     cli-truncate "^2.1.0"
     commander "^7.2.0"
     cosmiconfig "^7.0.0"
     debug "^4.3.1"
-    dedent "^0.7.0"
     enquirer "^2.3.6"
     execa "^5.0.0"
     listr2 "^3.8.2"
@@ -11400,13 +11394,13 @@ simple-swizzle@^0.2.2:
   dependencies:
     is-arrayish "^0.3.1"
 
-sinon@^11.1.1:
-  version "11.1.1"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-11.1.1.tgz#99a295a8b6f0fadbbb7e004076f3ae54fc6eab91"
-  integrity sha512-ZSSmlkSyhUWbkF01Z9tEbxZLF/5tRC9eojCdFh33gtQaP7ITQVaMWQHGuFM7Cuf/KEfihuh1tTl3/ABju3AQMg==
+sinon@^11.1.2:
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-11.1.2.tgz#9e78850c747241d5c59d1614d8f9cbe8840e8674"
+  integrity sha512-59237HChms4kg7/sXhiRcUzdSkKuydDeTiamT/jesUVHshBgL8XAmhgFo0GfK6RruMDM/iRSij1EybmMog9cJw==
   dependencies:
     "@sinonjs/commons" "^1.8.3"
-    "@sinonjs/fake-timers" "^7.1.0"
+    "@sinonjs/fake-timers" "^7.1.2"
     "@sinonjs/samsam" "^6.0.2"
     diff "^5.0.0"
     nise "^5.1.0"
