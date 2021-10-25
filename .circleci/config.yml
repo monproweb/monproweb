@@ -11,8 +11,6 @@ jobs:
         steps:
             - checkout
             - run: echo "this is the build job"
-            - run: npm install
-            - run: npm build
     test:
         docker:
             - image: cimg/base:2021.04
@@ -22,7 +20,6 @@ jobs:
         steps:
             - checkout
             - run: echo "this is the test job"
-            - run: npm test
 
 # Orchestrate our job run sequence
 workflows:
