@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { ReactComponent as Logo } from './logo.svg'
+import 'styles/App.scss'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    handleClick = () => {
+        import('components/Citation')
+            .then(({ citation }) => {
+                alert(citation)
+            })
+            .catch((err) => {
+                alert('Erreur')
+            })
+    }
+    render() {
+        return (
+            <>
+                <div className="App">
+                    <header className="App-header">
+                        <Logo title="logo" className="App-logo" />
+                        <p>
+                            Je construis des applications <code>libres</code> et{' '}
+                            <code>écoresponsables.</code>
+                        </p>
+                        <a
+                            className="App-link"
+                            href="https://github.com/monproweb/mon-pro-web"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Mon Pro Web
+                        </a>
+                        <div>
+                            <button onClick={this.handleClick}>
+                                🔥 Citation
+                            </button>
+                        </div>
+                    </header>
+                </div>
+            </>
+        )
+    }
 }
 
-export default App;
+export default App

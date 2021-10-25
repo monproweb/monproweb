@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.scss'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import { initializeApp } from 'firebase/app'
+import { getAnalytics } from 'firebase/analytics'
+import { getPerformance } from 'firebase/performance'
+
+const firebaseConfig = {
+    apiKey: 'AIzaSyBcxpWbGYVFvVJM4NZmG8Uk-qKjkbfhBco',
+    authDomain: 'mon-pro-web.firebaseapp.com',
+    databaseURL: 'https://mon-pro-web-default-rtdb.firebaseio.com',
+    projectId: 'mon-pro-web',
+    storageBucket: 'mon-pro-web.appspot.com',
+    messagingSenderId: '525128482932',
+    appId: '1:525128482932:web:eb3de96c568a2ce87b5121',
+    measurementId: 'G-4GV65QSVDM',
+}
+
+const app = initializeApp(firebaseConfig)
+const analytics = getAnalytics(app)
+const perf = getPerformance(app)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById('root')
+)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+reportWebVitals()
