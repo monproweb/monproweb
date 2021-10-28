@@ -1,17 +1,24 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable no-unused-expressions */
 /* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable eqeqeq */
 /* eslint-disable no-undef */
 const streams = [];
 const fadeInterval = 1.6;
 const symbolSize = 14;
 let frameCounter = 1;
+let rSlider, gSlider, bSlider;
+var w = window.innerWidth;
+var h = window.innerHeight;  
 
 function setup() {
-  createCanvas(
-    window.innerWidth,
-    window.innerHeight
-  );
+  canvas=createCanvas(w, h);
+  // create sliders
+  rSlider = createSlider(0, 255, 0);
+  rSlider.position(w-1200, h-150);
+  gSlider = createSlider(0, 255, 0);
+  gSlider.position(w-1200, h-100);
+  bSlider = createSlider(0, 255, 0);
+  bSlider.position(w-1200, h-50);
 
   let x = 0;
   for (let i = 0; i <= width / symbolSize; i++) {
@@ -23,13 +30,23 @@ function setup() {
 
   textFont('Consolas');
   textSize(symbolSize);
-  background('#ec6f18');
 }
 
 function draw() {
+  const r = rSlider.value();
+  const g = gSlider.value();
+  const b = bSlider.value();
+  background(r, g, b);
   streams.forEach(function(stream) {
     stream.render();
   });
+}
+
+window.onresize = function() {
+  // assigns new values for width and height variables
+  w = window.innerWidth;
+  h = window.innerHeight;  
+  canvas.size(w,h);
 }
 
 function Symbol(x, y, speed, first, opacity) {
@@ -90,7 +107,7 @@ function Stream() {
     }
   }
 
-    this.render = function () {
+  this.render = function() {
     frameCounter++;
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
