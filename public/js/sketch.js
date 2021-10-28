@@ -6,16 +6,8 @@ const streams = [];
 const fadeInterval = 1.6;
 const symbolSize = 14;
 let frameCounter = 1;
-let rSlider, gSlider, bSlider;
 
 function setup() {
-  // create sliders
-  rSlider = createSlider(0, 255, 100);
-  rSlider.position(20, 700);
-  gSlider = createSlider(0, 255, 0);
-  gSlider.position(20, 750);
-  bSlider = createSlider(0, 255, 255);
-  bSlider.position(20, 800);
   createCanvas(
     window.innerWidth,
     window.innerHeight
@@ -31,16 +23,10 @@ function setup() {
 
   textFont('Consolas');
   textSize(symbolSize);
+  background('#ec6f18');
 }
 
 function draw() {
-  const r = rSlider.value();
-  const g = gSlider.value();
-  const b = bSlider.value();
-  background(r, g, b);
-  text('Red', rSlider.x * 2 + rSlider.width, 700);
-  text('Green', gSlider.x * 2 + gSlider.width, 750);
-  text('Blue', bSlider.x * 2 + bSlider.width, 800);
   streams.forEach(function(stream) {
     stream.render();
   });
@@ -104,7 +90,7 @@ function Stream() {
     }
   }
 
-  this.render = function() {
+    this.render = function () {
     frameCounter++;
     this.symbols.forEach(function(symbol) {
       if (symbol.first) {
