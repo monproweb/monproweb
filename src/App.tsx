@@ -35,6 +35,12 @@ class App extends Component {
                                 🔥 Citation
                             </button>
                         </div>
+                        <div>
+                            <img
+                                src="https://www.gnu.org/graphics/gplv3-with-text-136x68.png"
+                                alt="Free as in Freedom"
+                            />
+                        </div>
                     </header>
                 </div>
             </>
