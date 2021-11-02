@@ -30,4 +30,5 @@ if (rootElement.hasChildNodes()) {
   render(<App />, rootElement);
 }
 
+ServiceWorker.register()
 reportWebVitals()
