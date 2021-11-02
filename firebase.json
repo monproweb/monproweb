@@ -34,12 +34,11 @@
     "trailingSlash": false,
 
     "appAssociation": "AUTO",
-      "rewrites": [
-      {
-        "source": "/",
-        "destination": "/index.html"
-      }
-    ]
+    
+    "rewrites": [ {
+    "source": "**",
+    "destination": "/404.html"
+    }]
 
   },
   "emulators": {
