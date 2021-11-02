@@ -1,6 +1,6 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable no-unused-vars */
 import React from 'react'
-import { render } from 'react-snapshot'
+import { hydrate, render } from "react-dom";
 import './index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -22,12 +22,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const analytics = getAnalytics(app)
 const perf = getPerformance(app)
+const rootElement = document.getElementById("root")
 
-render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
-    document.getElementById('root')
-)
+if (rootElement.hasChildNodes()) {
+  hydrate(<App />, rootElement);
+} else {
+  render(<App />, rootElement);
+}
 
 reportWebVitals()
