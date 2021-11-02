@@ -3,6 +3,7 @@ import React from 'react'
 import { hydrate, render } from "react-dom";
 import './index.scss'
 import App from './App'
+import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
@@ -30,5 +31,5 @@ if (rootElement.hasChildNodes()) {
   render(<App />, rootElement);
 }
 
-ServiceWorker.register()
+serviceWorkerRegistration.register()
 reportWebVitals()
