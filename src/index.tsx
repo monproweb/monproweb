@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { render } from 'react-snapshot'
 import './index.scss'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
@@ -23,7 +23,7 @@ const app = initializeApp(firebaseConfig)
 const analytics = getAnalytics(app)
 const perf = getPerformance(app)
 
-ReactDOM.render(
+render(
     <React.StrictMode>
         <App />
     </React.StrictMode>,
