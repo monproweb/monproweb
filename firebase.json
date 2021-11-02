@@ -3,11 +3,6 @@
 
     "public": "build",
 
-    "rewrites": [ {
-      "source": "**",
-      "destination": "/404.html"
-} ],
-
     "ignore": [
       "firebase.json",
       "**/.*",
