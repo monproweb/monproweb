@@ -33,7 +33,13 @@
 
     "trailingSlash": false,
 
-    "appAssociation": "AUTO"
+    "appAssociation": "AUTO",
+      "rewrites": [
+      {
+        "source": "/",
+        "destination": "/index.html"
+      }
+    ]
 
   },
   "emulators": {
