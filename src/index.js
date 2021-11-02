@@ -26,9 +26,9 @@ const perf = getPerformance(app)
 const rootElement = document.getElementById("root")
 
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(<React.StrictMode><App /></React.StrictMode>, rootElement);
 } else {
-  render(<App />, rootElement);
+  render(<React.StrictMode><App /></React.StrictMode>, rootElement);
 }
 
 serviceWorkerRegistration.register()
