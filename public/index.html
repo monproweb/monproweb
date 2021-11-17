@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8" />
-                <script>
+        <noscript>
         /*    
         @licstart  The following is the entire license notice for the 
         JavaScript code in this page.
@@ -27,7 +27,7 @@
         @licend  The above is the entire license notice
         for the JavaScript code in this page.
         */
-        </script>
+        </noscript>
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ec6f18" />
@@ -40,6 +40,23 @@
         <title>Mon Pro Web</title>
     </head>
     <body>
+        <script>
+            window.axeptioSettings = {
+                clientId: "609d5368e34b5e7472dbdd3e",
+                cookiesVersion: "ga_only",
+            };
+
+            (function (d, s) {
+                var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+                e.async = true; e.src = "//static.axept.io/sdk.js";
+                t.parentNode.insertBefore(e, t);
+            })(document, "script");
+            (_axcb = window._axcb || []).push(function (sdk) {
+                sdk.on('consent:saved', function (choices) {
+                    window.location.reload()
+                });
+            });
+        </script>
         <noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
         <div id="root"></div>
 </body>
