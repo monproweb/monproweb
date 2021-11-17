@@ -25,7 +25,7 @@ class App extends Component {
                         </p>
                         <a
                             className="App-link"
-                            href="https://github.com/monproweb/mon-pro-web"
+                            href="https://github.com/monproweb/monproweb"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
