@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ReactComponent as Logo } from './logo.svg'
 import 'styles/App.scss'
-import GNUGPLv3 from './images/gplv3-with-text-136x68.png'
+import GPLv3 from './images/gplv3-88x31.png'
 
 class App extends Component {
     handleClick = () => {
@@ -37,7 +37,7 @@ class App extends Component {
                             </button>
                         </div>
                         <div>
-                            <img src={GNUGPLv3} alt="Free as in Freedom" />
+                            <img src={GPLv3} alt="Free as in Freedom" />
                         </div>
                     </header>
                 </div>
