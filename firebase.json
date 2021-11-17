@@ -6,14 +6,18 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "headers": [ {
       "source": "**/*.@(eot|otf|ttf|ttc|woff|font.css)",
       "headers": [ {
         "key": "Access-Control-Allow-Origin",
-        "value": "*",
-        "source": "/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]
+        "value": "*"
       } ]
-    }, {
     },
     {
       "source": "/service-worker.js",
@@ -35,9 +39,13 @@
         "value": "max-age=300"
       } ]
     } ],
+
     "cleanUrls": true,
+
     "trailingSlash": false,
+
     "appAssociation": "AUTO"
+
   },
   "emulators": {
     "auth": {
@@ -64,5 +72,8 @@
     "ui": {
       "enabled": true
     }
+  },
+  "functions": {
+    "source": "functions"
   }
 }
