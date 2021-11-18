@@ -1,6 +1,6 @@
 # Getting Started with Mon Pro Web
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png?v8)
+![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png?v8) ![Free as in Freedom](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
