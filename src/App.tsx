@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
+import Particles from 'react-tsparticles'
 import { ReactComponent as Logo } from './logo.svg'
 import 'styles/App.scss'
 import GPLv3 from './images/gplv3-88x31.png'
+import particlesOptions from './particles.json'
+import { ISourceOptions } from 'tsparticles'
 
 class App extends Component {
     handleClick = () => {
@@ -17,6 +20,7 @@ class App extends Component {
         return (
             <>
                 <div className="App">
+                    <Particles options={particlesOptions as ISourceOptions}/>
                     <header className="App-header">
                         <Logo title="logo" className="App-logo" />
                         <p>
