@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { ReactComponent as Logo } from './logo.svg'
 import 'styles/App.scss'
 import GPLv3 from './images/gplv3-88x31.png'
 import Particles from 'react-tsparticles'
 import particlesOptions from './particles.json'
 import { ISourceOptions } from 'tsparticles'
-import {ThemeProvider, BaseStyles, Box, Heading, BorderBox, BorderBoxProps, Button, Flash} from '@primer/components'
+import {ThemeProvider, BaseStyles, Box, Heading} from '@primer/components'
 
 class App extends Component {
     handleClick = () => {
