@@ -5,7 +5,7 @@ import GPLv3 from './images/gplv3-88x31.png'
 import Particles from 'react-tsparticles'
 import particlesOptions from './particles.json'
 import { ISourceOptions } from 'tsparticles'
-import {ThemeProvider, BaseStyles, Box, Heading, Link, Text, Button, Flash} from '@primer/components'
+import {ThemeProvider, BaseStyles, Box, Heading, Link, Text, Button} from '@primer/components'
 
 class App extends Component {
     handleClick = () => {
