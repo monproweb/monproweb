@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import './index.scss'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
-import swConfig from './swConfig'
 import reportWebVitals from './reportWebVitals'
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
@@ -32,5 +31,5 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-serviceWorkerRegistration.register(swConfig)
+serviceWorkerRegistration.register()
 reportWebVitals()
