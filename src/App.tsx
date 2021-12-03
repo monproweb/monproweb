@@ -35,6 +35,7 @@ class App extends Component {
     autoComplete="off"
     contrast
     block
+    sx={{width: 280}}
   />
   </Header.Item>
   <Header.Item mr={0}>
