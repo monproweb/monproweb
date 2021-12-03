@@ -5,8 +5,10 @@ import GPLv3 from './images/gplv3-88x31.png'
 import Particles from 'react-tsparticles'
 import particlesOptions from './particles.json'
 import { ISourceOptions } from 'tsparticles'
-import {ThemeProvider, BaseStyles, Box, Heading, Link, Text, Button, Header, StyledOcticon, Avatar, TextInput, Tooltip} from '@primer/components'
-import {SearchIcon, SignInIcon} from '@primer/styled-octicons'
+import {ThemeProvider, BaseStyles, Box, Heading, Link, Text, Button} from '@primer/components'
+import { Media } from 'react-breakpoints'
+import DesktopNavigation from "components/DesktopNavigation";
+import TouchNavigation from "components/TouchNavigation";
 
 class App extends Component {
     handleClick = () => {
@@ -22,26 +24,15 @@ class App extends Component {
         return (
                 <ThemeProvider colorMode="auto">
             <BaseStyles>
-<Header>
-  <Header.Item full>
-    <Header.Link href="/" fontSize={2}>
-      <Avatar src="/logo192.png" size={32} sx={{mr: 2}} alt="@monproweb" />
-    </Header.Link>
-    <TextInput
-    icon={SearchIcon}
-    aria-label="Search"
-    name="search"
-    placeholder="Rechercher sur Monproweb"
-    autoComplete="off"
-    contrast
-    block
-    sx={{width: 290}}
-  />
-  </Header.Item>
-  <Header.Item mr={0}>
-    <Tooltip aria-label="Se connecter" direction="sw"><StyledOcticon icon={SignInIcon} size={20}  sx={{mr: 2}} /></Tooltip>
-  </Header.Item>
-</Header>
+      <Media>
+        {({ breakpoints, currentBreakpoint }) =>
+          breakpoints[currentBreakpoint] > breakpoints.desktop ? (
+            <DesktopNavigation />
+          ) : (
+            <TouchNavigation />
+          )
+        }
+      </Media>
                     <Box m={4}>
                 <Box className="App">
                     <Particles options={particlesOptions as ISourceOptions}/>

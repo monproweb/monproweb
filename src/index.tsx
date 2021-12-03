@@ -8,6 +8,17 @@ import reportWebVitals from './reportWebVitals'
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 import { getPerformance } from 'firebase/performance'
+import ReactBreakpoints from 'react-breakpoints'
+
+const breakpoints = {
+  mobile: 320,
+  mobileLandscape: 480,
+  tablet: 768,
+  tabletLandscape: 1024,
+  desktop: 1200,
+  desktopLarge: 1500,
+  desktopWide: 1920,
+}
 
 const firebaseConfig = {
     apiKey: 'AIzaSyBcxpWbGYVFvVJM4NZmG8Uk-qKjkbfhBco',
@@ -26,7 +37,9 @@ const perf = getPerformance(app)
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ReactBreakpoints breakpoints={breakpoints}>
+      <App />
+    </ReactBreakpoints>
   </React.StrictMode>,
   document.getElementById('root')
 );
