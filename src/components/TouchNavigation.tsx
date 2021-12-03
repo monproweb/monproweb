@@ -1,5 +1,5 @@
 /* eslint-disable primer-react/no-system-props */
-import { Avatar, CircleOcticon, Header, StyledOcticon, TextInput, Tooltip } from '@primer/components'
+import { Avatar, CircleOcticon, Header, StyledOcticon, Tooltip } from '@primer/components'
 import { SearchIcon, SignInIcon } from '@primer/styled-octicons'
 import React, { Component } from 'react'
 
