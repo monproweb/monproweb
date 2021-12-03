@@ -3470,7 +3470,7 @@ babel-plugin-jest-hoist@^26.6.2:
     "@types/babel__core" "^7.0.0"
     "@types/babel__traverse" "^7.0.6"
 
-babel-plugin-macros@2.8.0, babel-plugin-macros@^2.5.0:
+babel-plugin-macros@2.8.0, babel-plugin-macros@^2.0.0, babel-plugin-macros@^2.5.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.8.0.tgz#0f958a7cc6556b1e65344465d99111a1e5e10138"
   integrity sha512-SEP5kJpfGYqYKpBrj5XU3ahw5p5GOHJ0U5ssOSQ/WBVdwkD2Dzlce95exQTs3jOVWPPKLBN2rlEWkCK7dSmLvg==
@@ -3507,6 +3507,13 @@ babel-plugin-polyfill-regenerator@^0.3.0:
   integrity sha512-dhAPTDLGoMW5/84wkgwiLRwMnio2i1fUe53EuvtKMv0pn2p3S8OCoV1xAzfJPl0KOX7IB89s2ib85vbYiea3jg==
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.0"
+
+babel-plugin-relay@^12.0.0:
+  version "12.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-relay/-/babel-plugin-relay-12.0.0.tgz#cdce02494b69e9477a4507f9972f8473081b732d"
+  integrity sha512-fQWmS3YEu1smPx4xrn+7RyzDAlgVDG5q2m5cb+qC/Tr2+gANkxqGtQ+YPiOX6g4rgdbE+7a6RT3lViBExYBVKw==
+  dependencies:
+    babel-plugin-macros "^2.0.0"
 
 "babel-plugin-styled-components@>= 1.12.0":
   version "1.13.3"

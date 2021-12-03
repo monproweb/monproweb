@@ -12,6 +12,7 @@
         "@types/node": "^16.11.7",
         "@types/react": "^17.0.35",
         "@types/react-dom": "^17.0.11",
+        "babel-plugin-relay": "^12.0.0",
         "firebase": "^9.4.1",
         "firebase-functions": "^3.16.0",
         "graphql": "^16.0.1",

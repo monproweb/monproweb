@@ -5,8 +5,8 @@ import GPLv3 from './images/gplv3-88x31.png'
 import Particles from 'react-tsparticles'
 import particlesOptions from './particles.json'
 import { ISourceOptions } from 'tsparticles'
-import {ThemeProvider, BaseStyles, Box, Heading, Link, Text, Button, Header, StyledOcticon, Avatar} from '@primer/components'
-import {InfinityIcon} from '@primer/styled-octicons'
+import {ThemeProvider, BaseStyles, Box, Heading, Link, Text, Button, Header, StyledOcticon, Avatar, TextInput, Tooltip} from '@primer/components'
+import {SearchIcon, SignInIcon} from '@primer/styled-octicons'
 
 class App extends Component {
     handleClick = () => {
@@ -23,15 +23,22 @@ class App extends Component {
                 <ThemeProvider colorMode="auto">
             <BaseStyles>
 <Header>
-  <Header.Item>
+  <Header.Item full>
     <Header.Link href="/" fontSize={2}>
-      <StyledOcticon icon={InfinityIcon} size={32}  sx={{mr: 2}} />
-      <span>Mon Pro Web</span>
+      <Avatar src="/logo192.png" size={32} sx={{mr: 2}} alt="@monproweb" />
     </Header.Link>
+    <TextInput
+    icon={SearchIcon}
+    aria-label="Search"
+    name="search"
+    placeholder="Rechercher sur Monproweb"
+    autoComplete="off"
+    contrast
+    block
+  />
   </Header.Item>
-  <Header.Item full>Menu</Header.Item>
   <Header.Item mr={0}>
-    <Avatar src="/logo192.png" size={20} square alt="@monproweb" />
+    <Tooltip aria-label="Se connecter" direction="sw"><StyledOcticon icon={SignInIcon} size={20}  sx={{mr: 2}} /></Tooltip>
   </Header.Item>
 </Header>
                     <Box m={4}>
