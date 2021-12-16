@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 import './index.scss'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
@@ -11,13 +11,13 @@ import { getPerformance } from 'firebase/performance'
 import ReactBreakpoints from 'react-breakpoints'
 
 const breakpoints = {
-  mobile: 320,
-  mobileLandscape: 480,
-  tablet: 768,
-  tabletLandscape: 1024,
-  desktop: 1200,
-  desktopLarge: 1500,
-  desktopWide: 1920,
+    mobile: 320,
+    mobileLandscape: 480,
+    tablet: 768,
+    tabletLandscape: 1024,
+    desktop: 1200,
+    desktopLarge: 1500,
+    desktopWide: 1920,
 }
 
 const firebaseConfig = {
@@ -36,13 +36,13 @@ const analytics = getAnalytics(app)
 const perf = getPerformance(app)
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ReactBreakpoints breakpoints={breakpoints}>
-      <App />
-    </ReactBreakpoints>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+    <React.StrictMode>
+        <ReactBreakpoints breakpoints={breakpoints}>
+            <App />
+        </ReactBreakpoints>
+    </React.StrictMode>,
+    document.getElementById('root')
+)
 
 serviceWorkerRegistration.register()
 reportWebVitals()

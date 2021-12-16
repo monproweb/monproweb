@@ -1,5 +1,3 @@
-const citation = [
-    "✨ Je pense que tout est possible à qui rêve, ose, travaille et n'abandonne jamais.",
-]
+const citation = ['✨ Je ne perds jamais, soit je gagne, soit j’apprends.']
 
 export { citation }
