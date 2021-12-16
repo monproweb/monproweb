@@ -1,6 +1,5 @@
 import {
     Avatar,
-    CircleOcticon,
     Header,
     StyledOcticon,
     Tooltip,
