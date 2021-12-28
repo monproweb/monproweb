@@ -13,6 +13,7 @@ import {
     Link,
     Text,
     Button,
+    ButtonPrimary,
 } from '@primer/react'
 import { Media } from 'react-breakpoints'
 import DesktopNavigation from 'components/DesktopNavigation'
@@ -69,6 +70,9 @@ class App extends Component {
                                         <Button onClick={this.handleClick}>
                                             🔥 Citation
                                         </Button>
+                                    </Box>
+                                    <Box p={3}>
+                                        <Link href="https://monproweb419.workplace.com/groupcall/LINK:htoyeaqwkjid/">👨‍💻 Salle de travail</Link>
                                     </Box>
                                     <Box p={3}>
                                         <Link
