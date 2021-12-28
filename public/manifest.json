@@ -22,6 +22,5 @@
     "display": "standalone",
     "theme_color": "#ec6f18",
     "background_color": "#ffffff",
-    "ovr_package_name": "io.monproweb.app.pwa",
-    "ovr_multi_tab_enabled": "true"
+    "ovr_package_name": "io.monproweb.app.pwa"
 }
