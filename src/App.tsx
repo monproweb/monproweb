@@ -13,7 +13,6 @@ import {
     Link,
     Text,
     Button,
-    ButtonPrimary,
 } from '@primer/react'
 import { Media } from 'react-breakpoints'
 import DesktopNavigation from 'components/DesktopNavigation'
