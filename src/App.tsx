@@ -17,6 +17,7 @@ import {
 import { Media } from 'react-breakpoints'
 import DesktopNavigation from 'components/DesktopNavigation'
 import TouchNavigation from 'components/TouchNavigation'
+import { TikTok } from 'react-tiktok'
 
 class App extends Component {
     handleClick = () => {
@@ -90,6 +91,7 @@ class App extends Component {
                             </header>
                         </Box>
                     </Box>
+                    <TikTok url="https://www.tiktok.com/@thomas_erhel/video/7060925548507237638" />
                 </BaseStyles>
             </ThemeProvider>
         )
