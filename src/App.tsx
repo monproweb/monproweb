@@ -12,36 +12,27 @@ import {
     Heading,
     Link,
     Text,
-    Button,
+    Avatar,
+    Header,
 } from '@primer/react'
-import { Media } from 'react-breakpoints'
-import DesktopNavigation from 'components/DesktopNavigation'
-import TouchNavigation from 'components/TouchNavigation'
 
 class App extends Component {
-    handleClick = () => {
-        import('components/Citation')
-            .then(({ citation }) => {
-                alert(citation)
-            })
-            .catch((err) => {
-                alert('Erreur')
-            })
-    }
     render() {
         return (
             <ThemeProvider colorMode="auto">
-                <BaseStyles>
-                    <Media>
-                        {({ breakpoints, currentBreakpoint }) =>
-                            breakpoints[currentBreakpoint] >
-                            breakpoints.desktop ? (
-                                <DesktopNavigation />
-                            ) : (
-                                <TouchNavigation />
-                            )
-                        }
-                    </Media>
+            <BaseStyles>
+            <Header>
+                <Header.Item full>
+                    <Header.Link href="/">
+                        <Avatar
+                            src="/logo192.png"
+                            size={32}
+                            sx={{ mr: 2 }}
+                            alt="@monproweb"
+                        />
+                    </Header.Link>
+                </Header.Item>
+            </Header>
                     <Box m={4}>
                         <Box className="App">
                             <Particles
@@ -65,14 +56,6 @@ class App extends Component {
                                     >
                                         Mon Pro Web
                                     </Link>
-                                    <Box p={3}>
-                                        <Button onClick={this.handleClick}>
-                                            🔥 Citation
-                                        </Button>
-                                    </Box>
-                                    <Box p={3}>
-                                        <Link href="https://monproweb419.workplace.com/groupcall/LINK:htoyeaqwkjid/">👨‍💻 Salle de travail</Link>
-                                    </Box>
                                     <Box p={3}>
                                         <Link
                                             sx={{ mb: 1 }}
