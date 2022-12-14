@@ -26,7 +26,7 @@ function Layout() {
           </Header.Link>
         </Header.Item>
         <Header.Item>
-          <Header.Link href="#about" onClick={handleClick("about")}>About</Header.Link>
+          <Header.Link onClick={handleClick("about")}>About</Header.Link>
         </Header.Item>
         <Header.Item full>
           <Header.Link href="/contact">Contact</Header.Link>
