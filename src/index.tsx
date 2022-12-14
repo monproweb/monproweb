@@ -1,13 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './index.scss'
 import App from './App'
+import {ThemeProvider, BaseStyles} from '@primer/react'
+import { BrowserRouter } from "react-router-dom";
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 import { getPerformance } from 'firebase/performance'
+import { getFirestore } from "firebase/firestore";
+import { createRoot } from 'react-dom/client';
+const container = document.getElementById('root');
+const root = createRoot(container!);
 
 const firebaseConfig = {
     apiKey: 'AIzaSyBcxpWbGYVFvVJM4NZmG8Uk-qKjkbfhBco',
@@ -23,12 +28,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const analytics = getAnalytics(app)
 const perf = getPerformance(app)
+const db = getFirestore(app);
 
-ReactDOM.render(
+root.render(
     <React.StrictMode>
-        <App />
+        <BrowserRouter>
+            <ThemeProvider>
+                <BaseStyles>
+                    <App />
+                </BaseStyles>
+            </ThemeProvider>
+        </BrowserRouter>
     </React.StrictMode>,
-    document.getElementById('root')
 )
 
 serviceWorkerRegistration.register()
