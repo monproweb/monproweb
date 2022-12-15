@@ -9,12 +9,11 @@ function About() {
     <>
       <PageLayout>
         <PageLayout.Header aria-label="header">
-          
-        </PageLayout.Header>
-        <PageLayout.Content aria-label="content">
           <Heading>
             About
           </Heading>
+        </PageLayout.Header>
+        <PageLayout.Content aria-label="content">
         <Box className='Avatar'>
           <Avatar src={cat} size={100} alt="Cat in space" />
         </Box>
