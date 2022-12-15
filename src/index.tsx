@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
-import './index.scss'
 import App from './App'
 import {ThemeProvider, BaseStyles} from '@primer/react'
 import { BrowserRouter } from "react-router-dom";
