@@ -6,17 +6,6 @@ import Ethereum from './Ethereum'
 import metamask from '../images/metamask.svg'
 
 function Layout() {
-
-  const handleClick = (anchor) => () => {
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
   return (
     <>
       <Header>
@@ -26,7 +15,7 @@ function Layout() {
           </Header.Link>
         </Header.Item>
         <Header.Item>
-          <Header.Link onClick={handleClick("about")}>About</Header.Link>
+          <Header.Link href="/about">About</Header.Link>
         </Header.Item>
         <Header.Item full>
           <Header.Link href="/contact">Contact</Header.Link>

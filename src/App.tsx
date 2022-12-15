@@ -4,7 +4,7 @@ import 'styles/App.scss'
 import Header from "components/Header";
 import Home from "pages/Home";
 
-const Projects = React.lazy(() => import("./pages/Projects"));
+const About = React.lazy(() => import("./pages/About"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const NoMatch = React.lazy(() => import("./pages/NoMatch"));
 
@@ -15,9 +15,9 @@ export default function App() {
       <Route path="/" element={<Header />}>
         <Route index element={<Home />} />
         <Route
-          path="projects"
+          path="about"
           element={<React.Suspense fallback={<>...</>}>
-            <Projects />
+            <About />
           </React.Suspense>} />
         <Route
           path="contact"
