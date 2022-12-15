@@ -1,7 +1,7 @@
 import { Box, PageLayout, Heading, Text, Avatar } from '@primer/react'
-import cat from '../images/cat.png'
-import rsm from '../images/rsm.png'
-import ship from '../images/ship.png'
+import cat from '../images/cat.webp'
+import rsm from '../images/rsm.webp'
+import ship from '../images/ship.webp'
 import '../styles/Home.scss'
 
 function About() {

@@ -1,5 +1,5 @@
 import { Box, PageLayout, Heading, Text, Avatar } from '@primer/react'
-import nft from '../images/nft.png'
+import nft from '../images/nft.webp'
 import '../styles/Home.scss'
 
 function Home() {
