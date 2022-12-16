@@ -9,15 +9,16 @@ function Layout() {
   return (
     <>
       <Header>
-        <Header.Item>
+        <Header.Item full>
           <Header.Link href="/" fontSize={2}>
             <Avatar src={logo} size={32} sx={{ mr: 2 }} alt="@monproweb" />
+            <span>Mon Pro Web</span>
           </Header.Link>
         </Header.Item>
-        <Header.Item>
+        <Header.Item mr={0}>
           <Header.Link href="/about">About</Header.Link>
         </Header.Item>
-        <Header.Item full>
+        <Header.Item mr={0}>
           <Header.Link href="/contact">Contact</Header.Link>
         </Header.Item>
         <Header.Item mr={0}>
