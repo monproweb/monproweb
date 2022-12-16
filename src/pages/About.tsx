@@ -9,9 +9,6 @@ function About() {
     <>
 <PageLayout>
   <PageLayout.Header aria-label="header">
-    <Heading>
-      About
-    </Heading>
   </PageLayout.Header>
   <PageLayout.Content aria-label="content">
     <Box className='Avatar'>
@@ -45,11 +42,6 @@ function About() {
     </Box>
   </PageLayout.Content>
   <PageLayout.Footer aria-label="footer">
-    <Box height={64}>
-      <Text>
-              
-      </Text>
-    </Box>
   </PageLayout.Footer>
 </PageLayout> 
     </>
