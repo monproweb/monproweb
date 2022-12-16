@@ -1,4 +1,4 @@
-import { Box, PageLayout, Heading, Text, Avatar } from '@primer/react'
+import { Box, PageLayout, Text, Avatar } from '@primer/react'
 import cat from '../images/cat.webp'
 import rsm from '../images/rsm.webp'
 import ship from '../images/ship.webp'
