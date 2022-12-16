@@ -14,23 +14,6 @@
         <title>Mon Pro Web</title>
     </head>
     <body>
-        <script>
-            window.axeptioSettings = {
-                clientId: "609d5368e34b5e7472dbdd3e",
-                cookiesVersion: "ga_only",
-            };
-
-            (function (d, s) {
-                var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-                e.async = true; e.src = "//static.axept.io/sdk-slim.js";
-                t.parentNode.insertBefore(e, t);
-            })(document, "script");
-            (_axcb = window._axcb || []).push(function (sdk) {
-                sdk.on('consent:saved', function (choices) {
-                    window.location.reload()
-                });
-            });
-        </script>
         <noscript>Vous devez activer JavaScript pour exécuter cette application.</noscript>
         <div id="root"></div>
 </body>
