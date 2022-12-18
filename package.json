@@ -7,6 +7,7 @@
         "@fortawesome/free-solid-svg-icons": "^6.2.1",
         "@fortawesome/react-fontawesome": "^0.2.0",
         "@metamask/logo": "^3.1.1",
+        "@openzeppelin/contracts-upgradeable": "^4.8.0",
         "@primer/primitives": "^7.10.0",
         "@primer/react": "^35.15.1",
         "@primer/styled-octicons": "^17.9.0",
