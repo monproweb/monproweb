@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Box } from '@primer/react'
 
 interface Repo {
   id: number;
@@ -21,14 +20,14 @@ const StarredRepos: React.FC<Props> = ({ username }) => {
   }, [username]);
 
 return (
-  <Box style={{ backgroundColor: 'black', position: 'relative' }}>
-    <Box style={{ textAlign: 'center', fontSize: 32, color: 'white' }}>
+  <div style={{ backgroundColor: 'black', position: 'relative' }}>
+    <div style={{ textAlign: 'center', fontSize: 32, color: 'white' }}>
       Starred Repositories: {repos.length}
-    </Box>
+    </div>
     {repos.map(repo => (
       <Star key={repo.id} repo={repo} />
     ))}
-  </Box>
+  </div>
 );
 };
 
