@@ -39,7 +39,7 @@ const Star: React.FC<{ repo: Repo }> = ({ repo }) => {
       const x = Math.floor(Math.random() * window.innerWidth);
       const y = Math.floor(Math.random() * window.innerHeight);
       setPosition({ x, y });
-    }, 1000);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
