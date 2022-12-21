@@ -1,5 +1,5 @@
 /* eslint-disable testing-library/prefer-screen-queries */
-import { render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import StarredRepos from 'components/StarredRepos';
 
 describe('StarredRepos', () => {
@@ -17,29 +17,5 @@ describe('StarredRepos', () => {
     expect(repo1).toBeInTheDocument();
     expect(repo2).toBeInTheDocument();
     expect(repo3).toBeInTheDocument();
-  });
-
-  it('displays the repository names on hover', () => {
-    const { getByTestId } = render(<StarredRepos username="ThomasErhel" />);
-    const star = getByTestId('star');
-    fireEvent.mouseEnter(star);
-    expect(star).toHaveTextContent('Repository 1');
-    fireEvent.mouseLeave(star);
-    expect(star).not.toHaveTextContent('Repository 1');
-  });
-
-  it('animates the stars when not hovering', () => {
-    const { getByTestId } = render(<StarredRepos username="ThomasErhel" />);
-    const star = getByTestId('star');
-    expect(star).toHaveStyle('animation: rotate 4s linear infinite');
-  });
-
-  it('stops animating the stars when hovering', () => {
-    const { getByTestId } = render(<StarredRepos username="ThomasErhel" />);
-    const star = getByTestId('star');
-    fireEvent.mouseEnter(star);
-    expect(star).toHaveStyle('animation: none');
-    fireEvent.mouseLeave(star);
-    expect(star).toHaveStyle('animation: rotate 4s linear infinite');
   });
 });
