@@ -21,9 +21,6 @@ const StarredRepos: React.FC<Props> = ({ username }) => {
 
 return (
   <div style={{ backgroundColor: 'black', position: 'relative' }}>
-    <div style={{ textAlign: 'center', fontSize: 32, color: 'white' }}>
-      Starred Repositories: {repos.length}
-    </div>
     {repos.map(repo => (
       <Star key={repo.id} repo={repo} />
     ))}
