@@ -7,6 +7,7 @@ const About = React.lazy(() => import("./pages/About"));
 const Contact = React.lazy(() => import("./pages/Contact"));
 const Privacy = React.lazy(() => import("./pages/Privacy"));
 const Terms = React.lazy(() => import("./pages/Terms"));
+const StarryNight = React.lazy(() => import("./pages/StarryNight"));
 const NoMatch = React.lazy(() => import("./pages/NoMatch"));
 
 export default function App() {
@@ -34,6 +35,11 @@ export default function App() {
             path="terms"
             element={<React.Suspense fallback={<>...</>}>
               <Terms />
+            </React.Suspense>} />
+          <Route
+            path="starrynight"
+            element={<React.Suspense fallback={<>...</>}>
+              <StarryNight />
             </React.Suspense>} />
         <Route path="*" element={<NoMatch />} />
       </Route>
