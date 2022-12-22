@@ -16,7 +16,7 @@ function About() {
     </Box>
     <Box>
       <Text>
-        Monproweb is a startup that specializes in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology. Our team of experienced developers utilizes the React framework to create intuitive and user-friendly apps that deliver powerful functionality.
+        Monproweb is a startup that specializes in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology. Our team of experienced developers utilizes the React library to create intuitive and user-friendly apps that deliver powerful functionality.
       </Text>
     </Box>
     <Box className='Avatar'>
