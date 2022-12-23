@@ -1,7 +1,7 @@
 {
     "short_name": "MPW",
     "name": "Mon Pro Web",
-    "description": "I build Web and mobile applications",
+    "description": "I build Web and mobile applications.",
     "scope": "https://monproweb.io",
     "orientation": "portrait",
     "screenshots": [
