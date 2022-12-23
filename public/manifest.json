@@ -1,6 +1,38 @@
 {
     "short_name": "MPW",
     "name": "Mon Pro Web",
+    "description": "I build Web and mobile applications",
+    "scope": "https://monproweb.io",
+    "orientation": "portrait",
+    "screenshots": [
+        {
+            "src":"https://monproweb.io/images/home.png",
+            "sizes":"1980x1080",
+            "type":"image/png",
+            "description":"image/png"
+        },
+        {
+            "src":"https://monproweb.io/images/about.png",
+            "sizes":"1980x1080",
+            "type":"image/png",
+            "description":"image/png"
+        }
+    ],
+        "shortcuts": [
+            {
+                "name":"Home",
+                "url":".",
+                "description":"Go to home page"
+            },
+            {
+                "name":"About",
+                "url":"/about",
+                "description":"Go to about page"
+            }
+        ],
+    "categories": ["business", "productivity", "utilities"],
+    "dir": "ltr",
+    "lang": "en",
     "icons": [
         {
             "src": "favicon.ico",
