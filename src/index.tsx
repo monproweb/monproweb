@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react'
+import ReactDOM from 'react-dom/client';
 import App from './App'
 import {ThemeProvider, BaseStyles} from '@primer/react'
 import { BrowserRouter } from "react-router-dom";
@@ -9,9 +10,10 @@ import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
 import { getPerformance } from 'firebase/performance'
 import { getFirestore } from "firebase/firestore";
-import { createRoot } from 'react-dom/client';
-const container = document.getElementById('root');
-const root = createRoot(container!);
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 
 const firebaseConfig = {
     apiKey: 'AIzaSyBcxpWbGYVFvVJM4NZmG8Uk-qKjkbfhBco',
