@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import axios from 'axios';
 import { Box, Text } from '@primer/react';
