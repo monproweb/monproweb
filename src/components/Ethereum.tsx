@@ -14,7 +14,7 @@ function Ethereum () {
 
   return (
     <Box>
-      <Text>The current price of Ethereum is {data}$</Text>
+      <Text>The current price of Ethereum is {data}$.</Text>
     </Box>
   );
 }
