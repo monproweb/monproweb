@@ -1,4 +1,4 @@
-import { Box, PageLayout, Heading, Text, Flash } from '@primer/react'
+import { Box, PageLayout, Heading, Text } from '@primer/react'
 import Ethereum from '../components/Ethereum';
 
 function Home() {
