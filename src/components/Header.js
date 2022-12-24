@@ -2,7 +2,6 @@ import * as React from "react";
 import { Outlet } from "react-router-dom";
 import { Header, Avatar } from '@primer/react';
 import logo from '../logo.svg';
-import Ethereum from './Ethereum';
 import metamask from '../images/metamask.svg';
 
 function Layout() {
@@ -20,9 +19,6 @@ function Layout() {
         </Header.Item>
         <Header.Item mr={0}>
           <Header.Link href="/contact">Contact</Header.Link>
-        </Header.Item>
-        <Header.Item mr={0}>
-          <Ethereum />
         </Header.Item>
         <Header.Item mr={0}>
           <Avatar

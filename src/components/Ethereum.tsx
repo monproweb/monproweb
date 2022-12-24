@@ -19,7 +19,7 @@ function Ethereum () {
 
   return (
     <Box>
-      <FontAwesomeIcon icon={faEthereum} size="1x"/>
+      <FontAwesomeIcon icon={faEthereum} />
       <Text>{data}$</Text>
     </Box>
   );
