@@ -2,10 +2,6 @@
 import React from 'react';
 import axios from 'axios';
 import { Box, Text } from '@primer/react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faEthereum,
-} from "@fortawesome/free-brands-svg-icons";
 
 function Ethereum () {
   const [data, setData] = React.useState(null);
@@ -19,8 +15,7 @@ function Ethereum () {
 
   return (
     <Box>
-      <FontAwesomeIcon icon={faEthereum} />
-      <Text>{data}$</Text>
+      <Text>The current price of Ethereum is {data}$</Text>
     </Box>
   );
 }
