@@ -1,0 +1,14 @@
+/* Hide the navigation bar and other non-essential elements */
+header,
+nav,
+footer {
+    display: none;
+}
+
+body {
+    width: 100%;
+}
+
+* {
+    visibility: visible;
+}
