@@ -11,33 +11,43 @@ const NoMatch = React.lazy(() => import("./pages/NoMatch"));
 
 export default function App() {
   return (
-    <>
-      <Routes>
+    <Routes>
       <Route path="/" element={<MemoizedLayout />}>
         <Route index element={<Home />} />
         <Route
           path="about"
-          element={<React.Suspense fallback={<>...</>}>
-            <About />
-          </React.Suspense>} />
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <About />
+            </React.Suspense>
+          } 
+        />
         <Route
           path="contact"
-          element={<React.Suspense fallback={<>...</>}>
-            <Contact />
-            </React.Suspense>} />
-          <Route
-            path="privacy"
-            element={<React.Suspense fallback={<>...</>}>
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <Contact />
+            </React.Suspense>
+          } 
+        />
+        <Route
+          path="privacy"
+          element={
+            <React.Suspense fallback={<>...</>}>
               <Privacy />
-            </React.Suspense>} />
-          <Route
-            path="terms"
-            element={<React.Suspense fallback={<>...</>}>
+            </React.Suspense>
+          } 
+        />
+        <Route
+          path="terms"
+          element={
+            <React.Suspense fallback={<>...</>}>
               <Terms />
-            </React.Suspense>} />
+            </React.Suspense>
+          } 
+        />
         <Route path="*" element={<NoMatch />} />
       </Route>
-      </Routes>
-    </>
+    </Routes>
   );
 }
