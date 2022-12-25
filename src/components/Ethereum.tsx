@@ -1,8 +1,13 @@
 import React from 'react';
 import axios from 'axios';
 import { Box, Text } from '@primer/react';
+import { FC } from 'react';
 
-function Ethereum () {
+interface EthereumProps {
+  callback: () => void;
+}
+
+const Ethereum: FC<EthereumProps> = ({ callback }) => {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
