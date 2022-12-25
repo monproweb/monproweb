@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Routes, Route } from "react-router-dom";
-import MemoizedLayout from "components/Header";
+import Layout from "components/Header";
 import Home from "pages/Home";
 
 const About = React.lazy(() => import("./pages/About"));
@@ -12,7 +12,7 @@ const NoMatch = React.lazy(() => import("./pages/NoMatch"));
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<MemoizedLayout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route
           path="about"

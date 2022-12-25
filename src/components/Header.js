@@ -1,18 +1,9 @@
-/* eslint-disable no-unused-vars */
-import * as React from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header, Avatar } from '@primer/react';
 import logo from '../logo.svg';
 import metamask from '../images/metamask.svg';
-import { useMemo, useCallback } from 'react';
 
-const MemoizedLayout = React.memo(() => {
-  const expensiveCalculation = useMemo(() => {
-  }, []);
-
-  const callback = useCallback(() => {
-  }, []);
-
+function Layout() {
   return (
     <>
       <Header>
@@ -39,7 +30,7 @@ const MemoizedLayout = React.memo(() => {
       </Header>
       <Outlet />
     </>
-  );
-});
+  )
+}
 
-export default MemoizedLayout;
+export default Layout;
