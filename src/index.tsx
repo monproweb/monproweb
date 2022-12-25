@@ -32,15 +32,17 @@ const perf = getPerformance(app)
 const db = getFirestore(app);
 
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <ThemeProvider>
-                <BaseStyles>
-                    <App />
-                </BaseStyles>
-            </ThemeProvider>
-        </BrowserRouter>
-    </React.StrictMode>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <ThemeProvider>
+        <BaseStyles>
+          <React.Suspense fallback={<>Loading...</>}>
+            <App />
+          </React.Suspense>
+        </BaseStyles>
+      </ThemeProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
 )
 
 serviceWorkerRegistration.register()
