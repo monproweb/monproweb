@@ -1,15 +1,19 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Link } from 'react-router-dom';
+import { Box, Text } from '@primer/react';
 
-function NoMatch() {
+const NoMatch = () => {
   return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
-    </div>
+    <Box p={4} sx={{ textAlign: 'center' }}>
+      <Text as="h2" fontSize={5}>
+        Oops! We couldn't find the page you're looking for.
+      </Text>
+      <Text as="p" fontSize={3}>
+        The page you're trying to access doesn't seem to exist on this site. Please check the URL and try again, or go to the{' '}
+        <Link to="/">home page</Link> for more information.
+      </Text>
+    </Box>
   );
-}
+};
 
 export default NoMatch;
