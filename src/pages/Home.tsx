@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, PageLayout, Heading, Text } from '@primer/react';
 import Ethereum from '../components/Ethereum';
 import { useMemo, useCallback } from 'react';
@@ -10,11 +8,12 @@ const MemoizedEthereum = React.memo(Ethereum);
 function Home() {
   const expensiveCalculation = useMemo(() => {
     // Expensive calculation goes here
-  }, [] as readonly any[]);
+    return 'some expensive calculation result';
+  }, []); // Make sure to pass an array literal here
 
   const callback = useCallback(() => {
     // Callback function goes here
-  }, [] as readonly any[]);
+  }, []); // Make sure to pass an array literal here
 
   return (
     <>
@@ -25,6 +24,9 @@ function Home() {
           </Box>
           <Box p={3}>
             <MemoizedEthereum callback={callback} />
+          </Box>
+          <Box p={3}>
+            <Text>{expensiveCalculation}</Text>
           </Box>
         </PageLayout.Content>
         <PageLayout.Footer aria-label="footer">
