@@ -7,13 +7,11 @@ const MemoizedEthereum = React.memo(Ethereum);
 
 function Home() {
   const expensiveCalculation = useMemo(() => {
-    // Expensive calculation goes here
     return 'some expensive calculation result';
-  }, []); // Make sure to pass an array literal here
+  }, []);
 
   const callback = useCallback(() => {
-    // Callback function goes here
-  }, []); // Make sure to pass an array literal here
+  }, []);
 
   return (
     <>
