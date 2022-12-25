@@ -1,10 +1,20 @@
-import * as React from "react";
-import { Outlet } from "react-router-dom";
-import { Header, Avatar } from '@primer/react';
+import * as React from 'react';
+import { Outlet } from 'react-router-dom';
+import { Header, Avatar, Box, Text, Button } from '@primer/react';
 import logo from '../logo.svg';
 import metamask from '../images/metamask.svg';
+import { useMemo, useCallback } from 'react';
 
-function Layout() {
+const MemoizedLayout = React.memo(() => {
+  const expensiveCalculation = useMemo(() => {
+    // Expensive calculation goes here
+    return 'some expensive calculation result';
+  }, []);
+
+  const callback = useCallback(() => {
+    // Callback function goes here
+  }, []);
+
   return (
     <>
       <Header>
@@ -29,9 +39,13 @@ function Layout() {
           />
         </Header.Item>
       </Header>
+      <Box p={3}>
+        <Text>{expensiveCalculation}</Text>
+        <Button onClick={callback}>Click me</Button>
+      </Box>
       <Outlet />
     </>
   );
-}
+});
 
-export default Layout;
+export default MemoizedLayout;
