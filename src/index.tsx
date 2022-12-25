@@ -8,7 +8,6 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from 'firebase/analytics'
-import { getPerformance } from 'firebase/performance'
 import { getFirestore } from "firebase/firestore";
 
 const root = ReactDOM.createRoot(
@@ -28,7 +27,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig)
 const analytics = getAnalytics(app)
-const perf = getPerformance(app)
 const db = getFirestore(app);
 
 root.render(
