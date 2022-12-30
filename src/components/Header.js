@@ -54,16 +54,22 @@ const Layout = () => {
               <ActionMenu.Overlay>
                 <ActionList>
                   <ActionList.Item>
-                    <InfoIcon size={16} />
+                    <ActionList.LeadingVisual>
+                      <InfoIcon />
+                    </ActionList.LeadingVisual>
                     <Link href="/about"> About</Link>
                   </ActionList.Item>
                   <ActionList.Item>
-                    <MailIcon size={16} />
+                    <ActionList.LeadingVisual>
+                      <MailIcon />
+                    </ActionList.LeadingVisual>
                     <Link href="/contact"> Contact</Link>
                   </ActionList.Item>
                   <ActionList.Divider />
                   <ActionList.Item>
-                    <Avatar src={metamask} size={20} square alt="@metamask" />
+                    <ActionList.LeadingVisual>
+                      <Avatar src={metamask} square alt="@metamask" />
+                    </ActionList.LeadingVisual>
                     <Text> Metamask</Text>
                   </ActionList.Item>
                 </ActionList>
