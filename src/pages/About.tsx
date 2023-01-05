@@ -2,10 +2,12 @@ import { Box, PageLayout, Text, Avatar } from '@primer/react';
 import cat from '../images/cat.webp';
 import rsm from '../images/rsm.webp';
 import ship from '../images/ship.webp';
+import mind from '../images/mind.webp';
 import '../styles/About.scss';
 
 const About = () => {
   return (
+    <Box p={3} bg="canvas.default">
     <PageLayout>
       <PageLayout.Content aria-label="content">
         <Box className="Avatar">
@@ -32,6 +34,9 @@ const About = () => {
             In addition to our focus on sustainability, we also have extensive experience with Ethereum blockchain technology. This allows us to build applications that are secure, transparent, and highly scalable. Whether you need a simple web application or a complex decentralized application, we have the skills and expertise to deliver the solution you need.
           </Text>
         </Box>
+        <Box className="Avatar">
+          <Avatar src={mind} size={100} alt="ChatGPT mind" />
+        </Box>
         <Box>
           <Text>
             At Monproweb, we pride ourselves on our ability to deliver high-quality web and mobile solutions that meet the unique needs of each of our clients. Contact us today to discuss your project and learn more about how we can help bring your vision to life.
@@ -39,6 +44,7 @@ const About = () => {
         </Box>
       </PageLayout.Content>
     </PageLayout>
+  </Box>
   );
 };
 

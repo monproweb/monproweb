@@ -7,7 +7,7 @@ import Programming from '../images/programming.svg'
 
 function Home() {
   return (
-    <>
+    <Box p={3} bg="canvas.default">
       <PageLayout>
         <PageLayout.Content aria-label="content">
           <Box p={3}>
@@ -22,7 +22,7 @@ function Home() {
         </PageLayout.Content>
         <Footer />
       </PageLayout>
-    </>
+    </Box>
   );
 }
 
