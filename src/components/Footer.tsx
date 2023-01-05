@@ -1,10 +1,9 @@
-import * as React from "react";
+import { PageLayout } from '@primer/react';
 
 function Footer() {
   return (
-    <div>
-      <h2>Footer</h2>
-    </div>
+    <PageLayout.Footer aria-label="footer">
+    </PageLayout.Footer>
   );
 }
 
