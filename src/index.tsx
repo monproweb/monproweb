@@ -2,7 +2,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client';
 import App from './App'
-import {ThemeProvider, BaseStyles} from '@primer/react'
+import {ThemeProvider, BaseStyles, Spinner} from '@primer/react'
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
@@ -16,7 +16,7 @@ root.render(
     <BrowserRouter>
       <ThemeProvider colorMode='auto'>
         <BaseStyles>
-          <React.Suspense fallback={<>Loading...</>}>
+          <React.Suspense fallback={<Spinner />}>
             <App />
           </React.Suspense>
         </BaseStyles>

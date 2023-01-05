@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Box, PageLayout, Heading, Button } from '@primer/react';
 import Footer from '../components/Footer';
-import {RocketIcon} from '@primer/octicons-react'
+import { RocketIcon } from '@primer/octicons-react'
 import '../styles/Home.scss';
 import Programming from '../images/programming.svg'
 
