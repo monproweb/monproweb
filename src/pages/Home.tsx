@@ -7,7 +7,7 @@ import Programming from '../images/programming.svg'
 
 function Home() {
   return (
-    <Box p={3} bg="canvas.default">
+    <Box p={3} bg="canvas.default" className='section'>
       <PageLayout>
         <PageLayout.Content aria-label="content">
           <Box p={3}>

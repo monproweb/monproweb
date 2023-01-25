@@ -7,11 +7,11 @@ import '../styles/About.scss';
 
 const About = () => {
   return (
-    <Box p={3} bg="canvas.default">
+    <Box p={3} bg="canvas.default" className='section'>
     <PageLayout>
       <PageLayout.Content aria-label="content">
         <Box className="Avatar">
-          <Avatar src={cat} size={100} alt="Cat in space" />
+          <Avatar src={cat} size={80} alt="Cat in space" />
         </Box>
         <Box>
           <Text>
@@ -19,7 +19,7 @@ const About = () => {
           </Text>
         </Box>
         <Box className="Avatar">
-          <Avatar src={rsm} size={100} alt="Positive change ambassador badge from RSM" />
+          <Avatar src={rsm} size={80} alt="Positive change ambassador badge from RSM" />
         </Box>
         <Box>
           <Text>
@@ -27,7 +27,7 @@ const About = () => {
           </Text>
         </Box>
         <Box className="Avatar">
-          <Avatar src={ship} size={100} alt="A boat with Ethereum sail" />
+          <Avatar src={ship} size={80} alt="A boat with Ethereum sail" />
         </Box>
         <Box>
           <Text>
@@ -35,7 +35,7 @@ const About = () => {
           </Text>
         </Box>
         <Box className="Avatar">
-          <Avatar src={mind} size={100} alt="ChatGPT mind" />
+          <Avatar src={mind} size={80} alt="ChatGPT mind" />
         </Box>
         <Box>
           <Text>
