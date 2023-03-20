@@ -17,7 +17,7 @@ const SwitchTheme = () => {
 
     return (
         <Button onClick={handleClick}>
-            {isNight ? <MoonIcon /> : <SunIcon />}
+            {isNight ? <SunIcon /> : <MoonIcon />}
         </Button>
     )
 }
