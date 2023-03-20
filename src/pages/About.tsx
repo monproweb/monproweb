@@ -1,11 +1,4 @@
-import {
-    Box,
-    PageLayout,
-    Text,
-    Avatar,
-    Heading,
-    Breadcrumbs,
-} from '@primer/react'
+import { Box, PageLayout, Text, Avatar, Heading } from '@primer/react'
 import Footer from '../components/Footer'
 import cat from '../images/cat.webp'
 import rsm from '../images/rsm.webp'
@@ -18,12 +11,6 @@ const About = () => {
         <Box p={3} bg="canvas.default" className="section">
             <PageLayout>
                 <PageLayout.Content aria-label="content">
-                    <Breadcrumbs>
-                        <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
-                        <Breadcrumbs.Item href="/about" selected>
-                            About
-                        </Breadcrumbs.Item>
-                    </Breadcrumbs>
                     <Heading sx={{ fontSize: 42, mb: 2 }}>About</Heading>
                     <Box
                         sx={{
