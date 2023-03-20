@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import { Header, Avatar } from '@primer/react'
 import logo from '../logo.svg'
+import SwitchTheme from '../components/SwitchTheme'
 
 const Layout = () => {
     return (
@@ -18,6 +19,9 @@ const Layout = () => {
                     </Header.Link>
                 </Header.Item>
                 <Header.Item mr={0}>
+                    <Header.Item>
+                        <SwitchTheme />
+                    </Header.Item>
                     <Header.Link href="/about">About</Header.Link>
                 </Header.Item>
             </Header>
