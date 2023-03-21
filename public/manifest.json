@@ -2,7 +2,7 @@
     "short_name": "MonProWeb",
     "name": "Mon Pro Web",
     "description": "I build Web and mobile applications.",
-    "scope": "https://monproweb.io",
+    "scope": "/",
     "orientation": "portrait",
     "screenshots": [
         {
