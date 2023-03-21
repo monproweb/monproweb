@@ -10,7 +10,14 @@ export default function ProgrammingImage() {
     })
 
     return (
-        <Box p={3}>
+        <Box
+            p={3}
+            sx={{
+                ':hover': {
+                    transform: 'scale(1.1)',
+                },
+            }}
+        >
             <animated.div style={imageAnimation}>
                 <img
                     className="programming"
@@ -18,6 +25,10 @@ export default function ProgrammingImage() {
                     alt="programming"
                     width="300px"
                     height="300px"
+                    style={{
+                        display: 'block',
+                        transition: 'transform 0.3s',
+                    }}
                 />
             </animated.div>
         </Box>

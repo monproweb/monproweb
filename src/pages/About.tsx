@@ -40,7 +40,20 @@ function AboutSection({ image, alt, text, index }) {
         <animated.div style={sectionAnimation}>
             <Box>
                 <Box sx={{ textAlign: 'center' }} role="region">
-                    <Avatar src={image} size={100} alt={alt} />
+                    <Avatar
+                        src={image}
+                        size={100}
+                        alt={alt}
+                        style={{
+                            display: 'inline-block',
+                            transition: 'transform 0.3s',
+                        }}
+                        sx={{
+                            ':hover': {
+                                transform: 'scale(1.1)',
+                            },
+                        }}
+                    />
                 </Box>
                 <Text>{text}</Text>
             </Box>
