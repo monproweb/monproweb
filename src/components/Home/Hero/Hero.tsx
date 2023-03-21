@@ -1,6 +1,6 @@
-import ProgrammingImage from './Hero/ProgrammingImage'
-import IntroText from './Hero/InfoText'
-import CallToAction from './Hero/CallToAction'
+import ProgrammingImage from './ProgrammingImage'
+import IntroText from './InfoText'
+import CallToAction from './CallToAction'
 import { Box } from '@primer/react'
 
 export default function Hero() {
