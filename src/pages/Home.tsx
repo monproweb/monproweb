@@ -36,8 +36,10 @@ function Home() {
                             aria-label="Get in touch"
                             variant="primary"
                             onClick={() => {
-                                window.location.href =
-                                    'mailto:thomas.erhel@gmail.com'
+                                window.open(
+                                    'https://twitter.com/ThomasErhel',
+                                    '_blank'
+                                )
                             }}
                         >
                             Get in touch
