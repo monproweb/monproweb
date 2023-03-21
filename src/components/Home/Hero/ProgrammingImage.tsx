@@ -1,4 +1,4 @@
-import { Box } from '@primer/react'
+import { Box, Avatar } from '@primer/react'
 import { useSpring, animated } from 'react-spring'
 import Programming from '../../../images/programming.svg'
 
@@ -10,24 +10,19 @@ export default function ProgrammingImage() {
     })
 
     return (
-        <Box
-            p={3}
-            sx={{
-                ':hover': {
-                    transform: 'scale(1.1)',
-                },
-            }}
-        >
+        <Box p={3}>
             <animated.div style={imageAnimation}>
-                <img
-                    className="programming"
+                <Avatar
                     src={Programming}
                     alt="programming"
-                    width="300px"
-                    height="300px"
-                    style={{
+                    sx={{
+                        width: '300px',
+                        height: '300px',
                         display: 'block',
                         transition: 'transform 0.3s',
+                        ':hover': {
+                            transform: 'scale(1.1)',
+                        },
                     }}
                 />
             </animated.div>
