@@ -1,7 +1,7 @@
 import { Box, Text, Link, PageLayout } from '@primer/react'
 import { MarkGithubIcon } from '@primer/octicons-react'
 
-function Footer() {
+export default function Footer() {
     return (
         <PageLayout.Footer aria-label="footer">
             <Box p={3} textAlign="center">
@@ -30,5 +30,3 @@ function Footer() {
         </PageLayout.Footer>
     )
 }
-
-export default Footer

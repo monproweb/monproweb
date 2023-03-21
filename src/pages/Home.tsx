@@ -1,7 +1,5 @@
 import Hero from '../components/Home/Hero'
 
-function Home() {
+export default function Home() {
     return <Hero />
 }
-
-export default Home

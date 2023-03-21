@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 import { Box, Text } from '@primer/react'
 
-const NoMatch = () => {
+export default function NoMatch() {
     return (
         <Box p={4} sx={{ textAlign: 'center' }}>
             <Text as="h2" fontSize={5}>
@@ -16,5 +16,3 @@ const NoMatch = () => {
         </Box>
     )
 }
-
-export default NoMatch

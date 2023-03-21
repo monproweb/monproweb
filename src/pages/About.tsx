@@ -4,7 +4,7 @@ import rsm from '../images/rsm.webp'
 import ship from '../images/ship.webp'
 import mind from '../images/mind.webp'
 
-const About = () => {
+export default function About() {
     return (
         <>
             <Heading sx={{ fontSize: 42, mb: 2 }}>About Monproweb</Heading>
@@ -88,5 +88,3 @@ const About = () => {
         </>
     )
 }
-
-export default About

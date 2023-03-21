@@ -1,6 +1,6 @@
 import { Box, PageLayout, Heading, Text } from '@primer/react'
 
-function Privacy() {
+export default function Privacy() {
     return (
         <>
             <PageLayout>
@@ -185,5 +185,3 @@ function Privacy() {
         </>
     )
 }
-
-export default Privacy
