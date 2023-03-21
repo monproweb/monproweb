@@ -1,4 +1,5 @@
 import { Box, Text, Avatar, Heading } from '@primer/react'
+import { useSpring, animated } from 'react-spring'
 import cat from '../images/cat.webp'
 import rsm from '../images/rsm.webp'
 import ship from '../images/ship.webp'
@@ -27,14 +28,23 @@ const sections = [
     },
 ]
 
-function AboutSection({ image, alt, text }) {
+function AboutSection({ image, alt, text, index }) {
+    const sectionAnimation = useSpring({
+        from: { opacity: 0, transform: 'translateY(30px)' },
+        to: { opacity: 1, transform: 'translateY(0px)' },
+        config: { duration: 1000 },
+        delay: 200 * index,
+    })
+
     return (
-        <Box>
-            <Box sx={{ textAlign: 'center' }} role="region">
-                <Avatar src={image} size={100} alt={alt} />
+        <animated.div style={sectionAnimation}>
+            <Box>
+                <Box sx={{ textAlign: 'center' }} role="region">
+                    <Avatar src={image} size={100} alt={alt} />
+                </Box>
+                <Text>{text}</Text>
             </Box>
-            <Text>{text}</Text>
-        </Box>
+        </animated.div>
     )
 }
 
@@ -60,7 +70,7 @@ export default function About() {
                 }}
             >
                 {sections.map((section, index) => (
-                    <AboutSection key={index} {...section} />
+                    <AboutSection index={undefined} key={index} {...section} />
                 ))}
             </Box>
         </>
