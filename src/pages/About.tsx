@@ -30,7 +30,7 @@ const sections = [
 function AboutSection({ image, alt, text }) {
     return (
         <Box>
-            <Box sx={{ textAlign: 'center' }}>
+            <Box sx={{ textAlign: 'center' }} role="region">
                 <Avatar src={image} size={100} alt={alt} />
             </Box>
             <Text>{text}</Text>
