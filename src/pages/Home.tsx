@@ -4,7 +4,15 @@ import Programming from '../images/programming.svg'
 
 function Home() {
     return (
-        <>
+        <Box
+            sx={{
+                height: '100vh',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+            }}
+        >
             <Box p={3}>
                 <img
                     className="programming"
@@ -43,7 +51,7 @@ function Home() {
                     Learn more
                 </Link>
             </Box>
-        </>
+        </Box>
     )
 }
 
