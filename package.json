@@ -62,10 +62,10 @@
     },
     "jest": {
         "collectCoverageFrom": [
-          "src/**/*.{js,jsx,ts,tsx}",
-          "!src/**/*.d.ts"
+            "src/**/*.{js,jsx,ts,tsx}",
+            "!src/**/*.d.ts"
         ]
-      },
+    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
