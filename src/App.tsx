@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import Layout from 'components/Header'
+import Layout from 'components/Layout'
 import Home from 'pages/Home'
 import { Spinner } from '@primer/react'
 
@@ -11,35 +11,16 @@ const NoMatch = React.lazy(() => import('./pages/NoMatch'))
 
 export default function App() {
     return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route index element={<Home />} />
-                <Route
-                    path="about"
-                    element={
-                        <React.Suspense fallback={<Spinner />}>
-                            <About />
-                        </React.Suspense>
-                    }
-                />
-                <Route
-                    path="privacy"
-                    element={
-                        <React.Suspense fallback={<Spinner />}>
-                            <Privacy />
-                        </React.Suspense>
-                    }
-                />
-                <Route
-                    path="terms"
-                    element={
-                        <React.Suspense fallback={<Spinner />}>
-                            <Terms />
-                        </React.Suspense>
-                    }
-                />
-                <Route path="*" element={<NoMatch />} />
-            </Route>
-        </Routes>
+        <React.Suspense fallback={<Spinner />}>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="privacy" element={<Privacy />} />
+                    <Route path="terms" element={<Terms />} />
+                    <Route path="*" element={<NoMatch />} />
+                </Route>
+            </Routes>
+        </React.Suspense>
     )
 }

@@ -1,9 +1,8 @@
-import { Outlet } from 'react-router-dom'
 import { Header, Avatar } from '@primer/react'
 import logo from '../logo.svg'
-import SwitchTheme from '../components/SwitchTheme'
+import SwitchTheme from './SwitchTheme'
 
-const Layout = () => {
+const Nav = () => {
     return (
         <>
             <Header>
@@ -25,9 +24,8 @@ const Layout = () => {
                     <Header.Link href="/about">About</Header.Link>
                 </Header.Item>
             </Header>
-            <Outlet />
         </>
     )
 }
 
-export default Layout
+export default Nav
