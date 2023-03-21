@@ -1,5 +1,5 @@
-import { Box, Button } from '@primer/react'
-import { Link } from 'react-router-dom'
+import { Box, Button, Link } from '@primer/react'
+import { Link as RouterLink } from 'react-router-dom'
 import { RocketIcon } from '@primer/octicons-react'
 
 const TWITTER_URL = 'https://twitter.com/ThomasErhel'
@@ -18,7 +18,11 @@ export default function CallToAction() {
             >
                 Get in touch
             </Button>
-            <Link to={ABOUT_URL} aria-label="Learn more about Monproweb">
+            <Link
+                to={ABOUT_URL}
+                as={RouterLink}
+                aria-label="Learn more about Monproweb"
+            >
                 Learn more
             </Link>
         </Box>
