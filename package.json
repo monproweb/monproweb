@@ -60,6 +60,12 @@
         "semi": false,
         "singleQuote": true
     },
+    "jest": {
+        "collectCoverageFrom": [
+          "src/**/*.{js,jsx,ts,tsx}",
+          "!src/**/*.d.ts"
+        ]
+      },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -90,6 +96,7 @@
         ]
     },
     "devDependencies": {
+        "@types/css-font-loading-module": "^0.0.8",
         "eslint-plugin-primer-react": "^1.0.1",
         "husky": "^8.0.3",
         "lint-staged": "^13.2.0",
