@@ -20,7 +20,7 @@ const SwitchTheme = () => {
     }
 
     return (
-        <Button onClick={handleClick}>
+        <Button onClick={handleClick} data-testid="switch-theme">
             {isNight ? (
                 <SunIcon aria-label="sun icon" />
             ) : (

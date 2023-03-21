@@ -6,6 +6,7 @@ import { Box } from '@primer/react'
 export default function Hero() {
     return (
         <Box
+            data-testid="hero-component"
             sx={{
                 height: '100vh',
                 display: 'flex',
