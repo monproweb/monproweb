@@ -9,7 +9,7 @@ const sections = [
     {
         image: cat,
         alt: 'Cat in space',
-        text: 'Monproweb is a startup that specialized in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology. Our team of experienced developers utilizes the React library to create intuitive and user-friendly apps that deliver powerful functionality.',
+        text: 'MonProWeb is a startup that specialized in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology. Our team of experienced developers utilizes the React library to create intuitive and user-friendly apps that deliver powerful functionality.',
     },
     {
         image: rsm,
@@ -24,7 +24,7 @@ const sections = [
     {
         image: mind,
         alt: 'ChatGPT mind',
-        text: 'At Monproweb, we pride ourselves on our ability to deliver high-quality web and mobile solutions that meet the unique needs of each of our clients. Contact us today to discuss your project and learn more about how we can help bring your vision to life.',
+        text: 'At MonProWeb, we pride ourselves on our ability to deliver high-quality web and mobile solutions that meet the unique needs of each of our clients. Contact us today to discuss your project and learn more about how we can help bring your vision to life.',
     },
 ]
 
@@ -64,7 +64,7 @@ function AboutSection({ image, alt, text, index }) {
 export default function About() {
     return (
         <>
-            <Heading sx={{ fontSize: 42, mb: 2 }}>About Monproweb</Heading>
+            <Heading sx={{ fontSize: 42, mb: 2 }}>About MonProWeb</Heading>
             <Box
                 sx={{
                     '> *': {
