@@ -145,3 +145,13 @@ export function unregister() {
             })
     }
 }
+
+export function onUpdate() {
+    const answer = window.confirm(
+        'This app has been updated. Do you want to reload to view the latest version?'
+    )
+
+    if (answer === true) {
+        window.location.reload()
+    }
+}

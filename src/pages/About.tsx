@@ -4,6 +4,7 @@ import cat from '../images/cat.webp'
 import rsm from '../images/rsm.webp'
 import ship from '../images/ship.webp'
 import mind from '../images/mind.webp'
+import { Helmet } from 'react-helmet'
 
 const sections = [
     {
@@ -72,6 +73,24 @@ export default function About() {
                 alignItems: 'center',
             }}
         >
+            <Helmet>
+                <title>About MonProWeb</title>
+                <meta
+                    name="description"
+                    content="Learn more about MonProWeb, an eco-friendly startup specialized in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology."
+                />
+                <meta
+                    name="keywords"
+                    content="MonProWeb, web development, mobile development, Ethereum, blockchain, sustainability, eco-friendly"
+                />
+
+                <meta property="og:title" content="About MonProWeb" />
+                <meta
+                    property="og:description"
+                    content="Learn more about MonProWeb, an eco-friendly startup specialized in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology."
+                />
+                <meta property="og:url" content="https://monproweb.io/about" />
+            </Helmet>
             <Heading sx={{ fontSize: 42, mb: 2 }}>About MonProWeb</Heading>
             <Box
                 sx={{

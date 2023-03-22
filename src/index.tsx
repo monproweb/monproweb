@@ -1,14 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { hydrate, render } from 'react-dom'
 import App from './App'
 import { ThemeProvider, BaseStyles, Spinner } from '@primer/react'
 import { BrowserRouter } from 'react-router-dom'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+const rootElement = document.getElementById('root') as HTMLElement
 
-root.render(
+const app = (
     <React.StrictMode>
         <BrowserRouter>
             <ThemeProvider colorMode="auto">
@@ -21,6 +21,12 @@ root.render(
         </BrowserRouter>
     </React.StrictMode>
 )
+
+if (rootElement.hasChildNodes()) {
+    hydrate(app, rootElement)
+} else {
+    render(app, rootElement)
+}
 
 serviceWorkerRegistration.register()
 reportWebVitals()
