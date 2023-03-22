@@ -39,7 +39,7 @@ export default function CallToAction() {
                 <Link
                     to={ABOUT_URL}
                     as={RouterLink}
-                    aria-label="Learn more about Monproweb"
+                    aria-label="Learn more about MonProWeb"
                 >
                     Learn more about MonProWeb
                 </Link>
