@@ -24,6 +24,7 @@ export default function Footer() {
                         rel="noopener noreferrer"
                     >
                         <MarkGithubIcon size={24} />
+                        GitHub
                     </Link>
                 </Box>
             </Box>
