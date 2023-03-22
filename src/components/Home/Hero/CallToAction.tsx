@@ -41,7 +41,7 @@ export default function CallToAction() {
                     as={RouterLink}
                     aria-label="Learn more about Monproweb"
                 >
-                    Learn more about Monproweb
+                    Learn more about MonProWeb
                 </Link>
             </animated.div>
         </Box>
