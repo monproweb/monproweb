@@ -53,15 +53,7 @@ function AboutSection({ image, alt, text, index }) {
 
 export default function About() {
     return (
-        <Box
-            sx={{
-                height: '100vh',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
+        <Box>
             <Heading sx={{ fontSize: 42, mb: 2 }}>About MonProWeb</Heading>
             <Box
                 sx={{
