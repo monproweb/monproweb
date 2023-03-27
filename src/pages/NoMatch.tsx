@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom'
-import { Box, Text } from '@primer/react'
+import { Box, Text, Link } from '@primer/react'
+import { Link as RouterLink } from 'react-router-dom'
 
 export default function NoMatch() {
     return (
@@ -10,7 +10,10 @@ export default function NoMatch() {
             <Text as="p" fontSize={3} data-testid="no-match-description">
                 The page you're trying to access doesn't seem to exist on this
                 site. Please check the URL and try again, or go to the{' '}
-                <Link to="/">home page</Link> for more information.
+                <Link to="/" as={RouterLink}>
+                    home page
+                </Link>{' '}
+                for more information.
             </Text>
         </Box>
     )

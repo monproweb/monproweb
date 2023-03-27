@@ -1,5 +1,6 @@
 import { Box, Text, Link, PageLayout } from '@primer/react'
 import { MarkGithubIcon } from '@primer/octicons-react'
+import { Link as RouterLink } from 'react-router-dom'
 
 export default function Footer() {
     return (
@@ -19,7 +20,8 @@ export default function Footer() {
                     alignItems="center"
                 >
                     <Link
-                        href="https://github.com/ThomasErhel"
+                        to="https://github.com/ThomasErhel"
+                        as={RouterLink}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
