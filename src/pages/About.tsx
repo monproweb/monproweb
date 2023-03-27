@@ -1,10 +1,9 @@
 import { Box, Text, Avatar, Heading } from '@primer/react'
-import { useSpring, animated } from 'react-spring'
 import cat from '../images/cat.webp'
 import rsm from '../images/rsm.webp'
 import ship from '../images/ship.webp'
 import mind from '../images/mind.webp'
-import { Helmet } from 'react-helmet'
+import { HelmetProvider } from 'react-helmet-async'
 
 const sections = [
     {
@@ -30,35 +29,26 @@ const sections = [
 ]
 
 function AboutSection({ image, alt, text, index }) {
-    const sectionAnimation = useSpring({
-        from: { opacity: 0, transform: 'translateY(30px)' },
-        to: { opacity: 1, transform: 'translateY(0px)' },
-        config: { duration: 1000 },
-        delay: 200 * index,
-    })
-
     return (
-        <animated.div style={sectionAnimation}>
-            <Box>
-                <Box sx={{ textAlign: 'center' }} role="region">
-                    <Avatar
-                        src={image}
-                        size={100}
-                        alt={alt}
-                        style={{
-                            display: 'inline-block',
-                            transition: 'transform 0.3s',
-                        }}
-                        sx={{
-                            ':hover': {
-                                transform: 'scale(1.1)',
-                            },
-                        }}
-                    />
-                </Box>
-                <Text>{text}</Text>
+        <Box>
+            <Box sx={{ textAlign: 'center' }} role="region">
+                <Avatar
+                    src={image}
+                    size={100}
+                    alt={alt}
+                    style={{
+                        display: 'inline-block',
+                        transition: 'transform 0.3s',
+                    }}
+                    sx={{
+                        ':hover': {
+                            transform: 'scale(1.1)',
+                        },
+                    }}
+                />
             </Box>
-        </animated.div>
+            <Text>{text}</Text>
+        </Box>
     )
 }
 
@@ -73,7 +63,7 @@ export default function About() {
                 alignItems: 'center',
             }}
         >
-            <Helmet>
+            <HelmetProvider>
                 <title>About MonProWeb</title>
                 <meta
                     name="description"
@@ -90,7 +80,7 @@ export default function About() {
                     content="Learn more about MonProWeb, an eco-friendly startup specialized in building web and mobile applications with a focus on sustainability and the use of Ethereum blockchain technology."
                 />
                 <meta property="og:url" content="https://monproweb.io/about" />
-            </Helmet>
+            </HelmetProvider>
             <Heading sx={{ fontSize: 42, mb: 2 }}>About MonProWeb</Heading>
             <Box
                 sx={{
