@@ -9,7 +9,7 @@ export default function Layout() {
             <Nav />
             <Box p={3} bg="canvas.default">
                 <PageLayout>
-                    <PageLayout.Content aria-label="content">
+                    <PageLayout.Content aria-label="Content">
                         <Outlet />
                         <Footer />
                     </PageLayout.Content>

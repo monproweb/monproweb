@@ -4,8 +4,8 @@ export default function Privacy() {
     return (
         <>
             <PageLayout>
-                <PageLayout.Header aria-label="header"></PageLayout.Header>
-                <PageLayout.Content aria-label="content">
+                <PageLayout.Header aria-label="Header"></PageLayout.Header>
+                <PageLayout.Content aria-label="Content">
                     <Box>
                         <Heading>Privacy Policy</Heading>
                         <Text>
@@ -180,7 +180,7 @@ export default function Privacy() {
                         </Text>
                     </Box>
                 </PageLayout.Content>
-                <PageLayout.Footer aria-label="footer"></PageLayout.Footer>
+                <PageLayout.Footer aria-label="Footer"></PageLayout.Footer>
             </PageLayout>
         </>
     )

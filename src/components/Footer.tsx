@@ -3,7 +3,7 @@ import { MarkGithubIcon } from '@primer/octicons-react'
 
 export default function Footer() {
     return (
-        <PageLayout.Footer aria-label="footer">
+        <PageLayout.Footer aria-label="Footer">
             <Box p={3} textAlign="center">
                 <Text>
                     &copy; {new Date().getFullYear()} MonProWeb. All rights
