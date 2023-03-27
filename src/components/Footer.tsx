@@ -23,7 +23,7 @@ export default function Footer() {
                         to="https://github.com/ThomasErhel"
                         as={RouterLink}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                     >
                         <MarkGithubIcon size={24} />
                         GitHub

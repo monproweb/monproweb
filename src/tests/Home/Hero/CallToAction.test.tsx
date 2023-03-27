@@ -31,7 +31,8 @@ describe('CallToAction component', () => {
 
         expect(openSpy).toHaveBeenCalledWith(
             'https://twitter.com/ThomasErhel',
-            '_blank'
+            '_blank',
+            'noreferrer'
         )
         openSpy.mockRestore()
     })

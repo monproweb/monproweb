@@ -12,9 +12,8 @@ export default function CallToAction() {
                 <Button
                     leadingIcon={RocketIcon}
                     aria-label="Get in touch"
-                    variant="primary"
                     onClick={() => {
-                        window.open(TWITTER_URL, '_blank')
+                        window.open(TWITTER_URL, '_blank', 'noreferrer')
                     }}
                 >
                     Get in touch
