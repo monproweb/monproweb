@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/417.cb322c4f.chunk.js","mappings":"qKAAe,SAASA,IACpB,OACIC,EAAAA,EAAAA,KAAA,OAAAC,UACID,EAAAA,EAAAA,KAAA,MAAAC,SAAI,WAGhB,C","sources":["pages/Terms.tsx"],"sourcesContent":["export default function Terms() {\n    return (\n        <div>\n            <h2>Terms</h2>\n        </div>\n    )\n}\n"],"names":["Terms","_jsx","children"],"sourceRoot":""}
