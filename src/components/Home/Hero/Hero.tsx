@@ -5,16 +5,7 @@ import { Box } from '@primer/react'
 
 export default function Hero() {
     return (
-        <Box
-            data-testid="hero-component"
-            sx={{
-                height: '100vh',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
+        <Box data-testid="hero-component">
             <ProgrammingImage />
             <IntroText />
             <CallToAction />
