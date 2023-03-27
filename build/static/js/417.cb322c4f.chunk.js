@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmonproweb=self.webpackChunkmonproweb||[]).push([[417],{4417:function(n,e,r){r.r(e),r.d(e,{default:function(){return c}});var u=r(184);function c(){return(0,u.jsx)("div",{children:(0,u.jsx)("h2",{children:"Terms"})})}}}]);
+//# sourceMappingURL=417.cb322c4f.chunk.js.map
