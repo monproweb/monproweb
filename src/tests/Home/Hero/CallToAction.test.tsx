@@ -9,32 +9,26 @@ describe('CallToAction component', () => {
                 <CallToAction />
             </MemoryRouter>
         )
-        const button = screen.getByRole('button', { name: /Get in touch/i })
+        const button = screen.getByRole('link', { name: /Get in touch/i })
         expect(button).toBeInTheDocument()
         const link = screen.getByRole('link', { name: /Learn more/i })
         expect(link).toBeInTheDocument()
     })
 
     test('opens the Twitter URL when clicking the Get in touch button', () => {
-        const openSpy = jest.spyOn(window, 'open').mockImplementation(() => {
-            return null
-        })
-
         render(
             <MemoryRouter>
                 <CallToAction />
             </MemoryRouter>
         )
 
-        const button = screen.getByRole('button', { name: /Get in touch/i })
-        fireEvent.click(button)
-
-        expect(openSpy).toHaveBeenCalledWith(
-            'https://twitter.com/ThomasErhel',
-            '_blank',
-            'noreferrer'
+        const button = screen.getByRole('link', { name: /Get in touch/i })
+        expect(button).toHaveAttribute(
+            'href',
+            'https://twitter.com/ThomasErhel'
         )
-        openSpy.mockRestore()
+        expect(button).toHaveAttribute('target', '_blank')
+        expect(button).toHaveAttribute('rel', 'noreferrer')
     })
 
     test('navigates to the About URL when clicking the Learn more link', () => {

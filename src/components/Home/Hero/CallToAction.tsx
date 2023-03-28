@@ -10,11 +10,12 @@ export default function CallToAction() {
         <>
             <Box p={3}>
                 <Button
+                    as="a"
+                    href={TWITTER_URL}
+                    target="_blank"
+                    rel="noreferrer"
                     leadingIcon={RocketIcon}
                     aria-label="Get in touch"
-                    onClick={() => {
-                        window.open(TWITTER_URL, '_blank', 'noreferrer')
-                    }}
                 >
                     Get in touch
                 </Button>
