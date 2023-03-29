@@ -13,10 +13,11 @@ const SwitchTheme = () => {
     const handleClick = () => {
         if (isNight) {
             setColorMode('day')
+            setIsNight(false)
         } else {
             setColorMode('night')
+            setIsNight(true)
         }
-        setIsNight(!isNight)
     }
 
     return (
