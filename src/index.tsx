@@ -11,7 +11,7 @@ const rootElement = document.getElementById('root') as HTMLElement
 const app = (
     <React.StrictMode>
         <BrowserRouter>
-            <ThemeProvider colorMode="auto">
+            <ThemeProvider colorMode="auto" preventSSRMismatch>
                 <BaseStyles>
                     <React.Suspense fallback={<Spinner />}>
                         <App />
