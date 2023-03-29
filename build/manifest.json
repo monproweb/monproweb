@@ -20,12 +20,22 @@
         {
             "name": "Home",
             "url": ".",
-            "description": "Go to home page"
+            "description": "Go to home page",
+            "icons": [
+                {
+                    "src": "/home.svg"
+                }
+            ]
         },
         {
             "name": "About",
             "url": "/about",
-            "description": "Go to about page"
+            "description": "Go to about page",
+            "icons": [
+                {
+                    "src": "/info.svg"
+                }
+            ]
         }
     ],
     "categories": ["business", "productivity", "utilities"],
