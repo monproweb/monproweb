@@ -10,6 +10,12 @@
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://cra.link/PWA
 
+declare global {
+    interface ServiceWorkerRegistration {
+        periodicSync: any
+    }
+}
+
 const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
         // [::1] is the IPv6 localhost address.
@@ -45,11 +51,36 @@ export function register(config?: Config) {
 
                 // Add some additional logging to localhost, pointing developers to the
                 // service worker/PWA documentation.
-                navigator.serviceWorker.ready.then(() => {
+                navigator.serviceWorker.ready.then(async (registration) => {
                     console.log(
                         'This web app is being served cache-first by a service ' +
                             'worker. To learn more, visit https://cra.link/PWA'
                     )
+
+                    if (
+                        registration.active &&
+                        registration.active.state === 'activated'
+                    ) {
+                        updateReady(registration.active)
+                    }
+
+                    // Register Periodic Sync
+                    if ('periodicSync' in registration) {
+                        try {
+                            await registration.periodicSync.register(
+                                'content-sync',
+                                {
+                                    minInterval: 24 * 60 * 60 * 1000, // 1 day
+                                }
+                            )
+                            console.log('Periodic Sync registered')
+                        } catch (error) {
+                            console.error(
+                                'Periodic Sync registration failed:',
+                                error
+                            )
+                        }
+                    }
                 })
             } else {
                 // Is not localhost. Just register service worker
@@ -59,10 +90,17 @@ export function register(config?: Config) {
     }
 }
 
+function updateReady(sw: ServiceWorker) {
+    // You can put your custom logic here for when the Service Worker is ready.
+    console.log('Service Worker is ready:', sw)
+}
+
 function registerValidSW(swUrl: string, config?: Config) {
     navigator.serviceWorker
         .register(swUrl)
-        .then((registration) => {
+        .then(async (registration) => {
+            await registerBackgroundSync(registration)
+            await registerPeriodicSync(registration)
             registration.onupdatefound = () => {
                 const installingWorker = registration.installing
                 if (installingWorker == null) {
@@ -134,15 +172,13 @@ function checkValidServiceWorker(swUrl: string, config?: Config) {
         })
 }
 
-export function unregister() {
+export async function unregister() {
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.ready
-            .then((registration) => {
-                registration.unregister()
-            })
-            .catch((error) => {
-                console.error(error.message)
-            })
+        const registration = await navigator.serviceWorker.ready
+        if ('periodicSync' in registration) {
+            registration.periodicSync.unregister('periodic-sync')
+        }
+        registration.unregister()
     }
 }
 
@@ -153,5 +189,29 @@ export function onUpdate() {
 
     if (answer === true) {
         window.location.reload()
+    }
+}
+
+const registerBackgroundSync = async (
+    registration: ServiceWorkerRegistration
+) => {
+    try {
+        await registration.sync.register('bgSyncQueue')
+        console.log('Background sync registered')
+    } catch (error) {
+        console.log('Background sync registration failed:', error)
+    }
+}
+
+const registerPeriodicSync = async (
+    registration: ServiceWorkerRegistration
+) => {
+    try {
+        await registration.periodicSync.register('periodicSyncTag', {
+            minInterval: 24 * 60 * 60 * 1000, // 24 hours
+        })
+        console.log('Periodic sync registered')
+    } catch (error) {
+        console.log('Periodic sync registration failed:', error)
     }
 }
