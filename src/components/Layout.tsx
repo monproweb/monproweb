@@ -11,8 +11,10 @@ export default function Layout() {
                 <PageLayout>
                     <PageLayout.Content aria-label="Content">
                         <Outlet />
-                        <Footer />
                     </PageLayout.Content>
+                    <PageLayout.Footer aria-label="Footer">
+                        <Footer />
+                    </PageLayout.Footer>
                 </PageLayout>
             </Box>
         </>
