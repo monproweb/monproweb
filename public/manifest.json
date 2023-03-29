@@ -68,6 +68,5 @@
     "id": "/",
     "display": "standalone",
     "theme_color": "#DD4814",
-    "background_color": "#ffffff",
-    "ovr_package_name": "io.monproweb.app.pwa"
+    "background_color": "#ffffff"
 }
