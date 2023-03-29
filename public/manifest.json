@@ -23,7 +23,9 @@
             "description": "Go to home page",
             "icons": [
                 {
-                    "src": "/home.svg"
+                    "src": "/home.svg",
+                    "sizes": "96x96",
+                    "type": "image/svg"
                 }
             ]
         },
@@ -33,7 +35,9 @@
             "description": "Go to about page",
             "icons": [
                 {
-                    "src": "/info.svg"
+                    "src": "/info.svg",
+                    "sizes": "96x96",
+                    "type": "image/svg"
                 }
             ]
         }
