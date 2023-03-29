@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useTheme, Button } from '@primer/react'
 import { SunIcon, MoonIcon } from '@primer/octicons-react'
 
 const SwitchTheme = () => {
     const { setColorMode, resolvedColorMode } = useTheme()
-    const [isNight, setIsNight] = useState(false)
+    const [isNight, setIsNight] = useState(resolvedColorMode === 'night')
 
     useEffect(() => {
         setIsNight(resolvedColorMode === 'night')
