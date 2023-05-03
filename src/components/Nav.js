@@ -8,7 +8,7 @@ const Nav = () => {
         <>
             <Header>
                 <Header.Item full>
-                    <Header.Link as={RouterLink} to="/" fontSize={2}>
+                    <Header.Link as={RouterLink} to="/" sx={{ fontSize: 2 }}>
                         <Avatar
                             src={logo}
                             size={32}
@@ -19,7 +19,7 @@ const Nav = () => {
                     </Header.Link>
                 </Header.Item>
 
-                <Header.Item mr={0}>
+                <Header.Item sx={{ marginRight: 0 }}>
                     <Header.Item>
                         <SwitchTheme />
                     </Header.Item>
