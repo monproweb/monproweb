@@ -1,5 +1,5 @@
 import React from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
+import { hydrate, render } from 'react-dom'
 import App from './App'
 import { ThemeProvider, BaseStyles, Spinner } from '@primer/react'
 import { BrowserRouter } from 'react-router-dom'
@@ -23,10 +23,9 @@ const app = (
 )
 
 if (rootElement.hasChildNodes()) {
-    hydrateRoot(rootElement, app)
+    hydrate(app, rootElement)
 } else {
-    const root = createRoot(rootElement)
-    root.render(app)
+    render(app, rootElement)
 }
 
 serviceWorkerRegistration.register()
