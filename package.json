@@ -3,7 +3,7 @@
     "version": "4.0.0",
     "private": true,
     "dependencies": {
-        "@openzeppelin/contracts-upgradeable": "^4.8.3",
+        "@openzeppelin/contracts-upgradeable": "^4.9.6",
         "@primer/primitives": "^7.11.7",
         "@primer/react": "^35.25.1",
         "@primer/styled-octicons": "^18.3.0",
